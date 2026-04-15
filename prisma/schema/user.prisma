@@ -1,8 +1,3 @@
-enum UserRole {
-  ADMIN
-  USER
-}
-
 model User {
   id        Int      @id @default(autoincrement())
   email     String   @unique
@@ -16,7 +11,7 @@ model User {
   createdSuggestions PurchaseSuggestion[] @relation("CreatedBy")
   purchaseHistories  PurchaseHistory[]
 
-  role UserRole @default(USER)
+  roles UserRole[]
 
   @@map("user")
 }

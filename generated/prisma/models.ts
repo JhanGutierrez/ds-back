@@ -9,6 +9,9 @@
  * 🟢 You can import this file directly.
  */
 export type * from './models/PurchaseHistory.js'
+export type * from './models/PurchaseSuggestionStatus.js'
 export type * from './models/PurchaseSuggestion.js'
+export type * from './models/Role.js'
+export type * from './models/UserRole.js'
 export type * from './models/User.js'
 export type * from './commonInputTypes.js'

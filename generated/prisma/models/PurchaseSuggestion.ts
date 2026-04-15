@@ -31,6 +31,7 @@ export type PurchaseSuggestionAvgAggregateOutputType = {
   leadTime: number | null
   finalInventoryDaysQuantity: number | null
   orderToday: number | null
+  purchaseStatusId: number | null
   createdById: number | null
 }
 
@@ -39,6 +40,7 @@ export type PurchaseSuggestionSumAggregateOutputType = {
   leadTime: number | null
   finalInventoryDaysQuantity: number | null
   orderToday: number | null
+  purchaseStatusId: number | null
   createdById: number | null
 }
 
@@ -52,7 +54,7 @@ export type PurchaseSuggestionMinAggregateOutputType = {
   leadTime: number | null
   finalInventoryDaysQuantity: number | null
   orderToday: number | null
-  status: $Enums.SuggestionStatus | null
+  purchaseStatusId: number | null
   createdAt: Date | null
   updatedAt: Date | null
   createdById: number | null
@@ -68,7 +70,7 @@ export type PurchaseSuggestionMaxAggregateOutputType = {
   leadTime: number | null
   finalInventoryDaysQuantity: number | null
   orderToday: number | null
-  status: $Enums.SuggestionStatus | null
+  purchaseStatusId: number | null
   createdAt: Date | null
   updatedAt: Date | null
   createdById: number | null
@@ -84,7 +86,7 @@ export type PurchaseSuggestionCountAggregateOutputType = {
   leadTime: number
   finalInventoryDaysQuantity: number
   orderToday: number
-  status: number
+  purchaseStatusId: number
   createdAt: number
   updatedAt: number
   createdById: number
@@ -97,6 +99,7 @@ export type PurchaseSuggestionAvgAggregateInputType = {
   leadTime?: true
   finalInventoryDaysQuantity?: true
   orderToday?: true
+  purchaseStatusId?: true
   createdById?: true
 }
 
@@ -105,6 +108,7 @@ export type PurchaseSuggestionSumAggregateInputType = {
   leadTime?: true
   finalInventoryDaysQuantity?: true
   orderToday?: true
+  purchaseStatusId?: true
   createdById?: true
 }
 
@@ -118,7 +122,7 @@ export type PurchaseSuggestionMinAggregateInputType = {
   leadTime?: true
   finalInventoryDaysQuantity?: true
   orderToday?: true
-  status?: true
+  purchaseStatusId?: true
   createdAt?: true
   updatedAt?: true
   createdById?: true
@@ -134,7 +138,7 @@ export type PurchaseSuggestionMaxAggregateInputType = {
   leadTime?: true
   finalInventoryDaysQuantity?: true
   orderToday?: true
-  status?: true
+  purchaseStatusId?: true
   createdAt?: true
   updatedAt?: true
   createdById?: true
@@ -150,7 +154,7 @@ export type PurchaseSuggestionCountAggregateInputType = {
   leadTime?: true
   finalInventoryDaysQuantity?: true
   orderToday?: true
-  status?: true
+  purchaseStatusId?: true
   createdAt?: true
   updatedAt?: true
   createdById?: true
@@ -253,7 +257,7 @@ export type PurchaseSuggestionGroupByOutputType = {
   leadTime: number
   finalInventoryDaysQuantity: number
   orderToday: number
-  status: $Enums.SuggestionStatus
+  purchaseStatusId: number
   createdAt: Date
   updatedAt: Date
   createdById: number
@@ -292,10 +296,11 @@ export type PurchaseSuggestionWhereInput = {
   leadTime?: Prisma.IntFilter<"PurchaseSuggestion"> | number
   finalInventoryDaysQuantity?: Prisma.FloatFilter<"PurchaseSuggestion"> | number
   orderToday?: Prisma.IntFilter<"PurchaseSuggestion"> | number
-  status?: Prisma.EnumSuggestionStatusFilter<"PurchaseSuggestion"> | $Enums.SuggestionStatus
+  purchaseStatusId?: Prisma.IntFilter<"PurchaseSuggestion"> | number
   createdAt?: Prisma.DateTimeFilter<"PurchaseSuggestion"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"PurchaseSuggestion"> | Date | string
   createdById?: Prisma.IntFilter<"PurchaseSuggestion"> | number
+  status?: Prisma.XOR<Prisma.PurchaseSuggestionStatusScalarRelationFilter, Prisma.PurchaseSuggestionStatusWhereInput>
   createdBy?: Prisma.XOR<Prisma.UserScalarRelationFilter, Prisma.UserWhereInput>
   history?: Prisma.PurchaseHistoryListRelationFilter
 }
@@ -310,10 +315,11 @@ export type PurchaseSuggestionOrderByWithRelationInput = {
   leadTime?: Prisma.SortOrder
   finalInventoryDaysQuantity?: Prisma.SortOrder
   orderToday?: Prisma.SortOrder
-  status?: Prisma.SortOrder
+  purchaseStatusId?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
   createdById?: Prisma.SortOrder
+  status?: Prisma.PurchaseSuggestionStatusOrderByWithRelationInput
   createdBy?: Prisma.UserOrderByWithRelationInput
   history?: Prisma.PurchaseHistoryOrderByRelationAggregateInput
 }
@@ -331,10 +337,11 @@ export type PurchaseSuggestionWhereUniqueInput = Prisma.AtLeast<{
   leadTime?: Prisma.IntFilter<"PurchaseSuggestion"> | number
   finalInventoryDaysQuantity?: Prisma.FloatFilter<"PurchaseSuggestion"> | number
   orderToday?: Prisma.IntFilter<"PurchaseSuggestion"> | number
-  status?: Prisma.EnumSuggestionStatusFilter<"PurchaseSuggestion"> | $Enums.SuggestionStatus
+  purchaseStatusId?: Prisma.IntFilter<"PurchaseSuggestion"> | number
   createdAt?: Prisma.DateTimeFilter<"PurchaseSuggestion"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"PurchaseSuggestion"> | Date | string
   createdById?: Prisma.IntFilter<"PurchaseSuggestion"> | number
+  status?: Prisma.XOR<Prisma.PurchaseSuggestionStatusScalarRelationFilter, Prisma.PurchaseSuggestionStatusWhereInput>
   createdBy?: Prisma.XOR<Prisma.UserScalarRelationFilter, Prisma.UserWhereInput>
   history?: Prisma.PurchaseHistoryListRelationFilter
 }, "id">
@@ -349,7 +356,7 @@ export type PurchaseSuggestionOrderByWithAggregationInput = {
   leadTime?: Prisma.SortOrder
   finalInventoryDaysQuantity?: Prisma.SortOrder
   orderToday?: Prisma.SortOrder
-  status?: Prisma.SortOrder
+  purchaseStatusId?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
   createdById?: Prisma.SortOrder
@@ -373,7 +380,7 @@ export type PurchaseSuggestionScalarWhereWithAggregatesInput = {
   leadTime?: Prisma.IntWithAggregatesFilter<"PurchaseSuggestion"> | number
   finalInventoryDaysQuantity?: Prisma.FloatWithAggregatesFilter<"PurchaseSuggestion"> | number
   orderToday?: Prisma.IntWithAggregatesFilter<"PurchaseSuggestion"> | number
-  status?: Prisma.EnumSuggestionStatusWithAggregatesFilter<"PurchaseSuggestion"> | $Enums.SuggestionStatus
+  purchaseStatusId?: Prisma.IntWithAggregatesFilter<"PurchaseSuggestion"> | number
   createdAt?: Prisma.DateTimeWithAggregatesFilter<"PurchaseSuggestion"> | Date | string
   updatedAt?: Prisma.DateTimeWithAggregatesFilter<"PurchaseSuggestion"> | Date | string
   createdById?: Prisma.IntWithAggregatesFilter<"PurchaseSuggestion"> | number
@@ -388,9 +395,9 @@ export type PurchaseSuggestionCreateInput = {
   leadTime: number
   finalInventoryDaysQuantity: number
   orderToday: number
-  status?: $Enums.SuggestionStatus
   createdAt?: Date | string
   updatedAt?: Date | string
+  status: Prisma.PurchaseSuggestionStatusCreateNestedOneWithoutSuggestionsInput
   createdBy: Prisma.UserCreateNestedOneWithoutCreatedSuggestionsInput
   history?: Prisma.PurchaseHistoryCreateNestedManyWithoutPurchaseInput
 }
@@ -405,7 +412,7 @@ export type PurchaseSuggestionUncheckedCreateInput = {
   leadTime: number
   finalInventoryDaysQuantity: number
   orderToday: number
-  status?: $Enums.SuggestionStatus
+  purchaseStatusId: number
   createdAt?: Date | string
   updatedAt?: Date | string
   createdById: number
@@ -421,9 +428,9 @@ export type PurchaseSuggestionUpdateInput = {
   leadTime?: Prisma.IntFieldUpdateOperationsInput | number
   finalInventoryDaysQuantity?: Prisma.FloatFieldUpdateOperationsInput | number
   orderToday?: Prisma.IntFieldUpdateOperationsInput | number
-  status?: Prisma.EnumSuggestionStatusFieldUpdateOperationsInput | $Enums.SuggestionStatus
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  status?: Prisma.PurchaseSuggestionStatusUpdateOneRequiredWithoutSuggestionsNestedInput
   createdBy?: Prisma.UserUpdateOneRequiredWithoutCreatedSuggestionsNestedInput
   history?: Prisma.PurchaseHistoryUpdateManyWithoutPurchaseNestedInput
 }
@@ -438,7 +445,7 @@ export type PurchaseSuggestionUncheckedUpdateInput = {
   leadTime?: Prisma.IntFieldUpdateOperationsInput | number
   finalInventoryDaysQuantity?: Prisma.FloatFieldUpdateOperationsInput | number
   orderToday?: Prisma.IntFieldUpdateOperationsInput | number
-  status?: Prisma.EnumSuggestionStatusFieldUpdateOperationsInput | $Enums.SuggestionStatus
+  purchaseStatusId?: Prisma.IntFieldUpdateOperationsInput | number
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   createdById?: Prisma.IntFieldUpdateOperationsInput | number
@@ -455,7 +462,7 @@ export type PurchaseSuggestionCreateManyInput = {
   leadTime: number
   finalInventoryDaysQuantity: number
   orderToday: number
-  status?: $Enums.SuggestionStatus
+  purchaseStatusId: number
   createdAt?: Date | string
   updatedAt?: Date | string
   createdById: number
@@ -470,7 +477,6 @@ export type PurchaseSuggestionUpdateManyMutationInput = {
   leadTime?: Prisma.IntFieldUpdateOperationsInput | number
   finalInventoryDaysQuantity?: Prisma.FloatFieldUpdateOperationsInput | number
   orderToday?: Prisma.IntFieldUpdateOperationsInput | number
-  status?: Prisma.EnumSuggestionStatusFieldUpdateOperationsInput | $Enums.SuggestionStatus
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
@@ -485,7 +491,7 @@ export type PurchaseSuggestionUncheckedUpdateManyInput = {
   leadTime?: Prisma.IntFieldUpdateOperationsInput | number
   finalInventoryDaysQuantity?: Prisma.FloatFieldUpdateOperationsInput | number
   orderToday?: Prisma.IntFieldUpdateOperationsInput | number
-  status?: Prisma.EnumSuggestionStatusFieldUpdateOperationsInput | $Enums.SuggestionStatus
+  purchaseStatusId?: Prisma.IntFieldUpdateOperationsInput | number
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   createdById?: Prisma.IntFieldUpdateOperationsInput | number
@@ -494,6 +500,16 @@ export type PurchaseSuggestionUncheckedUpdateManyInput = {
 export type PurchaseSuggestionScalarRelationFilter = {
   is?: Prisma.PurchaseSuggestionWhereInput
   isNot?: Prisma.PurchaseSuggestionWhereInput
+}
+
+export type PurchaseSuggestionListRelationFilter = {
+  every?: Prisma.PurchaseSuggestionWhereInput
+  some?: Prisma.PurchaseSuggestionWhereInput
+  none?: Prisma.PurchaseSuggestionWhereInput
+}
+
+export type PurchaseSuggestionOrderByRelationAggregateInput = {
+  _count?: Prisma.SortOrder
 }
 
 export type PurchaseSuggestionCountOrderByAggregateInput = {
@@ -506,7 +522,7 @@ export type PurchaseSuggestionCountOrderByAggregateInput = {
   leadTime?: Prisma.SortOrder
   finalInventoryDaysQuantity?: Prisma.SortOrder
   orderToday?: Prisma.SortOrder
-  status?: Prisma.SortOrder
+  purchaseStatusId?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
   createdById?: Prisma.SortOrder
@@ -517,6 +533,7 @@ export type PurchaseSuggestionAvgOrderByAggregateInput = {
   leadTime?: Prisma.SortOrder
   finalInventoryDaysQuantity?: Prisma.SortOrder
   orderToday?: Prisma.SortOrder
+  purchaseStatusId?: Prisma.SortOrder
   createdById?: Prisma.SortOrder
 }
 
@@ -530,7 +547,7 @@ export type PurchaseSuggestionMaxOrderByAggregateInput = {
   leadTime?: Prisma.SortOrder
   finalInventoryDaysQuantity?: Prisma.SortOrder
   orderToday?: Prisma.SortOrder
-  status?: Prisma.SortOrder
+  purchaseStatusId?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
   createdById?: Prisma.SortOrder
@@ -546,7 +563,7 @@ export type PurchaseSuggestionMinOrderByAggregateInput = {
   leadTime?: Prisma.SortOrder
   finalInventoryDaysQuantity?: Prisma.SortOrder
   orderToday?: Prisma.SortOrder
-  status?: Prisma.SortOrder
+  purchaseStatusId?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
   createdById?: Prisma.SortOrder
@@ -557,17 +574,8 @@ export type PurchaseSuggestionSumOrderByAggregateInput = {
   leadTime?: Prisma.SortOrder
   finalInventoryDaysQuantity?: Prisma.SortOrder
   orderToday?: Prisma.SortOrder
+  purchaseStatusId?: Prisma.SortOrder
   createdById?: Prisma.SortOrder
-}
-
-export type PurchaseSuggestionListRelationFilter = {
-  every?: Prisma.PurchaseSuggestionWhereInput
-  some?: Prisma.PurchaseSuggestionWhereInput
-  none?: Prisma.PurchaseSuggestionWhereInput
-}
-
-export type PurchaseSuggestionOrderByRelationAggregateInput = {
-  _count?: Prisma.SortOrder
 }
 
 export type PurchaseSuggestionCreateNestedOneWithoutHistoryInput = {
@@ -584,16 +592,54 @@ export type PurchaseSuggestionUpdateOneRequiredWithoutHistoryNestedInput = {
   update?: Prisma.XOR<Prisma.XOR<Prisma.PurchaseSuggestionUpdateToOneWithWhereWithoutHistoryInput, Prisma.PurchaseSuggestionUpdateWithoutHistoryInput>, Prisma.PurchaseSuggestionUncheckedUpdateWithoutHistoryInput>
 }
 
+export type PurchaseSuggestionCreateNestedManyWithoutStatusInput = {
+  create?: Prisma.XOR<Prisma.PurchaseSuggestionCreateWithoutStatusInput, Prisma.PurchaseSuggestionUncheckedCreateWithoutStatusInput> | Prisma.PurchaseSuggestionCreateWithoutStatusInput[] | Prisma.PurchaseSuggestionUncheckedCreateWithoutStatusInput[]
+  connectOrCreate?: Prisma.PurchaseSuggestionCreateOrConnectWithoutStatusInput | Prisma.PurchaseSuggestionCreateOrConnectWithoutStatusInput[]
+  createMany?: Prisma.PurchaseSuggestionCreateManyStatusInputEnvelope
+  connect?: Prisma.PurchaseSuggestionWhereUniqueInput | Prisma.PurchaseSuggestionWhereUniqueInput[]
+}
+
+export type PurchaseSuggestionUncheckedCreateNestedManyWithoutStatusInput = {
+  create?: Prisma.XOR<Prisma.PurchaseSuggestionCreateWithoutStatusInput, Prisma.PurchaseSuggestionUncheckedCreateWithoutStatusInput> | Prisma.PurchaseSuggestionCreateWithoutStatusInput[] | Prisma.PurchaseSuggestionUncheckedCreateWithoutStatusInput[]
+  connectOrCreate?: Prisma.PurchaseSuggestionCreateOrConnectWithoutStatusInput | Prisma.PurchaseSuggestionCreateOrConnectWithoutStatusInput[]
+  createMany?: Prisma.PurchaseSuggestionCreateManyStatusInputEnvelope
+  connect?: Prisma.PurchaseSuggestionWhereUniqueInput | Prisma.PurchaseSuggestionWhereUniqueInput[]
+}
+
+export type PurchaseSuggestionUpdateManyWithoutStatusNestedInput = {
+  create?: Prisma.XOR<Prisma.PurchaseSuggestionCreateWithoutStatusInput, Prisma.PurchaseSuggestionUncheckedCreateWithoutStatusInput> | Prisma.PurchaseSuggestionCreateWithoutStatusInput[] | Prisma.PurchaseSuggestionUncheckedCreateWithoutStatusInput[]
+  connectOrCreate?: Prisma.PurchaseSuggestionCreateOrConnectWithoutStatusInput | Prisma.PurchaseSuggestionCreateOrConnectWithoutStatusInput[]
+  upsert?: Prisma.PurchaseSuggestionUpsertWithWhereUniqueWithoutStatusInput | Prisma.PurchaseSuggestionUpsertWithWhereUniqueWithoutStatusInput[]
+  createMany?: Prisma.PurchaseSuggestionCreateManyStatusInputEnvelope
+  set?: Prisma.PurchaseSuggestionWhereUniqueInput | Prisma.PurchaseSuggestionWhereUniqueInput[]
+  disconnect?: Prisma.PurchaseSuggestionWhereUniqueInput | Prisma.PurchaseSuggestionWhereUniqueInput[]
+  delete?: Prisma.PurchaseSuggestionWhereUniqueInput | Prisma.PurchaseSuggestionWhereUniqueInput[]
+  connect?: Prisma.PurchaseSuggestionWhereUniqueInput | Prisma.PurchaseSuggestionWhereUniqueInput[]
+  update?: Prisma.PurchaseSuggestionUpdateWithWhereUniqueWithoutStatusInput | Prisma.PurchaseSuggestionUpdateWithWhereUniqueWithoutStatusInput[]
+  updateMany?: Prisma.PurchaseSuggestionUpdateManyWithWhereWithoutStatusInput | Prisma.PurchaseSuggestionUpdateManyWithWhereWithoutStatusInput[]
+  deleteMany?: Prisma.PurchaseSuggestionScalarWhereInput | Prisma.PurchaseSuggestionScalarWhereInput[]
+}
+
+export type PurchaseSuggestionUncheckedUpdateManyWithoutStatusNestedInput = {
+  create?: Prisma.XOR<Prisma.PurchaseSuggestionCreateWithoutStatusInput, Prisma.PurchaseSuggestionUncheckedCreateWithoutStatusInput> | Prisma.PurchaseSuggestionCreateWithoutStatusInput[] | Prisma.PurchaseSuggestionUncheckedCreateWithoutStatusInput[]
+  connectOrCreate?: Prisma.PurchaseSuggestionCreateOrConnectWithoutStatusInput | Prisma.PurchaseSuggestionCreateOrConnectWithoutStatusInput[]
+  upsert?: Prisma.PurchaseSuggestionUpsertWithWhereUniqueWithoutStatusInput | Prisma.PurchaseSuggestionUpsertWithWhereUniqueWithoutStatusInput[]
+  createMany?: Prisma.PurchaseSuggestionCreateManyStatusInputEnvelope
+  set?: Prisma.PurchaseSuggestionWhereUniqueInput | Prisma.PurchaseSuggestionWhereUniqueInput[]
+  disconnect?: Prisma.PurchaseSuggestionWhereUniqueInput | Prisma.PurchaseSuggestionWhereUniqueInput[]
+  delete?: Prisma.PurchaseSuggestionWhereUniqueInput | Prisma.PurchaseSuggestionWhereUniqueInput[]
+  connect?: Prisma.PurchaseSuggestionWhereUniqueInput | Prisma.PurchaseSuggestionWhereUniqueInput[]
+  update?: Prisma.PurchaseSuggestionUpdateWithWhereUniqueWithoutStatusInput | Prisma.PurchaseSuggestionUpdateWithWhereUniqueWithoutStatusInput[]
+  updateMany?: Prisma.PurchaseSuggestionUpdateManyWithWhereWithoutStatusInput | Prisma.PurchaseSuggestionUpdateManyWithWhereWithoutStatusInput[]
+  deleteMany?: Prisma.PurchaseSuggestionScalarWhereInput | Prisma.PurchaseSuggestionScalarWhereInput[]
+}
+
 export type FloatFieldUpdateOperationsInput = {
   set?: number
   increment?: number
   decrement?: number
   multiply?: number
   divide?: number
-}
-
-export type EnumSuggestionStatusFieldUpdateOperationsInput = {
-  set?: $Enums.SuggestionStatus
 }
 
 export type PurchaseSuggestionCreateNestedManyWithoutCreatedByInput = {
@@ -647,9 +693,9 @@ export type PurchaseSuggestionCreateWithoutHistoryInput = {
   leadTime: number
   finalInventoryDaysQuantity: number
   orderToday: number
-  status?: $Enums.SuggestionStatus
   createdAt?: Date | string
   updatedAt?: Date | string
+  status: Prisma.PurchaseSuggestionStatusCreateNestedOneWithoutSuggestionsInput
   createdBy: Prisma.UserCreateNestedOneWithoutCreatedSuggestionsInput
 }
 
@@ -663,7 +709,7 @@ export type PurchaseSuggestionUncheckedCreateWithoutHistoryInput = {
   leadTime: number
   finalInventoryDaysQuantity: number
   orderToday: number
-  status?: $Enums.SuggestionStatus
+  purchaseStatusId: number
   createdAt?: Date | string
   updatedAt?: Date | string
   createdById: number
@@ -694,9 +740,9 @@ export type PurchaseSuggestionUpdateWithoutHistoryInput = {
   leadTime?: Prisma.IntFieldUpdateOperationsInput | number
   finalInventoryDaysQuantity?: Prisma.FloatFieldUpdateOperationsInput | number
   orderToday?: Prisma.IntFieldUpdateOperationsInput | number
-  status?: Prisma.EnumSuggestionStatusFieldUpdateOperationsInput | $Enums.SuggestionStatus
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  status?: Prisma.PurchaseSuggestionStatusUpdateOneRequiredWithoutSuggestionsNestedInput
   createdBy?: Prisma.UserUpdateOneRequiredWithoutCreatedSuggestionsNestedInput
 }
 
@@ -710,10 +756,86 @@ export type PurchaseSuggestionUncheckedUpdateWithoutHistoryInput = {
   leadTime?: Prisma.IntFieldUpdateOperationsInput | number
   finalInventoryDaysQuantity?: Prisma.FloatFieldUpdateOperationsInput | number
   orderToday?: Prisma.IntFieldUpdateOperationsInput | number
-  status?: Prisma.EnumSuggestionStatusFieldUpdateOperationsInput | $Enums.SuggestionStatus
+  purchaseStatusId?: Prisma.IntFieldUpdateOperationsInput | number
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   createdById?: Prisma.IntFieldUpdateOperationsInput | number
+}
+
+export type PurchaseSuggestionCreateWithoutStatusInput = {
+  materialCode: string
+  materialDescription: string
+  supplier: string
+  supplyCenter: string
+  warehouse: string
+  leadTime: number
+  finalInventoryDaysQuantity: number
+  orderToday: number
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  createdBy: Prisma.UserCreateNestedOneWithoutCreatedSuggestionsInput
+  history?: Prisma.PurchaseHistoryCreateNestedManyWithoutPurchaseInput
+}
+
+export type PurchaseSuggestionUncheckedCreateWithoutStatusInput = {
+  id?: number
+  materialCode: string
+  materialDescription: string
+  supplier: string
+  supplyCenter: string
+  warehouse: string
+  leadTime: number
+  finalInventoryDaysQuantity: number
+  orderToday: number
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  createdById: number
+  history?: Prisma.PurchaseHistoryUncheckedCreateNestedManyWithoutPurchaseInput
+}
+
+export type PurchaseSuggestionCreateOrConnectWithoutStatusInput = {
+  where: Prisma.PurchaseSuggestionWhereUniqueInput
+  create: Prisma.XOR<Prisma.PurchaseSuggestionCreateWithoutStatusInput, Prisma.PurchaseSuggestionUncheckedCreateWithoutStatusInput>
+}
+
+export type PurchaseSuggestionCreateManyStatusInputEnvelope = {
+  data: Prisma.PurchaseSuggestionCreateManyStatusInput | Prisma.PurchaseSuggestionCreateManyStatusInput[]
+  skipDuplicates?: boolean
+}
+
+export type PurchaseSuggestionUpsertWithWhereUniqueWithoutStatusInput = {
+  where: Prisma.PurchaseSuggestionWhereUniqueInput
+  update: Prisma.XOR<Prisma.PurchaseSuggestionUpdateWithoutStatusInput, Prisma.PurchaseSuggestionUncheckedUpdateWithoutStatusInput>
+  create: Prisma.XOR<Prisma.PurchaseSuggestionCreateWithoutStatusInput, Prisma.PurchaseSuggestionUncheckedCreateWithoutStatusInput>
+}
+
+export type PurchaseSuggestionUpdateWithWhereUniqueWithoutStatusInput = {
+  where: Prisma.PurchaseSuggestionWhereUniqueInput
+  data: Prisma.XOR<Prisma.PurchaseSuggestionUpdateWithoutStatusInput, Prisma.PurchaseSuggestionUncheckedUpdateWithoutStatusInput>
+}
+
+export type PurchaseSuggestionUpdateManyWithWhereWithoutStatusInput = {
+  where: Prisma.PurchaseSuggestionScalarWhereInput
+  data: Prisma.XOR<Prisma.PurchaseSuggestionUpdateManyMutationInput, Prisma.PurchaseSuggestionUncheckedUpdateManyWithoutStatusInput>
+}
+
+export type PurchaseSuggestionScalarWhereInput = {
+  AND?: Prisma.PurchaseSuggestionScalarWhereInput | Prisma.PurchaseSuggestionScalarWhereInput[]
+  OR?: Prisma.PurchaseSuggestionScalarWhereInput[]
+  NOT?: Prisma.PurchaseSuggestionScalarWhereInput | Prisma.PurchaseSuggestionScalarWhereInput[]
+  id?: Prisma.IntFilter<"PurchaseSuggestion"> | number
+  materialCode?: Prisma.StringFilter<"PurchaseSuggestion"> | string
+  materialDescription?: Prisma.StringFilter<"PurchaseSuggestion"> | string
+  supplier?: Prisma.StringFilter<"PurchaseSuggestion"> | string
+  supplyCenter?: Prisma.StringFilter<"PurchaseSuggestion"> | string
+  warehouse?: Prisma.StringFilter<"PurchaseSuggestion"> | string
+  leadTime?: Prisma.IntFilter<"PurchaseSuggestion"> | number
+  finalInventoryDaysQuantity?: Prisma.FloatFilter<"PurchaseSuggestion"> | number
+  orderToday?: Prisma.IntFilter<"PurchaseSuggestion"> | number
+  purchaseStatusId?: Prisma.IntFilter<"PurchaseSuggestion"> | number
+  createdAt?: Prisma.DateTimeFilter<"PurchaseSuggestion"> | Date | string
+  updatedAt?: Prisma.DateTimeFilter<"PurchaseSuggestion"> | Date | string
+  createdById?: Prisma.IntFilter<"PurchaseSuggestion"> | number
 }
 
 export type PurchaseSuggestionCreateWithoutCreatedByInput = {
@@ -725,9 +847,9 @@ export type PurchaseSuggestionCreateWithoutCreatedByInput = {
   leadTime: number
   finalInventoryDaysQuantity: number
   orderToday: number
-  status?: $Enums.SuggestionStatus
   createdAt?: Date | string
   updatedAt?: Date | string
+  status: Prisma.PurchaseSuggestionStatusCreateNestedOneWithoutSuggestionsInput
   history?: Prisma.PurchaseHistoryCreateNestedManyWithoutPurchaseInput
 }
 
@@ -741,7 +863,7 @@ export type PurchaseSuggestionUncheckedCreateWithoutCreatedByInput = {
   leadTime: number
   finalInventoryDaysQuantity: number
   orderToday: number
-  status?: $Enums.SuggestionStatus
+  purchaseStatusId: number
   createdAt?: Date | string
   updatedAt?: Date | string
   history?: Prisma.PurchaseHistoryUncheckedCreateNestedManyWithoutPurchaseInput
@@ -773,23 +895,65 @@ export type PurchaseSuggestionUpdateManyWithWhereWithoutCreatedByInput = {
   data: Prisma.XOR<Prisma.PurchaseSuggestionUpdateManyMutationInput, Prisma.PurchaseSuggestionUncheckedUpdateManyWithoutCreatedByInput>
 }
 
-export type PurchaseSuggestionScalarWhereInput = {
-  AND?: Prisma.PurchaseSuggestionScalarWhereInput | Prisma.PurchaseSuggestionScalarWhereInput[]
-  OR?: Prisma.PurchaseSuggestionScalarWhereInput[]
-  NOT?: Prisma.PurchaseSuggestionScalarWhereInput | Prisma.PurchaseSuggestionScalarWhereInput[]
-  id?: Prisma.IntFilter<"PurchaseSuggestion"> | number
-  materialCode?: Prisma.StringFilter<"PurchaseSuggestion"> | string
-  materialDescription?: Prisma.StringFilter<"PurchaseSuggestion"> | string
-  supplier?: Prisma.StringFilter<"PurchaseSuggestion"> | string
-  supplyCenter?: Prisma.StringFilter<"PurchaseSuggestion"> | string
-  warehouse?: Prisma.StringFilter<"PurchaseSuggestion"> | string
-  leadTime?: Prisma.IntFilter<"PurchaseSuggestion"> | number
-  finalInventoryDaysQuantity?: Prisma.FloatFilter<"PurchaseSuggestion"> | number
-  orderToday?: Prisma.IntFilter<"PurchaseSuggestion"> | number
-  status?: Prisma.EnumSuggestionStatusFilter<"PurchaseSuggestion"> | $Enums.SuggestionStatus
-  createdAt?: Prisma.DateTimeFilter<"PurchaseSuggestion"> | Date | string
-  updatedAt?: Prisma.DateTimeFilter<"PurchaseSuggestion"> | Date | string
-  createdById?: Prisma.IntFilter<"PurchaseSuggestion"> | number
+export type PurchaseSuggestionCreateManyStatusInput = {
+  id?: number
+  materialCode: string
+  materialDescription: string
+  supplier: string
+  supplyCenter: string
+  warehouse: string
+  leadTime: number
+  finalInventoryDaysQuantity: number
+  orderToday: number
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  createdById: number
+}
+
+export type PurchaseSuggestionUpdateWithoutStatusInput = {
+  materialCode?: Prisma.StringFieldUpdateOperationsInput | string
+  materialDescription?: Prisma.StringFieldUpdateOperationsInput | string
+  supplier?: Prisma.StringFieldUpdateOperationsInput | string
+  supplyCenter?: Prisma.StringFieldUpdateOperationsInput | string
+  warehouse?: Prisma.StringFieldUpdateOperationsInput | string
+  leadTime?: Prisma.IntFieldUpdateOperationsInput | number
+  finalInventoryDaysQuantity?: Prisma.FloatFieldUpdateOperationsInput | number
+  orderToday?: Prisma.IntFieldUpdateOperationsInput | number
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  createdBy?: Prisma.UserUpdateOneRequiredWithoutCreatedSuggestionsNestedInput
+  history?: Prisma.PurchaseHistoryUpdateManyWithoutPurchaseNestedInput
+}
+
+export type PurchaseSuggestionUncheckedUpdateWithoutStatusInput = {
+  id?: Prisma.IntFieldUpdateOperationsInput | number
+  materialCode?: Prisma.StringFieldUpdateOperationsInput | string
+  materialDescription?: Prisma.StringFieldUpdateOperationsInput | string
+  supplier?: Prisma.StringFieldUpdateOperationsInput | string
+  supplyCenter?: Prisma.StringFieldUpdateOperationsInput | string
+  warehouse?: Prisma.StringFieldUpdateOperationsInput | string
+  leadTime?: Prisma.IntFieldUpdateOperationsInput | number
+  finalInventoryDaysQuantity?: Prisma.FloatFieldUpdateOperationsInput | number
+  orderToday?: Prisma.IntFieldUpdateOperationsInput | number
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  createdById?: Prisma.IntFieldUpdateOperationsInput | number
+  history?: Prisma.PurchaseHistoryUncheckedUpdateManyWithoutPurchaseNestedInput
+}
+
+export type PurchaseSuggestionUncheckedUpdateManyWithoutStatusInput = {
+  id?: Prisma.IntFieldUpdateOperationsInput | number
+  materialCode?: Prisma.StringFieldUpdateOperationsInput | string
+  materialDescription?: Prisma.StringFieldUpdateOperationsInput | string
+  supplier?: Prisma.StringFieldUpdateOperationsInput | string
+  supplyCenter?: Prisma.StringFieldUpdateOperationsInput | string
+  warehouse?: Prisma.StringFieldUpdateOperationsInput | string
+  leadTime?: Prisma.IntFieldUpdateOperationsInput | number
+  finalInventoryDaysQuantity?: Prisma.FloatFieldUpdateOperationsInput | number
+  orderToday?: Prisma.IntFieldUpdateOperationsInput | number
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  createdById?: Prisma.IntFieldUpdateOperationsInput | number
 }
 
 export type PurchaseSuggestionCreateManyCreatedByInput = {
@@ -802,7 +966,7 @@ export type PurchaseSuggestionCreateManyCreatedByInput = {
   leadTime: number
   finalInventoryDaysQuantity: number
   orderToday: number
-  status?: $Enums.SuggestionStatus
+  purchaseStatusId: number
   createdAt?: Date | string
   updatedAt?: Date | string
 }
@@ -816,9 +980,9 @@ export type PurchaseSuggestionUpdateWithoutCreatedByInput = {
   leadTime?: Prisma.IntFieldUpdateOperationsInput | number
   finalInventoryDaysQuantity?: Prisma.FloatFieldUpdateOperationsInput | number
   orderToday?: Prisma.IntFieldUpdateOperationsInput | number
-  status?: Prisma.EnumSuggestionStatusFieldUpdateOperationsInput | $Enums.SuggestionStatus
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  status?: Prisma.PurchaseSuggestionStatusUpdateOneRequiredWithoutSuggestionsNestedInput
   history?: Prisma.PurchaseHistoryUpdateManyWithoutPurchaseNestedInput
 }
 
@@ -832,7 +996,7 @@ export type PurchaseSuggestionUncheckedUpdateWithoutCreatedByInput = {
   leadTime?: Prisma.IntFieldUpdateOperationsInput | number
   finalInventoryDaysQuantity?: Prisma.FloatFieldUpdateOperationsInput | number
   orderToday?: Prisma.IntFieldUpdateOperationsInput | number
-  status?: Prisma.EnumSuggestionStatusFieldUpdateOperationsInput | $Enums.SuggestionStatus
+  purchaseStatusId?: Prisma.IntFieldUpdateOperationsInput | number
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   history?: Prisma.PurchaseHistoryUncheckedUpdateManyWithoutPurchaseNestedInput
@@ -848,7 +1012,7 @@ export type PurchaseSuggestionUncheckedUpdateManyWithoutCreatedByInput = {
   leadTime?: Prisma.IntFieldUpdateOperationsInput | number
   finalInventoryDaysQuantity?: Prisma.FloatFieldUpdateOperationsInput | number
   orderToday?: Prisma.IntFieldUpdateOperationsInput | number
-  status?: Prisma.EnumSuggestionStatusFieldUpdateOperationsInput | $Enums.SuggestionStatus
+  purchaseStatusId?: Prisma.IntFieldUpdateOperationsInput | number
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
@@ -894,10 +1058,11 @@ export type PurchaseSuggestionSelect<ExtArgs extends runtime.Types.Extensions.In
   leadTime?: boolean
   finalInventoryDaysQuantity?: boolean
   orderToday?: boolean
-  status?: boolean
+  purchaseStatusId?: boolean
   createdAt?: boolean
   updatedAt?: boolean
   createdById?: boolean
+  status?: boolean | Prisma.PurchaseSuggestionStatusDefaultArgs<ExtArgs>
   createdBy?: boolean | Prisma.UserDefaultArgs<ExtArgs>
   history?: boolean | Prisma.PurchaseSuggestion$historyArgs<ExtArgs>
   _count?: boolean | Prisma.PurchaseSuggestionCountOutputTypeDefaultArgs<ExtArgs>
@@ -913,10 +1078,11 @@ export type PurchaseSuggestionSelectCreateManyAndReturn<ExtArgs extends runtime.
   leadTime?: boolean
   finalInventoryDaysQuantity?: boolean
   orderToday?: boolean
-  status?: boolean
+  purchaseStatusId?: boolean
   createdAt?: boolean
   updatedAt?: boolean
   createdById?: boolean
+  status?: boolean | Prisma.PurchaseSuggestionStatusDefaultArgs<ExtArgs>
   createdBy?: boolean | Prisma.UserDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["purchaseSuggestion"]>
 
@@ -930,10 +1096,11 @@ export type PurchaseSuggestionSelectUpdateManyAndReturn<ExtArgs extends runtime.
   leadTime?: boolean
   finalInventoryDaysQuantity?: boolean
   orderToday?: boolean
-  status?: boolean
+  purchaseStatusId?: boolean
   createdAt?: boolean
   updatedAt?: boolean
   createdById?: boolean
+  status?: boolean | Prisma.PurchaseSuggestionStatusDefaultArgs<ExtArgs>
   createdBy?: boolean | Prisma.UserDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["purchaseSuggestion"]>
 
@@ -947,28 +1114,32 @@ export type PurchaseSuggestionSelectScalar = {
   leadTime?: boolean
   finalInventoryDaysQuantity?: boolean
   orderToday?: boolean
-  status?: boolean
+  purchaseStatusId?: boolean
   createdAt?: boolean
   updatedAt?: boolean
   createdById?: boolean
 }
 
-export type PurchaseSuggestionOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "materialCode" | "materialDescription" | "supplier" | "supplyCenter" | "warehouse" | "leadTime" | "finalInventoryDaysQuantity" | "orderToday" | "status" | "createdAt" | "updatedAt" | "createdById", ExtArgs["result"]["purchaseSuggestion"]>
+export type PurchaseSuggestionOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "materialCode" | "materialDescription" | "supplier" | "supplyCenter" | "warehouse" | "leadTime" | "finalInventoryDaysQuantity" | "orderToday" | "purchaseStatusId" | "createdAt" | "updatedAt" | "createdById", ExtArgs["result"]["purchaseSuggestion"]>
 export type PurchaseSuggestionInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  status?: boolean | Prisma.PurchaseSuggestionStatusDefaultArgs<ExtArgs>
   createdBy?: boolean | Prisma.UserDefaultArgs<ExtArgs>
   history?: boolean | Prisma.PurchaseSuggestion$historyArgs<ExtArgs>
   _count?: boolean | Prisma.PurchaseSuggestionCountOutputTypeDefaultArgs<ExtArgs>
 }
 export type PurchaseSuggestionIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  status?: boolean | Prisma.PurchaseSuggestionStatusDefaultArgs<ExtArgs>
   createdBy?: boolean | Prisma.UserDefaultArgs<ExtArgs>
 }
 export type PurchaseSuggestionIncludeUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  status?: boolean | Prisma.PurchaseSuggestionStatusDefaultArgs<ExtArgs>
   createdBy?: boolean | Prisma.UserDefaultArgs<ExtArgs>
 }
 
 export type $PurchaseSuggestionPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "PurchaseSuggestion"
   objects: {
+    status: Prisma.$PurchaseSuggestionStatusPayload<ExtArgs>
     createdBy: Prisma.$UserPayload<ExtArgs>
     history: Prisma.$PurchaseHistoryPayload<ExtArgs>[]
   }
@@ -982,7 +1153,7 @@ export type $PurchaseSuggestionPayload<ExtArgs extends runtime.Types.Extensions.
     leadTime: number
     finalInventoryDaysQuantity: number
     orderToday: number
-    status: $Enums.SuggestionStatus
+    purchaseStatusId: number
     createdAt: Date
     updatedAt: Date
     createdById: number
@@ -1380,6 +1551,7 @@ readonly fields: PurchaseSuggestionFieldRefs;
  */
 export interface Prisma__PurchaseSuggestionClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
+  status<T extends Prisma.PurchaseSuggestionStatusDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.PurchaseSuggestionStatusDefaultArgs<ExtArgs>>): Prisma.Prisma__PurchaseSuggestionStatusClient<runtime.Types.Result.GetResult<Prisma.$PurchaseSuggestionStatusPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
   createdBy<T extends Prisma.UserDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.UserDefaultArgs<ExtArgs>>): Prisma.Prisma__UserClient<runtime.Types.Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
   history<T extends Prisma.PurchaseSuggestion$historyArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.PurchaseSuggestion$historyArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$PurchaseHistoryPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
@@ -1420,7 +1592,7 @@ export interface PurchaseSuggestionFieldRefs {
   readonly leadTime: Prisma.FieldRef<"PurchaseSuggestion", 'Int'>
   readonly finalInventoryDaysQuantity: Prisma.FieldRef<"PurchaseSuggestion", 'Float'>
   readonly orderToday: Prisma.FieldRef<"PurchaseSuggestion", 'Int'>
-  readonly status: Prisma.FieldRef<"PurchaseSuggestion", 'SuggestionStatus'>
+  readonly purchaseStatusId: Prisma.FieldRef<"PurchaseSuggestion", 'Int'>
   readonly createdAt: Prisma.FieldRef<"PurchaseSuggestion", 'DateTime'>
   readonly updatedAt: Prisma.FieldRef<"PurchaseSuggestion", 'DateTime'>
   readonly createdById: Prisma.FieldRef<"PurchaseSuggestion", 'Int'>

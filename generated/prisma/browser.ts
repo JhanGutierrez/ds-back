@@ -23,10 +23,25 @@ export * from './enums.js';
  */
 export type PurchaseHistory = Prisma.PurchaseHistoryModel
 /**
+ * Model PurchaseSuggestionStatus
+ * 
+ */
+export type PurchaseSuggestionStatus = Prisma.PurchaseSuggestionStatusModel
+/**
  * Model PurchaseSuggestion
  * 
  */
 export type PurchaseSuggestion = Prisma.PurchaseSuggestionModel
+/**
+ * Model Role
+ * 
+ */
+export type Role = Prisma.RoleModel
+/**
+ * Model UserRole
+ * 
+ */
+export type UserRole = Prisma.UserRoleModel
 /**
  * Model User
  * 

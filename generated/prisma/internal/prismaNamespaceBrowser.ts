@@ -52,7 +52,10 @@ export const AnyNull = runtime.AnyNull
 
 export const ModelName = {
   PurchaseHistory: 'PurchaseHistory',
+  PurchaseSuggestionStatus: 'PurchaseSuggestionStatus',
   PurchaseSuggestion: 'PurchaseSuggestion',
+  Role: 'Role',
+  UserRole: 'UserRole',
   User: 'User'
 } as const
 
@@ -84,6 +87,15 @@ export const PurchaseHistoryScalarFieldEnum = {
 export type PurchaseHistoryScalarFieldEnum = (typeof PurchaseHistoryScalarFieldEnum)[keyof typeof PurchaseHistoryScalarFieldEnum]
 
 
+export const PurchaseSuggestionStatusScalarFieldEnum = {
+  id: 'id',
+  code: 'code',
+  name: 'name'
+} as const
+
+export type PurchaseSuggestionStatusScalarFieldEnum = (typeof PurchaseSuggestionStatusScalarFieldEnum)[keyof typeof PurchaseSuggestionStatusScalarFieldEnum]
+
+
 export const PurchaseSuggestionScalarFieldEnum = {
   id: 'id',
   materialCode: 'materialCode',
@@ -94,13 +106,29 @@ export const PurchaseSuggestionScalarFieldEnum = {
   leadTime: 'leadTime',
   finalInventoryDaysQuantity: 'finalInventoryDaysQuantity',
   orderToday: 'orderToday',
-  status: 'status',
+  purchaseStatusId: 'purchaseStatusId',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt',
   createdById: 'createdById'
 } as const
 
 export type PurchaseSuggestionScalarFieldEnum = (typeof PurchaseSuggestionScalarFieldEnum)[keyof typeof PurchaseSuggestionScalarFieldEnum]
+
+
+export const RoleScalarFieldEnum = {
+  id: 'id',
+  name: 'name'
+} as const
+
+export type RoleScalarFieldEnum = (typeof RoleScalarFieldEnum)[keyof typeof RoleScalarFieldEnum]
+
+
+export const UserRoleScalarFieldEnum = {
+  userId: 'userId',
+  roleId: 'roleId'
+} as const
+
+export type UserRoleScalarFieldEnum = (typeof UserRoleScalarFieldEnum)[keyof typeof UserRoleScalarFieldEnum]
 
 
 export const UserScalarFieldEnum = {
@@ -111,8 +139,7 @@ export const UserScalarFieldEnum = {
   lastName: 'lastName',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt',
-  password: 'password',
-  role: 'role'
+  password: 'password'
 } as const
 
 export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum]

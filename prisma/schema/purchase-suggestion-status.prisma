@@ -1,0 +1,8 @@
+model PurchaseSuggestionStatus {
+  id    Int    @id @default(autoincrement())
+  code  String @unique
+  name  String
+
+  suggestions PurchaseSuggestion[]
+  @@map("purchase_suggestion_status")
+}

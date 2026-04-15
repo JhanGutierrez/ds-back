@@ -1,0 +1,28 @@
+enum SuggestionStatus {
+  DRAFT
+  REVIEWED
+  TO_APPROVE
+  OC_PENDING
+}
+
+model PurchaseSuggestion {
+  id                         Int              @id @default(autoincrement())
+  materialCode               String           @map("material_code")
+  materialDescription        String           @map("material_description")
+  supplier                   String
+  supplyCenter               String           @map("supply_center")
+  warehouse                  String
+  leadTime                   Int              @map("lead_time")
+  finalInventoryDaysQuantity Float            @map("final_inventory_days_quantity")
+  orderToday                 Int              @map("order_today")
+  status                     SuggestionStatus @default(DRAFT)
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  createdById Int               @map("created_by_id")
+  createdBy   User              @relation("CreatedBy", fields: [createdById], references: [id])
+  history     PurchaseHistory[]
+
+  @@map("purchase_suggestions")
+}

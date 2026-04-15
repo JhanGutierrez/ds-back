@@ -1,0 +1,14 @@
+model PurchaseHistory {
+  id         Int                @id @default(autoincrement())
+  purchaseId Int                @map("purchase_id")
+  purchase   PurchaseSuggestion @relation(fields: [purchaseId], references: [id])
+
+  userId Int  @map("user_id")
+  user   User @relation(fields: [userId], references: [id])
+
+  action    String // "CREATE", "UPDATE", "STATUS_CHANGE", "DELETE"
+  changes   Json?
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("purchase_history")
+}

@@ -1,0 +1,22 @@
+enum UserRole {
+  ADMIN
+  USER
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  username  String   @unique
+  firstName String?  @map("first_name")
+  lastName  String?  @map("last_name")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+  password  String
+
+  createdSuggestions PurchaseSuggestion[] @relation("CreatedBy")
+  purchaseHistories  PurchaseHistory[]
+
+  role UserRole @default(USER)
+
+  @@map("user")
+}

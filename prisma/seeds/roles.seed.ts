@@ -1,11 +1,17 @@
 import { PrismaClient } from '../../generated/prisma/client';
 
 export async function rolesSeed(prisma: PrismaClient): Promise<void> {
-  await prisma.$executeRawUnsafe(
-    `TRUNCATE TABLE "role" RESTART IDENTITY CASCADE;`,
-  );
-
   await prisma.role.createMany({
-    data: [{ name: 'ADMIN' }, { name: 'USER' }],
+    data: [
+      { nombre: 'ADMIN' },
+      { nombre: 'GERENTE_PLANEACION' },
+      { nombre: 'SAR' },
+      { nombre: 'SAN' },
+      { nombre: 'SUBGERENTE_PLANEACION' },
+      { nombre: 'SAN_IMPORTADOS' },
+      { nombre: 'GERENTE_ABASTECIMIENTO_REGIONAL' },
+      { nombre: 'GERENTE_ABASTECIMIENTO_NACIONAL' },
+    ],
+    skipDuplicates: true,
   });
 }

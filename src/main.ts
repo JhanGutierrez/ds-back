@@ -27,7 +27,19 @@ async function bootstrap() {
     .build();
 
   const documentFactory = () => SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('api', app, documentFactory);
+  SwaggerModule.setup('api', app, documentFactory, {
+    customCss: `
+      .swagger-ui .response a {
+        color: #080a0b !important;
+        background: #51a8ff !important;
+        padding: 6px 16px;
+        border-radius: 4px;
+        text-decoration: none !important;
+        font-weight: 700;
+        font-size: 14px;
+      }
+    `,
+  });
 
   app.useGlobalFilters(new HttpExceptionsFilter());
   app.useGlobalInterceptors(new TransformInterceptor());

@@ -1,0 +1,33 @@
+sequenceDiagram
+    autonumber
+
+    participant C   as Cliente
+    participant G   as AuthGuard + RolesGuard
+    participant PSC as PurchaseSuggestionController
+    participant PSS as PurchaseSuggestionService
+    participant DB  as PrismaService
+
+    Note over C,DB: Ver diagrama 02 para el flujo detallado de autenticación y autorización
+
+    C->>G: GET /purchase-suggestion<br>?pagina=1&limite=10&codigoMaterial=...&estado=...&centroAbastecedor=...&orden=desc&ordenarPor=fechaCreacion
+    G-->>PSC: request autorizado
+
+    PSC->>PSS: getSuggestions(filterDto)
+
+    PSS->>PSS: Construir cláusula where:<br>- codigoMaterial (si se provee)<br>- estado (si se provee)<br>- centroAbastecedor (si se provee)
+
+    PSS->>PSS: Construir orderBy:<br>{ [ordenarPor]: orden }
+
+    par Consultas en paralelo
+        PSS->>DB: purchaseSuggestion.count({ where })
+        and
+        PSS->>DB: purchaseSuggestion.findMany({\n  where, orderBy,\n  skip: (pagina-1)*limite,\n  take: limite,\n  select: COMMON_FIELDS + estadoCompraSugerida\n})
+    end
+
+    DB-->>PSS: total: number
+    DB-->>PSS: PurchaseSuggestion[] (con estadoCompraSugerida)
+
+    PSS->>PSS: Calcular ultimaPagina = Math.ceil(total / limite)
+
+    PSS-->>PSC: { meta: { total, pagina, ultimaPagina }, data: PurchaseSuggestion[] }
+    PSC-->>C: 200 { statusCode, message, data, meta }

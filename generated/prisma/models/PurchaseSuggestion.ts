@@ -28,136 +28,778 @@ export type AggregatePurchaseSuggestion = {
 
 export type PurchaseSuggestionAvgAggregateOutputType = {
   id: number | null
-  leadTime: number | null
-  finalInventoryDaysQuantity: number | null
-  orderToday: number | null
-  purchaseStatusId: number | null
-  createdById: number | null
+  codigoMaterial: number | null
+  porcCompra: number | null
+  almacen: number | null
+  ltReal: number | null
+  factorLt: runtime.Decimal | null
+  frec: runtime.Decimal | null
+  ump: number | null
+  ums: number | null
+  venta30DiasDiaDelDia: runtime.Decimal | null
+  ventaFcDiaAjustada: runtime.Decimal | null
+  porcDesviacionFcVsVenta: runtime.Decimal | null
+  porcIncPlaneacionDemanda: runtime.Decimal | null
+  pedidoPromedioDiaUmp: number | null
+  tiendasAgotadas: number | null
+  tipologia: number | null
+  invTienda: runtime.Decimal | null
+  stockObjetivoTienda: runtime.Decimal | null
+  faltanteLlenadoTienda: runtime.Decimal | null
+  diasInvTienda: runtime.Decimal | null
+  inventarioFisico: runtime.Decimal | null
+  inventarioEnTransito: number | null
+  diasInvALaFecha: runtime.Decimal | null
+  diasInvFisicoTransito: runtime.Decimal | null
+  zonarojaPura: runtime.Decimal | null
+  zonaroja: runtime.Decimal | null
+  zonaamarilla: runtime.Decimal | null
+  zonaverde: runtime.Decimal | null
+  tamBufferPuroUmp: runtime.Decimal | null
+  tamBufferUmp: runtime.Decimal | null
+  demandaCalificada: runtime.Decimal | null
+  pedidoHoy: number | null
+  pedidoF1: number | null
+  pedidoF2: number | null
+  pedidoF3: number | null
+  pedidoF4: number | null
+  pedidoF5: number | null
+  pedidoF6: number | null
+  estimadoParaTopeBuffer: number | null
+  cantidadDefinitivaOcHoy: runtime.Decimal | null
+  cantidadDefinitivaOcF1: runtime.Decimal | null
+  cantidadDefinitivaOcF2: runtime.Decimal | null
+  cantidadDefinitivaOcF3: runtime.Decimal | null
+  factorVariabilidadVenta: runtime.Decimal | null
+  diasMinimoInv: runtime.Decimal | null
+  diasPromedioInv: runtime.Decimal | null
+  diasMaximoInv: runtime.Decimal | null
+  diasInvCantidadDefinitiva: runtime.Decimal | null
+  diasInvCdF1: runtime.Decimal | null
+  diasInvCdF2: runtime.Decimal | null
+  diasInvCdF3: runtime.Decimal | null
+  vidaUtilMinDiasReciboCedi: number | null
+  moq: number | null
+  multiploDeCompra: number | null
 }
 
 export type PurchaseSuggestionSumAggregateOutputType = {
   id: number | null
-  leadTime: number | null
-  finalInventoryDaysQuantity: number | null
-  orderToday: number | null
-  purchaseStatusId: number | null
-  createdById: number | null
+  codigoMaterial: number | null
+  porcCompra: number | null
+  almacen: number | null
+  ltReal: number | null
+  factorLt: runtime.Decimal | null
+  frec: runtime.Decimal | null
+  ump: number | null
+  ums: number | null
+  venta30DiasDiaDelDia: runtime.Decimal | null
+  ventaFcDiaAjustada: runtime.Decimal | null
+  porcDesviacionFcVsVenta: runtime.Decimal | null
+  porcIncPlaneacionDemanda: runtime.Decimal | null
+  pedidoPromedioDiaUmp: number | null
+  tiendasAgotadas: number | null
+  tipologia: number | null
+  invTienda: runtime.Decimal | null
+  stockObjetivoTienda: runtime.Decimal | null
+  faltanteLlenadoTienda: runtime.Decimal | null
+  diasInvTienda: runtime.Decimal | null
+  inventarioFisico: runtime.Decimal | null
+  inventarioEnTransito: number | null
+  diasInvALaFecha: runtime.Decimal | null
+  diasInvFisicoTransito: runtime.Decimal | null
+  zonarojaPura: runtime.Decimal | null
+  zonaroja: runtime.Decimal | null
+  zonaamarilla: runtime.Decimal | null
+  zonaverde: runtime.Decimal | null
+  tamBufferPuroUmp: runtime.Decimal | null
+  tamBufferUmp: runtime.Decimal | null
+  demandaCalificada: runtime.Decimal | null
+  pedidoHoy: number | null
+  pedidoF1: number | null
+  pedidoF2: number | null
+  pedidoF3: number | null
+  pedidoF4: number | null
+  pedidoF5: number | null
+  pedidoF6: number | null
+  estimadoParaTopeBuffer: number | null
+  cantidadDefinitivaOcHoy: runtime.Decimal | null
+  cantidadDefinitivaOcF1: runtime.Decimal | null
+  cantidadDefinitivaOcF2: runtime.Decimal | null
+  cantidadDefinitivaOcF3: runtime.Decimal | null
+  factorVariabilidadVenta: runtime.Decimal | null
+  diasMinimoInv: runtime.Decimal | null
+  diasPromedioInv: runtime.Decimal | null
+  diasMaximoInv: runtime.Decimal | null
+  diasInvCantidadDefinitiva: runtime.Decimal | null
+  diasInvCdF1: runtime.Decimal | null
+  diasInvCdF2: runtime.Decimal | null
+  diasInvCdF3: runtime.Decimal | null
+  vidaUtilMinDiasReciboCedi: number | null
+  moq: number | null
+  multiploDeCompra: number | null
 }
 
 export type PurchaseSuggestionMinAggregateOutputType = {
   id: number | null
-  materialCode: string | null
-  materialDescription: string | null
-  supplier: string | null
-  supplyCenter: string | null
-  warehouse: string | null
-  leadTime: number | null
-  finalInventoryDaysQuantity: number | null
-  orderToday: number | null
-  purchaseStatusId: number | null
-  createdAt: Date | null
-  updatedAt: Date | null
-  createdById: number | null
+  mc: string | null
+  mca: string | null
+  mcap: string | null
+  codigoMaterial: number | null
+  descripcionMaterial: string | null
+  codProv: string | null
+  proveedor: string | null
+  centroAbastecedor: string | null
+  desDentro: string | null
+  porcCompra: number | null
+  almacen: number | null
+  categoria: string | null
+  ltReal: number | null
+  factorLt: runtime.Decimal | null
+  frec: runtime.Decimal | null
+  ump: number | null
+  ums: number | null
+  venta30DiasDiaDelDia: runtime.Decimal | null
+  ventaFcDiaAjustada: runtime.Decimal | null
+  porcDesviacionFcVsVenta: runtime.Decimal | null
+  porcIncPlaneacionDemanda: runtime.Decimal | null
+  aplica: string | null
+  pedidoPromedioDiaUmp: number | null
+  tiendasAgotadas: number | null
+  tipologia: number | null
+  invTienda: runtime.Decimal | null
+  stockObjetivoTienda: runtime.Decimal | null
+  faltanteLlenadoTienda: runtime.Decimal | null
+  diasInvTienda: runtime.Decimal | null
+  inventarioFisico: runtime.Decimal | null
+  inventarioEnTransito: number | null
+  diasInvALaFecha: runtime.Decimal | null
+  diasInvFisicoTransito: runtime.Decimal | null
+  zonarojaPura: runtime.Decimal | null
+  zonaroja: runtime.Decimal | null
+  zonaamarilla: runtime.Decimal | null
+  zonaverde: runtime.Decimal | null
+  tamBufferPuroUmp: runtime.Decimal | null
+  tamBufferUmp: runtime.Decimal | null
+  demandaCalificada: runtime.Decimal | null
+  activoLunes: boolean | null
+  activoMartes: boolean | null
+  activoMiercoles: boolean | null
+  activoJueves: boolean | null
+  activoViernes: boolean | null
+  activoSabado: boolean | null
+  activoDomingo: boolean | null
+  pedidoHoy: number | null
+  pedidoF1: number | null
+  pedidoF2: number | null
+  pedidoF3: number | null
+  pedidoF4: number | null
+  pedidoF5: number | null
+  pedidoF6: number | null
+  estimadoParaTopeBuffer: number | null
+  cantidadDefinitivaOcHoy: runtime.Decimal | null
+  cantidadDefinitivaOcF1: runtime.Decimal | null
+  cantidadDefinitivaOcF2: runtime.Decimal | null
+  cantidadDefinitivaOcF3: runtime.Decimal | null
+  factorVariabilidadVenta: runtime.Decimal | null
+  diasMinimoInv: runtime.Decimal | null
+  diasPromedioInv: runtime.Decimal | null
+  diasMaximoInv: runtime.Decimal | null
+  diasInvCantidadDefinitiva: runtime.Decimal | null
+  diasInvCdF1: runtime.Decimal | null
+  diasInvCdF2: runtime.Decimal | null
+  diasInvCdF3: runtime.Decimal | null
+  diaDePedido: string | null
+  diaDeLlegada: string | null
+  fechaEstimadaEntrega: Date | null
+  nomDiaEntrega: string | null
+  fechaEntregaF1: Date | null
+  fechaEntregaF2: Date | null
+  fechaEntregaF3: Date | null
+  alertaStock: string | null
+  vidaUtilMinDiasReciboCedi: number | null
+  alertaVidaUtil: string | null
+  crossDock: boolean | null
+  moq: number | null
+  subcategoria: string | null
+  temperaturaAlmacenamiento: string | null
+  responsableDeCompra: string | null
+  category: string | null
+  multiploDeCompra: number | null
+  estado: string | null
+  fechaCreacion: Date | null
+  fechaActualizacion: Date | null
 }
 
 export type PurchaseSuggestionMaxAggregateOutputType = {
   id: number | null
-  materialCode: string | null
-  materialDescription: string | null
-  supplier: string | null
-  supplyCenter: string | null
-  warehouse: string | null
-  leadTime: number | null
-  finalInventoryDaysQuantity: number | null
-  orderToday: number | null
-  purchaseStatusId: number | null
-  createdAt: Date | null
-  updatedAt: Date | null
-  createdById: number | null
+  mc: string | null
+  mca: string | null
+  mcap: string | null
+  codigoMaterial: number | null
+  descripcionMaterial: string | null
+  codProv: string | null
+  proveedor: string | null
+  centroAbastecedor: string | null
+  desDentro: string | null
+  porcCompra: number | null
+  almacen: number | null
+  categoria: string | null
+  ltReal: number | null
+  factorLt: runtime.Decimal | null
+  frec: runtime.Decimal | null
+  ump: number | null
+  ums: number | null
+  venta30DiasDiaDelDia: runtime.Decimal | null
+  ventaFcDiaAjustada: runtime.Decimal | null
+  porcDesviacionFcVsVenta: runtime.Decimal | null
+  porcIncPlaneacionDemanda: runtime.Decimal | null
+  aplica: string | null
+  pedidoPromedioDiaUmp: number | null
+  tiendasAgotadas: number | null
+  tipologia: number | null
+  invTienda: runtime.Decimal | null
+  stockObjetivoTienda: runtime.Decimal | null
+  faltanteLlenadoTienda: runtime.Decimal | null
+  diasInvTienda: runtime.Decimal | null
+  inventarioFisico: runtime.Decimal | null
+  inventarioEnTransito: number | null
+  diasInvALaFecha: runtime.Decimal | null
+  diasInvFisicoTransito: runtime.Decimal | null
+  zonarojaPura: runtime.Decimal | null
+  zonaroja: runtime.Decimal | null
+  zonaamarilla: runtime.Decimal | null
+  zonaverde: runtime.Decimal | null
+  tamBufferPuroUmp: runtime.Decimal | null
+  tamBufferUmp: runtime.Decimal | null
+  demandaCalificada: runtime.Decimal | null
+  activoLunes: boolean | null
+  activoMartes: boolean | null
+  activoMiercoles: boolean | null
+  activoJueves: boolean | null
+  activoViernes: boolean | null
+  activoSabado: boolean | null
+  activoDomingo: boolean | null
+  pedidoHoy: number | null
+  pedidoF1: number | null
+  pedidoF2: number | null
+  pedidoF3: number | null
+  pedidoF4: number | null
+  pedidoF5: number | null
+  pedidoF6: number | null
+  estimadoParaTopeBuffer: number | null
+  cantidadDefinitivaOcHoy: runtime.Decimal | null
+  cantidadDefinitivaOcF1: runtime.Decimal | null
+  cantidadDefinitivaOcF2: runtime.Decimal | null
+  cantidadDefinitivaOcF3: runtime.Decimal | null
+  factorVariabilidadVenta: runtime.Decimal | null
+  diasMinimoInv: runtime.Decimal | null
+  diasPromedioInv: runtime.Decimal | null
+  diasMaximoInv: runtime.Decimal | null
+  diasInvCantidadDefinitiva: runtime.Decimal | null
+  diasInvCdF1: runtime.Decimal | null
+  diasInvCdF2: runtime.Decimal | null
+  diasInvCdF3: runtime.Decimal | null
+  diaDePedido: string | null
+  diaDeLlegada: string | null
+  fechaEstimadaEntrega: Date | null
+  nomDiaEntrega: string | null
+  fechaEntregaF1: Date | null
+  fechaEntregaF2: Date | null
+  fechaEntregaF3: Date | null
+  alertaStock: string | null
+  vidaUtilMinDiasReciboCedi: number | null
+  alertaVidaUtil: string | null
+  crossDock: boolean | null
+  moq: number | null
+  subcategoria: string | null
+  temperaturaAlmacenamiento: string | null
+  responsableDeCompra: string | null
+  category: string | null
+  multiploDeCompra: number | null
+  estado: string | null
+  fechaCreacion: Date | null
+  fechaActualizacion: Date | null
 }
 
 export type PurchaseSuggestionCountAggregateOutputType = {
   id: number
-  materialCode: number
-  materialDescription: number
-  supplier: number
-  supplyCenter: number
-  warehouse: number
-  leadTime: number
-  finalInventoryDaysQuantity: number
-  orderToday: number
-  purchaseStatusId: number
-  createdAt: number
-  updatedAt: number
-  createdById: number
+  mc: number
+  mca: number
+  mcap: number
+  codigoMaterial: number
+  descripcionMaterial: number
+  codProv: number
+  proveedor: number
+  centroAbastecedor: number
+  desDentro: number
+  porcCompra: number
+  almacen: number
+  categoria: number
+  ltReal: number
+  factorLt: number
+  frec: number
+  ump: number
+  ums: number
+  venta30DiasDiaDelDia: number
+  ventaFcDiaAjustada: number
+  porcDesviacionFcVsVenta: number
+  porcIncPlaneacionDemanda: number
+  aplica: number
+  pedidoPromedioDiaUmp: number
+  tiendasAgotadas: number
+  tipologia: number
+  invTienda: number
+  stockObjetivoTienda: number
+  faltanteLlenadoTienda: number
+  diasInvTienda: number
+  inventarioFisico: number
+  inventarioEnTransito: number
+  diasInvALaFecha: number
+  diasInvFisicoTransito: number
+  zonarojaPura: number
+  zonaroja: number
+  zonaamarilla: number
+  zonaverde: number
+  tamBufferPuroUmp: number
+  tamBufferUmp: number
+  demandaCalificada: number
+  activoLunes: number
+  activoMartes: number
+  activoMiercoles: number
+  activoJueves: number
+  activoViernes: number
+  activoSabado: number
+  activoDomingo: number
+  pedidoHoy: number
+  pedidoF1: number
+  pedidoF2: number
+  pedidoF3: number
+  pedidoF4: number
+  pedidoF5: number
+  pedidoF6: number
+  estimadoParaTopeBuffer: number
+  cantidadDefinitivaOcHoy: number
+  cantidadDefinitivaOcF1: number
+  cantidadDefinitivaOcF2: number
+  cantidadDefinitivaOcF3: number
+  factorVariabilidadVenta: number
+  diasMinimoInv: number
+  diasPromedioInv: number
+  diasMaximoInv: number
+  diasInvCantidadDefinitiva: number
+  diasInvCdF1: number
+  diasInvCdF2: number
+  diasInvCdF3: number
+  diaDePedido: number
+  diaDeLlegada: number
+  fechaEstimadaEntrega: number
+  nomDiaEntrega: number
+  fechaEntregaF1: number
+  fechaEntregaF2: number
+  fechaEntregaF3: number
+  alertaStock: number
+  vidaUtilMinDiasReciboCedi: number
+  alertaVidaUtil: number
+  crossDock: number
+  moq: number
+  subcategoria: number
+  temperaturaAlmacenamiento: number
+  responsableDeCompra: number
+  category: number
+  multiploDeCompra: number
+  estado: number
+  fechaCreacion: number
+  fechaActualizacion: number
   _all: number
 }
 
 
 export type PurchaseSuggestionAvgAggregateInputType = {
   id?: true
-  leadTime?: true
-  finalInventoryDaysQuantity?: true
-  orderToday?: true
-  purchaseStatusId?: true
-  createdById?: true
+  codigoMaterial?: true
+  porcCompra?: true
+  almacen?: true
+  ltReal?: true
+  factorLt?: true
+  frec?: true
+  ump?: true
+  ums?: true
+  venta30DiasDiaDelDia?: true
+  ventaFcDiaAjustada?: true
+  porcDesviacionFcVsVenta?: true
+  porcIncPlaneacionDemanda?: true
+  pedidoPromedioDiaUmp?: true
+  tiendasAgotadas?: true
+  tipologia?: true
+  invTienda?: true
+  stockObjetivoTienda?: true
+  faltanteLlenadoTienda?: true
+  diasInvTienda?: true
+  inventarioFisico?: true
+  inventarioEnTransito?: true
+  diasInvALaFecha?: true
+  diasInvFisicoTransito?: true
+  zonarojaPura?: true
+  zonaroja?: true
+  zonaamarilla?: true
+  zonaverde?: true
+  tamBufferPuroUmp?: true
+  tamBufferUmp?: true
+  demandaCalificada?: true
+  pedidoHoy?: true
+  pedidoF1?: true
+  pedidoF2?: true
+  pedidoF3?: true
+  pedidoF4?: true
+  pedidoF5?: true
+  pedidoF6?: true
+  estimadoParaTopeBuffer?: true
+  cantidadDefinitivaOcHoy?: true
+  cantidadDefinitivaOcF1?: true
+  cantidadDefinitivaOcF2?: true
+  cantidadDefinitivaOcF3?: true
+  factorVariabilidadVenta?: true
+  diasMinimoInv?: true
+  diasPromedioInv?: true
+  diasMaximoInv?: true
+  diasInvCantidadDefinitiva?: true
+  diasInvCdF1?: true
+  diasInvCdF2?: true
+  diasInvCdF3?: true
+  vidaUtilMinDiasReciboCedi?: true
+  moq?: true
+  multiploDeCompra?: true
 }
 
 export type PurchaseSuggestionSumAggregateInputType = {
   id?: true
-  leadTime?: true
-  finalInventoryDaysQuantity?: true
-  orderToday?: true
-  purchaseStatusId?: true
-  createdById?: true
+  codigoMaterial?: true
+  porcCompra?: true
+  almacen?: true
+  ltReal?: true
+  factorLt?: true
+  frec?: true
+  ump?: true
+  ums?: true
+  venta30DiasDiaDelDia?: true
+  ventaFcDiaAjustada?: true
+  porcDesviacionFcVsVenta?: true
+  porcIncPlaneacionDemanda?: true
+  pedidoPromedioDiaUmp?: true
+  tiendasAgotadas?: true
+  tipologia?: true
+  invTienda?: true
+  stockObjetivoTienda?: true
+  faltanteLlenadoTienda?: true
+  diasInvTienda?: true
+  inventarioFisico?: true
+  inventarioEnTransito?: true
+  diasInvALaFecha?: true
+  diasInvFisicoTransito?: true
+  zonarojaPura?: true
+  zonaroja?: true
+  zonaamarilla?: true
+  zonaverde?: true
+  tamBufferPuroUmp?: true
+  tamBufferUmp?: true
+  demandaCalificada?: true
+  pedidoHoy?: true
+  pedidoF1?: true
+  pedidoF2?: true
+  pedidoF3?: true
+  pedidoF4?: true
+  pedidoF5?: true
+  pedidoF6?: true
+  estimadoParaTopeBuffer?: true
+  cantidadDefinitivaOcHoy?: true
+  cantidadDefinitivaOcF1?: true
+  cantidadDefinitivaOcF2?: true
+  cantidadDefinitivaOcF3?: true
+  factorVariabilidadVenta?: true
+  diasMinimoInv?: true
+  diasPromedioInv?: true
+  diasMaximoInv?: true
+  diasInvCantidadDefinitiva?: true
+  diasInvCdF1?: true
+  diasInvCdF2?: true
+  diasInvCdF3?: true
+  vidaUtilMinDiasReciboCedi?: true
+  moq?: true
+  multiploDeCompra?: true
 }
 
 export type PurchaseSuggestionMinAggregateInputType = {
   id?: true
-  materialCode?: true
-  materialDescription?: true
-  supplier?: true
-  supplyCenter?: true
-  warehouse?: true
-  leadTime?: true
-  finalInventoryDaysQuantity?: true
-  orderToday?: true
-  purchaseStatusId?: true
-  createdAt?: true
-  updatedAt?: true
-  createdById?: true
+  mc?: true
+  mca?: true
+  mcap?: true
+  codigoMaterial?: true
+  descripcionMaterial?: true
+  codProv?: true
+  proveedor?: true
+  centroAbastecedor?: true
+  desDentro?: true
+  porcCompra?: true
+  almacen?: true
+  categoria?: true
+  ltReal?: true
+  factorLt?: true
+  frec?: true
+  ump?: true
+  ums?: true
+  venta30DiasDiaDelDia?: true
+  ventaFcDiaAjustada?: true
+  porcDesviacionFcVsVenta?: true
+  porcIncPlaneacionDemanda?: true
+  aplica?: true
+  pedidoPromedioDiaUmp?: true
+  tiendasAgotadas?: true
+  tipologia?: true
+  invTienda?: true
+  stockObjetivoTienda?: true
+  faltanteLlenadoTienda?: true
+  diasInvTienda?: true
+  inventarioFisico?: true
+  inventarioEnTransito?: true
+  diasInvALaFecha?: true
+  diasInvFisicoTransito?: true
+  zonarojaPura?: true
+  zonaroja?: true
+  zonaamarilla?: true
+  zonaverde?: true
+  tamBufferPuroUmp?: true
+  tamBufferUmp?: true
+  demandaCalificada?: true
+  activoLunes?: true
+  activoMartes?: true
+  activoMiercoles?: true
+  activoJueves?: true
+  activoViernes?: true
+  activoSabado?: true
+  activoDomingo?: true
+  pedidoHoy?: true
+  pedidoF1?: true
+  pedidoF2?: true
+  pedidoF3?: true
+  pedidoF4?: true
+  pedidoF5?: true
+  pedidoF6?: true
+  estimadoParaTopeBuffer?: true
+  cantidadDefinitivaOcHoy?: true
+  cantidadDefinitivaOcF1?: true
+  cantidadDefinitivaOcF2?: true
+  cantidadDefinitivaOcF3?: true
+  factorVariabilidadVenta?: true
+  diasMinimoInv?: true
+  diasPromedioInv?: true
+  diasMaximoInv?: true
+  diasInvCantidadDefinitiva?: true
+  diasInvCdF1?: true
+  diasInvCdF2?: true
+  diasInvCdF3?: true
+  diaDePedido?: true
+  diaDeLlegada?: true
+  fechaEstimadaEntrega?: true
+  nomDiaEntrega?: true
+  fechaEntregaF1?: true
+  fechaEntregaF2?: true
+  fechaEntregaF3?: true
+  alertaStock?: true
+  vidaUtilMinDiasReciboCedi?: true
+  alertaVidaUtil?: true
+  crossDock?: true
+  moq?: true
+  subcategoria?: true
+  temperaturaAlmacenamiento?: true
+  responsableDeCompra?: true
+  category?: true
+  multiploDeCompra?: true
+  estado?: true
+  fechaCreacion?: true
+  fechaActualizacion?: true
 }
 
 export type PurchaseSuggestionMaxAggregateInputType = {
   id?: true
-  materialCode?: true
-  materialDescription?: true
-  supplier?: true
-  supplyCenter?: true
-  warehouse?: true
-  leadTime?: true
-  finalInventoryDaysQuantity?: true
-  orderToday?: true
-  purchaseStatusId?: true
-  createdAt?: true
-  updatedAt?: true
-  createdById?: true
+  mc?: true
+  mca?: true
+  mcap?: true
+  codigoMaterial?: true
+  descripcionMaterial?: true
+  codProv?: true
+  proveedor?: true
+  centroAbastecedor?: true
+  desDentro?: true
+  porcCompra?: true
+  almacen?: true
+  categoria?: true
+  ltReal?: true
+  factorLt?: true
+  frec?: true
+  ump?: true
+  ums?: true
+  venta30DiasDiaDelDia?: true
+  ventaFcDiaAjustada?: true
+  porcDesviacionFcVsVenta?: true
+  porcIncPlaneacionDemanda?: true
+  aplica?: true
+  pedidoPromedioDiaUmp?: true
+  tiendasAgotadas?: true
+  tipologia?: true
+  invTienda?: true
+  stockObjetivoTienda?: true
+  faltanteLlenadoTienda?: true
+  diasInvTienda?: true
+  inventarioFisico?: true
+  inventarioEnTransito?: true
+  diasInvALaFecha?: true
+  diasInvFisicoTransito?: true
+  zonarojaPura?: true
+  zonaroja?: true
+  zonaamarilla?: true
+  zonaverde?: true
+  tamBufferPuroUmp?: true
+  tamBufferUmp?: true
+  demandaCalificada?: true
+  activoLunes?: true
+  activoMartes?: true
+  activoMiercoles?: true
+  activoJueves?: true
+  activoViernes?: true
+  activoSabado?: true
+  activoDomingo?: true
+  pedidoHoy?: true
+  pedidoF1?: true
+  pedidoF2?: true
+  pedidoF3?: true
+  pedidoF4?: true
+  pedidoF5?: true
+  pedidoF6?: true
+  estimadoParaTopeBuffer?: true
+  cantidadDefinitivaOcHoy?: true
+  cantidadDefinitivaOcF1?: true
+  cantidadDefinitivaOcF2?: true
+  cantidadDefinitivaOcF3?: true
+  factorVariabilidadVenta?: true
+  diasMinimoInv?: true
+  diasPromedioInv?: true
+  diasMaximoInv?: true
+  diasInvCantidadDefinitiva?: true
+  diasInvCdF1?: true
+  diasInvCdF2?: true
+  diasInvCdF3?: true
+  diaDePedido?: true
+  diaDeLlegada?: true
+  fechaEstimadaEntrega?: true
+  nomDiaEntrega?: true
+  fechaEntregaF1?: true
+  fechaEntregaF2?: true
+  fechaEntregaF3?: true
+  alertaStock?: true
+  vidaUtilMinDiasReciboCedi?: true
+  alertaVidaUtil?: true
+  crossDock?: true
+  moq?: true
+  subcategoria?: true
+  temperaturaAlmacenamiento?: true
+  responsableDeCompra?: true
+  category?: true
+  multiploDeCompra?: true
+  estado?: true
+  fechaCreacion?: true
+  fechaActualizacion?: true
 }
 
 export type PurchaseSuggestionCountAggregateInputType = {
   id?: true
-  materialCode?: true
-  materialDescription?: true
-  supplier?: true
-  supplyCenter?: true
-  warehouse?: true
-  leadTime?: true
-  finalInventoryDaysQuantity?: true
-  orderToday?: true
-  purchaseStatusId?: true
-  createdAt?: true
-  updatedAt?: true
-  createdById?: true
+  mc?: true
+  mca?: true
+  mcap?: true
+  codigoMaterial?: true
+  descripcionMaterial?: true
+  codProv?: true
+  proveedor?: true
+  centroAbastecedor?: true
+  desDentro?: true
+  porcCompra?: true
+  almacen?: true
+  categoria?: true
+  ltReal?: true
+  factorLt?: true
+  frec?: true
+  ump?: true
+  ums?: true
+  venta30DiasDiaDelDia?: true
+  ventaFcDiaAjustada?: true
+  porcDesviacionFcVsVenta?: true
+  porcIncPlaneacionDemanda?: true
+  aplica?: true
+  pedidoPromedioDiaUmp?: true
+  tiendasAgotadas?: true
+  tipologia?: true
+  invTienda?: true
+  stockObjetivoTienda?: true
+  faltanteLlenadoTienda?: true
+  diasInvTienda?: true
+  inventarioFisico?: true
+  inventarioEnTransito?: true
+  diasInvALaFecha?: true
+  diasInvFisicoTransito?: true
+  zonarojaPura?: true
+  zonaroja?: true
+  zonaamarilla?: true
+  zonaverde?: true
+  tamBufferPuroUmp?: true
+  tamBufferUmp?: true
+  demandaCalificada?: true
+  activoLunes?: true
+  activoMartes?: true
+  activoMiercoles?: true
+  activoJueves?: true
+  activoViernes?: true
+  activoSabado?: true
+  activoDomingo?: true
+  pedidoHoy?: true
+  pedidoF1?: true
+  pedidoF2?: true
+  pedidoF3?: true
+  pedidoF4?: true
+  pedidoF5?: true
+  pedidoF6?: true
+  estimadoParaTopeBuffer?: true
+  cantidadDefinitivaOcHoy?: true
+  cantidadDefinitivaOcF1?: true
+  cantidadDefinitivaOcF2?: true
+  cantidadDefinitivaOcF3?: true
+  factorVariabilidadVenta?: true
+  diasMinimoInv?: true
+  diasPromedioInv?: true
+  diasMaximoInv?: true
+  diasInvCantidadDefinitiva?: true
+  diasInvCdF1?: true
+  diasInvCdF2?: true
+  diasInvCdF3?: true
+  diaDePedido?: true
+  diaDeLlegada?: true
+  fechaEstimadaEntrega?: true
+  nomDiaEntrega?: true
+  fechaEntregaF1?: true
+  fechaEntregaF2?: true
+  fechaEntregaF3?: true
+  alertaStock?: true
+  vidaUtilMinDiasReciboCedi?: true
+  alertaVidaUtil?: true
+  crossDock?: true
+  moq?: true
+  subcategoria?: true
+  temperaturaAlmacenamiento?: true
+  responsableDeCompra?: true
+  category?: true
+  multiploDeCompra?: true
+  estado?: true
+  fechaCreacion?: true
+  fechaActualizacion?: true
   _all?: true
 }
 
@@ -249,18 +891,93 @@ export type PurchaseSuggestionGroupByArgs<ExtArgs extends runtime.Types.Extensio
 
 export type PurchaseSuggestionGroupByOutputType = {
   id: number
-  materialCode: string
-  materialDescription: string
-  supplier: string
-  supplyCenter: string
-  warehouse: string
-  leadTime: number
-  finalInventoryDaysQuantity: number
-  orderToday: number
-  purchaseStatusId: number
-  createdAt: Date
-  updatedAt: Date
-  createdById: number
+  mc: string
+  mca: string
+  mcap: string | null
+  codigoMaterial: number
+  descripcionMaterial: string
+  codProv: string
+  proveedor: string
+  centroAbastecedor: string
+  desDentro: string | null
+  porcCompra: number | null
+  almacen: number
+  categoria: string | null
+  ltReal: number
+  factorLt: runtime.Decimal
+  frec: runtime.Decimal
+  ump: number
+  ums: number
+  venta30DiasDiaDelDia: runtime.Decimal
+  ventaFcDiaAjustada: runtime.Decimal
+  porcDesviacionFcVsVenta: runtime.Decimal | null
+  porcIncPlaneacionDemanda: runtime.Decimal | null
+  aplica: string | null
+  pedidoPromedioDiaUmp: number
+  tiendasAgotadas: number | null
+  tipologia: number | null
+  invTienda: runtime.Decimal | null
+  stockObjetivoTienda: runtime.Decimal | null
+  faltanteLlenadoTienda: runtime.Decimal | null
+  diasInvTienda: runtime.Decimal | null
+  inventarioFisico: runtime.Decimal | null
+  inventarioEnTransito: number | null
+  diasInvALaFecha: runtime.Decimal | null
+  diasInvFisicoTransito: runtime.Decimal | null
+  zonarojaPura: runtime.Decimal | null
+  zonaroja: runtime.Decimal | null
+  zonaamarilla: runtime.Decimal | null
+  zonaverde: runtime.Decimal | null
+  tamBufferPuroUmp: runtime.Decimal | null
+  tamBufferUmp: runtime.Decimal | null
+  demandaCalificada: runtime.Decimal | null
+  activoLunes: boolean
+  activoMartes: boolean
+  activoMiercoles: boolean
+  activoJueves: boolean
+  activoViernes: boolean
+  activoSabado: boolean
+  activoDomingo: boolean
+  pedidoHoy: number
+  pedidoF1: number | null
+  pedidoF2: number | null
+  pedidoF3: number | null
+  pedidoF4: number | null
+  pedidoF5: number | null
+  pedidoF6: number | null
+  estimadoParaTopeBuffer: number | null
+  cantidadDefinitivaOcHoy: runtime.Decimal | null
+  cantidadDefinitivaOcF1: runtime.Decimal | null
+  cantidadDefinitivaOcF2: runtime.Decimal | null
+  cantidadDefinitivaOcF3: runtime.Decimal | null
+  factorVariabilidadVenta: runtime.Decimal | null
+  diasMinimoInv: runtime.Decimal | null
+  diasPromedioInv: runtime.Decimal | null
+  diasMaximoInv: runtime.Decimal | null
+  diasInvCantidadDefinitiva: runtime.Decimal | null
+  diasInvCdF1: runtime.Decimal | null
+  diasInvCdF2: runtime.Decimal | null
+  diasInvCdF3: runtime.Decimal | null
+  diaDePedido: string | null
+  diaDeLlegada: string | null
+  fechaEstimadaEntrega: Date | null
+  nomDiaEntrega: string | null
+  fechaEntregaF1: Date | null
+  fechaEntregaF2: Date | null
+  fechaEntregaF3: Date | null
+  alertaStock: string | null
+  vidaUtilMinDiasReciboCedi: number | null
+  alertaVidaUtil: string | null
+  crossDock: boolean | null
+  moq: number | null
+  subcategoria: string | null
+  temperaturaAlmacenamiento: string | null
+  responsableDeCompra: string | null
+  category: string | null
+  multiploDeCompra: number | null
+  estado: string | null
+  fechaCreacion: Date
+  fechaActualizacion: Date
   _count: PurchaseSuggestionCountAggregateOutputType | null
   _avg: PurchaseSuggestionAvgAggregateOutputType | null
   _sum: PurchaseSuggestionSumAggregateOutputType | null
@@ -288,78 +1005,375 @@ export type PurchaseSuggestionWhereInput = {
   OR?: Prisma.PurchaseSuggestionWhereInput[]
   NOT?: Prisma.PurchaseSuggestionWhereInput | Prisma.PurchaseSuggestionWhereInput[]
   id?: Prisma.IntFilter<"PurchaseSuggestion"> | number
-  materialCode?: Prisma.StringFilter<"PurchaseSuggestion"> | string
-  materialDescription?: Prisma.StringFilter<"PurchaseSuggestion"> | string
-  supplier?: Prisma.StringFilter<"PurchaseSuggestion"> | string
-  supplyCenter?: Prisma.StringFilter<"PurchaseSuggestion"> | string
-  warehouse?: Prisma.StringFilter<"PurchaseSuggestion"> | string
-  leadTime?: Prisma.IntFilter<"PurchaseSuggestion"> | number
-  finalInventoryDaysQuantity?: Prisma.FloatFilter<"PurchaseSuggestion"> | number
-  orderToday?: Prisma.IntFilter<"PurchaseSuggestion"> | number
-  purchaseStatusId?: Prisma.IntFilter<"PurchaseSuggestion"> | number
-  createdAt?: Prisma.DateTimeFilter<"PurchaseSuggestion"> | Date | string
-  updatedAt?: Prisma.DateTimeFilter<"PurchaseSuggestion"> | Date | string
-  createdById?: Prisma.IntFilter<"PurchaseSuggestion"> | number
-  status?: Prisma.XOR<Prisma.PurchaseSuggestionStatusScalarRelationFilter, Prisma.PurchaseSuggestionStatusWhereInput>
-  createdBy?: Prisma.XOR<Prisma.UserScalarRelationFilter, Prisma.UserWhereInput>
-  history?: Prisma.PurchaseHistoryListRelationFilter
+  mc?: Prisma.StringFilter<"PurchaseSuggestion"> | string
+  mca?: Prisma.StringFilter<"PurchaseSuggestion"> | string
+  mcap?: Prisma.StringNullableFilter<"PurchaseSuggestion"> | string | null
+  codigoMaterial?: Prisma.IntFilter<"PurchaseSuggestion"> | number
+  descripcionMaterial?: Prisma.StringFilter<"PurchaseSuggestion"> | string
+  codProv?: Prisma.StringFilter<"PurchaseSuggestion"> | string
+  proveedor?: Prisma.StringFilter<"PurchaseSuggestion"> | string
+  centroAbastecedor?: Prisma.StringFilter<"PurchaseSuggestion"> | string
+  desDentro?: Prisma.StringNullableFilter<"PurchaseSuggestion"> | string | null
+  porcCompra?: Prisma.IntNullableFilter<"PurchaseSuggestion"> | number | null
+  almacen?: Prisma.IntFilter<"PurchaseSuggestion"> | number
+  categoria?: Prisma.StringNullableFilter<"PurchaseSuggestion"> | string | null
+  ltReal?: Prisma.IntFilter<"PurchaseSuggestion"> | number
+  factorLt?: Prisma.DecimalFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  frec?: Prisma.DecimalFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  ump?: Prisma.IntFilter<"PurchaseSuggestion"> | number
+  ums?: Prisma.IntFilter<"PurchaseSuggestion"> | number
+  venta30DiasDiaDelDia?: Prisma.DecimalFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  ventaFcDiaAjustada?: Prisma.DecimalFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  porcDesviacionFcVsVenta?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  porcIncPlaneacionDemanda?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  aplica?: Prisma.StringNullableFilter<"PurchaseSuggestion"> | string | null
+  pedidoPromedioDiaUmp?: Prisma.IntFilter<"PurchaseSuggestion"> | number
+  tiendasAgotadas?: Prisma.IntNullableFilter<"PurchaseSuggestion"> | number | null
+  tipologia?: Prisma.IntNullableFilter<"PurchaseSuggestion"> | number | null
+  invTienda?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  stockObjetivoTienda?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  faltanteLlenadoTienda?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvTienda?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  inventarioFisico?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  inventarioEnTransito?: Prisma.IntNullableFilter<"PurchaseSuggestion"> | number | null
+  diasInvALaFecha?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvFisicoTransito?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonarojaPura?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaroja?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaamarilla?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaverde?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  tamBufferPuroUmp?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  tamBufferUmp?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  demandaCalificada?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  activoLunes?: Prisma.BoolFilter<"PurchaseSuggestion"> | boolean
+  activoMartes?: Prisma.BoolFilter<"PurchaseSuggestion"> | boolean
+  activoMiercoles?: Prisma.BoolFilter<"PurchaseSuggestion"> | boolean
+  activoJueves?: Prisma.BoolFilter<"PurchaseSuggestion"> | boolean
+  activoViernes?: Prisma.BoolFilter<"PurchaseSuggestion"> | boolean
+  activoSabado?: Prisma.BoolFilter<"PurchaseSuggestion"> | boolean
+  activoDomingo?: Prisma.BoolFilter<"PurchaseSuggestion"> | boolean
+  pedidoHoy?: Prisma.IntFilter<"PurchaseSuggestion"> | number
+  pedidoF1?: Prisma.IntNullableFilter<"PurchaseSuggestion"> | number | null
+  pedidoF2?: Prisma.IntNullableFilter<"PurchaseSuggestion"> | number | null
+  pedidoF3?: Prisma.IntNullableFilter<"PurchaseSuggestion"> | number | null
+  pedidoF4?: Prisma.IntNullableFilter<"PurchaseSuggestion"> | number | null
+  pedidoF5?: Prisma.IntNullableFilter<"PurchaseSuggestion"> | number | null
+  pedidoF6?: Prisma.IntNullableFilter<"PurchaseSuggestion"> | number | null
+  estimadoParaTopeBuffer?: Prisma.IntNullableFilter<"PurchaseSuggestion"> | number | null
+  cantidadDefinitivaOcHoy?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF1?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF2?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF3?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  factorVariabilidadVenta?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasMinimoInv?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasPromedioInv?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasMaximoInv?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCantidadDefinitiva?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF1?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF2?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF3?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diaDePedido?: Prisma.StringNullableFilter<"PurchaseSuggestion"> | string | null
+  diaDeLlegada?: Prisma.StringNullableFilter<"PurchaseSuggestion"> | string | null
+  fechaEstimadaEntrega?: Prisma.DateTimeNullableFilter<"PurchaseSuggestion"> | Date | string | null
+  nomDiaEntrega?: Prisma.StringNullableFilter<"PurchaseSuggestion"> | string | null
+  fechaEntregaF1?: Prisma.DateTimeNullableFilter<"PurchaseSuggestion"> | Date | string | null
+  fechaEntregaF2?: Prisma.DateTimeNullableFilter<"PurchaseSuggestion"> | Date | string | null
+  fechaEntregaF3?: Prisma.DateTimeNullableFilter<"PurchaseSuggestion"> | Date | string | null
+  alertaStock?: Prisma.StringNullableFilter<"PurchaseSuggestion"> | string | null
+  vidaUtilMinDiasReciboCedi?: Prisma.IntNullableFilter<"PurchaseSuggestion"> | number | null
+  alertaVidaUtil?: Prisma.StringNullableFilter<"PurchaseSuggestion"> | string | null
+  crossDock?: Prisma.BoolNullableFilter<"PurchaseSuggestion"> | boolean | null
+  moq?: Prisma.IntNullableFilter<"PurchaseSuggestion"> | number | null
+  subcategoria?: Prisma.StringNullableFilter<"PurchaseSuggestion"> | string | null
+  temperaturaAlmacenamiento?: Prisma.StringNullableFilter<"PurchaseSuggestion"> | string | null
+  responsableDeCompra?: Prisma.StringNullableFilter<"PurchaseSuggestion"> | string | null
+  category?: Prisma.StringNullableFilter<"PurchaseSuggestion"> | string | null
+  multiploDeCompra?: Prisma.IntNullableFilter<"PurchaseSuggestion"> | number | null
+  estado?: Prisma.StringNullableFilter<"PurchaseSuggestion"> | string | null
+  fechaCreacion?: Prisma.DateTimeFilter<"PurchaseSuggestion"> | Date | string
+  fechaActualizacion?: Prisma.DateTimeFilter<"PurchaseSuggestion"> | Date | string
+  historial?: Prisma.PurchaseSuggestionHistoryListRelationFilter
+  estadoCompraSugerida?: Prisma.XOR<Prisma.PurchaseSuggestionStatusNullableScalarRelationFilter, Prisma.PurchaseSuggestionStatusWhereInput> | null
 }
 
 export type PurchaseSuggestionOrderByWithRelationInput = {
   id?: Prisma.SortOrder
-  materialCode?: Prisma.SortOrder
-  materialDescription?: Prisma.SortOrder
-  supplier?: Prisma.SortOrder
-  supplyCenter?: Prisma.SortOrder
-  warehouse?: Prisma.SortOrder
-  leadTime?: Prisma.SortOrder
-  finalInventoryDaysQuantity?: Prisma.SortOrder
-  orderToday?: Prisma.SortOrder
-  purchaseStatusId?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  updatedAt?: Prisma.SortOrder
-  createdById?: Prisma.SortOrder
-  status?: Prisma.PurchaseSuggestionStatusOrderByWithRelationInput
-  createdBy?: Prisma.UserOrderByWithRelationInput
-  history?: Prisma.PurchaseHistoryOrderByRelationAggregateInput
+  mc?: Prisma.SortOrder
+  mca?: Prisma.SortOrder
+  mcap?: Prisma.SortOrderInput | Prisma.SortOrder
+  codigoMaterial?: Prisma.SortOrder
+  descripcionMaterial?: Prisma.SortOrder
+  codProv?: Prisma.SortOrder
+  proveedor?: Prisma.SortOrder
+  centroAbastecedor?: Prisma.SortOrder
+  desDentro?: Prisma.SortOrderInput | Prisma.SortOrder
+  porcCompra?: Prisma.SortOrderInput | Prisma.SortOrder
+  almacen?: Prisma.SortOrder
+  categoria?: Prisma.SortOrderInput | Prisma.SortOrder
+  ltReal?: Prisma.SortOrder
+  factorLt?: Prisma.SortOrder
+  frec?: Prisma.SortOrder
+  ump?: Prisma.SortOrder
+  ums?: Prisma.SortOrder
+  venta30DiasDiaDelDia?: Prisma.SortOrder
+  ventaFcDiaAjustada?: Prisma.SortOrder
+  porcDesviacionFcVsVenta?: Prisma.SortOrderInput | Prisma.SortOrder
+  porcIncPlaneacionDemanda?: Prisma.SortOrderInput | Prisma.SortOrder
+  aplica?: Prisma.SortOrderInput | Prisma.SortOrder
+  pedidoPromedioDiaUmp?: Prisma.SortOrder
+  tiendasAgotadas?: Prisma.SortOrderInput | Prisma.SortOrder
+  tipologia?: Prisma.SortOrderInput | Prisma.SortOrder
+  invTienda?: Prisma.SortOrderInput | Prisma.SortOrder
+  stockObjetivoTienda?: Prisma.SortOrderInput | Prisma.SortOrder
+  faltanteLlenadoTienda?: Prisma.SortOrderInput | Prisma.SortOrder
+  diasInvTienda?: Prisma.SortOrderInput | Prisma.SortOrder
+  inventarioFisico?: Prisma.SortOrderInput | Prisma.SortOrder
+  inventarioEnTransito?: Prisma.SortOrderInput | Prisma.SortOrder
+  diasInvALaFecha?: Prisma.SortOrderInput | Prisma.SortOrder
+  diasInvFisicoTransito?: Prisma.SortOrderInput | Prisma.SortOrder
+  zonarojaPura?: Prisma.SortOrderInput | Prisma.SortOrder
+  zonaroja?: Prisma.SortOrderInput | Prisma.SortOrder
+  zonaamarilla?: Prisma.SortOrderInput | Prisma.SortOrder
+  zonaverde?: Prisma.SortOrderInput | Prisma.SortOrder
+  tamBufferPuroUmp?: Prisma.SortOrderInput | Prisma.SortOrder
+  tamBufferUmp?: Prisma.SortOrderInput | Prisma.SortOrder
+  demandaCalificada?: Prisma.SortOrderInput | Prisma.SortOrder
+  activoLunes?: Prisma.SortOrder
+  activoMartes?: Prisma.SortOrder
+  activoMiercoles?: Prisma.SortOrder
+  activoJueves?: Prisma.SortOrder
+  activoViernes?: Prisma.SortOrder
+  activoSabado?: Prisma.SortOrder
+  activoDomingo?: Prisma.SortOrder
+  pedidoHoy?: Prisma.SortOrder
+  pedidoF1?: Prisma.SortOrderInput | Prisma.SortOrder
+  pedidoF2?: Prisma.SortOrderInput | Prisma.SortOrder
+  pedidoF3?: Prisma.SortOrderInput | Prisma.SortOrder
+  pedidoF4?: Prisma.SortOrderInput | Prisma.SortOrder
+  pedidoF5?: Prisma.SortOrderInput | Prisma.SortOrder
+  pedidoF6?: Prisma.SortOrderInput | Prisma.SortOrder
+  estimadoParaTopeBuffer?: Prisma.SortOrderInput | Prisma.SortOrder
+  cantidadDefinitivaOcHoy?: Prisma.SortOrderInput | Prisma.SortOrder
+  cantidadDefinitivaOcF1?: Prisma.SortOrderInput | Prisma.SortOrder
+  cantidadDefinitivaOcF2?: Prisma.SortOrderInput | Prisma.SortOrder
+  cantidadDefinitivaOcF3?: Prisma.SortOrderInput | Prisma.SortOrder
+  factorVariabilidadVenta?: Prisma.SortOrderInput | Prisma.SortOrder
+  diasMinimoInv?: Prisma.SortOrderInput | Prisma.SortOrder
+  diasPromedioInv?: Prisma.SortOrderInput | Prisma.SortOrder
+  diasMaximoInv?: Prisma.SortOrderInput | Prisma.SortOrder
+  diasInvCantidadDefinitiva?: Prisma.SortOrderInput | Prisma.SortOrder
+  diasInvCdF1?: Prisma.SortOrderInput | Prisma.SortOrder
+  diasInvCdF2?: Prisma.SortOrderInput | Prisma.SortOrder
+  diasInvCdF3?: Prisma.SortOrderInput | Prisma.SortOrder
+  diaDePedido?: Prisma.SortOrderInput | Prisma.SortOrder
+  diaDeLlegada?: Prisma.SortOrderInput | Prisma.SortOrder
+  fechaEstimadaEntrega?: Prisma.SortOrderInput | Prisma.SortOrder
+  nomDiaEntrega?: Prisma.SortOrderInput | Prisma.SortOrder
+  fechaEntregaF1?: Prisma.SortOrderInput | Prisma.SortOrder
+  fechaEntregaF2?: Prisma.SortOrderInput | Prisma.SortOrder
+  fechaEntregaF3?: Prisma.SortOrderInput | Prisma.SortOrder
+  alertaStock?: Prisma.SortOrderInput | Prisma.SortOrder
+  vidaUtilMinDiasReciboCedi?: Prisma.SortOrderInput | Prisma.SortOrder
+  alertaVidaUtil?: Prisma.SortOrderInput | Prisma.SortOrder
+  crossDock?: Prisma.SortOrderInput | Prisma.SortOrder
+  moq?: Prisma.SortOrderInput | Prisma.SortOrder
+  subcategoria?: Prisma.SortOrderInput | Prisma.SortOrder
+  temperaturaAlmacenamiento?: Prisma.SortOrderInput | Prisma.SortOrder
+  responsableDeCompra?: Prisma.SortOrderInput | Prisma.SortOrder
+  category?: Prisma.SortOrderInput | Prisma.SortOrder
+  multiploDeCompra?: Prisma.SortOrderInput | Prisma.SortOrder
+  estado?: Prisma.SortOrderInput | Prisma.SortOrder
+  fechaCreacion?: Prisma.SortOrder
+  fechaActualizacion?: Prisma.SortOrder
+  historial?: Prisma.PurchaseSuggestionHistoryOrderByRelationAggregateInput
+  estadoCompraSugerida?: Prisma.PurchaseSuggestionStatusOrderByWithRelationInput
 }
 
 export type PurchaseSuggestionWhereUniqueInput = Prisma.AtLeast<{
   id?: number
+  mc?: string
   AND?: Prisma.PurchaseSuggestionWhereInput | Prisma.PurchaseSuggestionWhereInput[]
   OR?: Prisma.PurchaseSuggestionWhereInput[]
   NOT?: Prisma.PurchaseSuggestionWhereInput | Prisma.PurchaseSuggestionWhereInput[]
-  materialCode?: Prisma.StringFilter<"PurchaseSuggestion"> | string
-  materialDescription?: Prisma.StringFilter<"PurchaseSuggestion"> | string
-  supplier?: Prisma.StringFilter<"PurchaseSuggestion"> | string
-  supplyCenter?: Prisma.StringFilter<"PurchaseSuggestion"> | string
-  warehouse?: Prisma.StringFilter<"PurchaseSuggestion"> | string
-  leadTime?: Prisma.IntFilter<"PurchaseSuggestion"> | number
-  finalInventoryDaysQuantity?: Prisma.FloatFilter<"PurchaseSuggestion"> | number
-  orderToday?: Prisma.IntFilter<"PurchaseSuggestion"> | number
-  purchaseStatusId?: Prisma.IntFilter<"PurchaseSuggestion"> | number
-  createdAt?: Prisma.DateTimeFilter<"PurchaseSuggestion"> | Date | string
-  updatedAt?: Prisma.DateTimeFilter<"PurchaseSuggestion"> | Date | string
-  createdById?: Prisma.IntFilter<"PurchaseSuggestion"> | number
-  status?: Prisma.XOR<Prisma.PurchaseSuggestionStatusScalarRelationFilter, Prisma.PurchaseSuggestionStatusWhereInput>
-  createdBy?: Prisma.XOR<Prisma.UserScalarRelationFilter, Prisma.UserWhereInput>
-  history?: Prisma.PurchaseHistoryListRelationFilter
-}, "id">
+  mca?: Prisma.StringFilter<"PurchaseSuggestion"> | string
+  mcap?: Prisma.StringNullableFilter<"PurchaseSuggestion"> | string | null
+  codigoMaterial?: Prisma.IntFilter<"PurchaseSuggestion"> | number
+  descripcionMaterial?: Prisma.StringFilter<"PurchaseSuggestion"> | string
+  codProv?: Prisma.StringFilter<"PurchaseSuggestion"> | string
+  proveedor?: Prisma.StringFilter<"PurchaseSuggestion"> | string
+  centroAbastecedor?: Prisma.StringFilter<"PurchaseSuggestion"> | string
+  desDentro?: Prisma.StringNullableFilter<"PurchaseSuggestion"> | string | null
+  porcCompra?: Prisma.IntNullableFilter<"PurchaseSuggestion"> | number | null
+  almacen?: Prisma.IntFilter<"PurchaseSuggestion"> | number
+  categoria?: Prisma.StringNullableFilter<"PurchaseSuggestion"> | string | null
+  ltReal?: Prisma.IntFilter<"PurchaseSuggestion"> | number
+  factorLt?: Prisma.DecimalFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  frec?: Prisma.DecimalFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  ump?: Prisma.IntFilter<"PurchaseSuggestion"> | number
+  ums?: Prisma.IntFilter<"PurchaseSuggestion"> | number
+  venta30DiasDiaDelDia?: Prisma.DecimalFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  ventaFcDiaAjustada?: Prisma.DecimalFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  porcDesviacionFcVsVenta?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  porcIncPlaneacionDemanda?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  aplica?: Prisma.StringNullableFilter<"PurchaseSuggestion"> | string | null
+  pedidoPromedioDiaUmp?: Prisma.IntFilter<"PurchaseSuggestion"> | number
+  tiendasAgotadas?: Prisma.IntNullableFilter<"PurchaseSuggestion"> | number | null
+  tipologia?: Prisma.IntNullableFilter<"PurchaseSuggestion"> | number | null
+  invTienda?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  stockObjetivoTienda?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  faltanteLlenadoTienda?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvTienda?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  inventarioFisico?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  inventarioEnTransito?: Prisma.IntNullableFilter<"PurchaseSuggestion"> | number | null
+  diasInvALaFecha?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvFisicoTransito?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonarojaPura?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaroja?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaamarilla?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaverde?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  tamBufferPuroUmp?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  tamBufferUmp?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  demandaCalificada?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  activoLunes?: Prisma.BoolFilter<"PurchaseSuggestion"> | boolean
+  activoMartes?: Prisma.BoolFilter<"PurchaseSuggestion"> | boolean
+  activoMiercoles?: Prisma.BoolFilter<"PurchaseSuggestion"> | boolean
+  activoJueves?: Prisma.BoolFilter<"PurchaseSuggestion"> | boolean
+  activoViernes?: Prisma.BoolFilter<"PurchaseSuggestion"> | boolean
+  activoSabado?: Prisma.BoolFilter<"PurchaseSuggestion"> | boolean
+  activoDomingo?: Prisma.BoolFilter<"PurchaseSuggestion"> | boolean
+  pedidoHoy?: Prisma.IntFilter<"PurchaseSuggestion"> | number
+  pedidoF1?: Prisma.IntNullableFilter<"PurchaseSuggestion"> | number | null
+  pedidoF2?: Prisma.IntNullableFilter<"PurchaseSuggestion"> | number | null
+  pedidoF3?: Prisma.IntNullableFilter<"PurchaseSuggestion"> | number | null
+  pedidoF4?: Prisma.IntNullableFilter<"PurchaseSuggestion"> | number | null
+  pedidoF5?: Prisma.IntNullableFilter<"PurchaseSuggestion"> | number | null
+  pedidoF6?: Prisma.IntNullableFilter<"PurchaseSuggestion"> | number | null
+  estimadoParaTopeBuffer?: Prisma.IntNullableFilter<"PurchaseSuggestion"> | number | null
+  cantidadDefinitivaOcHoy?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF1?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF2?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF3?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  factorVariabilidadVenta?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasMinimoInv?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasPromedioInv?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasMaximoInv?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCantidadDefinitiva?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF1?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF2?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF3?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diaDePedido?: Prisma.StringNullableFilter<"PurchaseSuggestion"> | string | null
+  diaDeLlegada?: Prisma.StringNullableFilter<"PurchaseSuggestion"> | string | null
+  fechaEstimadaEntrega?: Prisma.DateTimeNullableFilter<"PurchaseSuggestion"> | Date | string | null
+  nomDiaEntrega?: Prisma.StringNullableFilter<"PurchaseSuggestion"> | string | null
+  fechaEntregaF1?: Prisma.DateTimeNullableFilter<"PurchaseSuggestion"> | Date | string | null
+  fechaEntregaF2?: Prisma.DateTimeNullableFilter<"PurchaseSuggestion"> | Date | string | null
+  fechaEntregaF3?: Prisma.DateTimeNullableFilter<"PurchaseSuggestion"> | Date | string | null
+  alertaStock?: Prisma.StringNullableFilter<"PurchaseSuggestion"> | string | null
+  vidaUtilMinDiasReciboCedi?: Prisma.IntNullableFilter<"PurchaseSuggestion"> | number | null
+  alertaVidaUtil?: Prisma.StringNullableFilter<"PurchaseSuggestion"> | string | null
+  crossDock?: Prisma.BoolNullableFilter<"PurchaseSuggestion"> | boolean | null
+  moq?: Prisma.IntNullableFilter<"PurchaseSuggestion"> | number | null
+  subcategoria?: Prisma.StringNullableFilter<"PurchaseSuggestion"> | string | null
+  temperaturaAlmacenamiento?: Prisma.StringNullableFilter<"PurchaseSuggestion"> | string | null
+  responsableDeCompra?: Prisma.StringNullableFilter<"PurchaseSuggestion"> | string | null
+  category?: Prisma.StringNullableFilter<"PurchaseSuggestion"> | string | null
+  multiploDeCompra?: Prisma.IntNullableFilter<"PurchaseSuggestion"> | number | null
+  estado?: Prisma.StringNullableFilter<"PurchaseSuggestion"> | string | null
+  fechaCreacion?: Prisma.DateTimeFilter<"PurchaseSuggestion"> | Date | string
+  fechaActualizacion?: Prisma.DateTimeFilter<"PurchaseSuggestion"> | Date | string
+  historial?: Prisma.PurchaseSuggestionHistoryListRelationFilter
+  estadoCompraSugerida?: Prisma.XOR<Prisma.PurchaseSuggestionStatusNullableScalarRelationFilter, Prisma.PurchaseSuggestionStatusWhereInput> | null
+}, "id" | "mc">
 
 export type PurchaseSuggestionOrderByWithAggregationInput = {
   id?: Prisma.SortOrder
-  materialCode?: Prisma.SortOrder
-  materialDescription?: Prisma.SortOrder
-  supplier?: Prisma.SortOrder
-  supplyCenter?: Prisma.SortOrder
-  warehouse?: Prisma.SortOrder
-  leadTime?: Prisma.SortOrder
-  finalInventoryDaysQuantity?: Prisma.SortOrder
-  orderToday?: Prisma.SortOrder
-  purchaseStatusId?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  updatedAt?: Prisma.SortOrder
-  createdById?: Prisma.SortOrder
+  mc?: Prisma.SortOrder
+  mca?: Prisma.SortOrder
+  mcap?: Prisma.SortOrderInput | Prisma.SortOrder
+  codigoMaterial?: Prisma.SortOrder
+  descripcionMaterial?: Prisma.SortOrder
+  codProv?: Prisma.SortOrder
+  proveedor?: Prisma.SortOrder
+  centroAbastecedor?: Prisma.SortOrder
+  desDentro?: Prisma.SortOrderInput | Prisma.SortOrder
+  porcCompra?: Prisma.SortOrderInput | Prisma.SortOrder
+  almacen?: Prisma.SortOrder
+  categoria?: Prisma.SortOrderInput | Prisma.SortOrder
+  ltReal?: Prisma.SortOrder
+  factorLt?: Prisma.SortOrder
+  frec?: Prisma.SortOrder
+  ump?: Prisma.SortOrder
+  ums?: Prisma.SortOrder
+  venta30DiasDiaDelDia?: Prisma.SortOrder
+  ventaFcDiaAjustada?: Prisma.SortOrder
+  porcDesviacionFcVsVenta?: Prisma.SortOrderInput | Prisma.SortOrder
+  porcIncPlaneacionDemanda?: Prisma.SortOrderInput | Prisma.SortOrder
+  aplica?: Prisma.SortOrderInput | Prisma.SortOrder
+  pedidoPromedioDiaUmp?: Prisma.SortOrder
+  tiendasAgotadas?: Prisma.SortOrderInput | Prisma.SortOrder
+  tipologia?: Prisma.SortOrderInput | Prisma.SortOrder
+  invTienda?: Prisma.SortOrderInput | Prisma.SortOrder
+  stockObjetivoTienda?: Prisma.SortOrderInput | Prisma.SortOrder
+  faltanteLlenadoTienda?: Prisma.SortOrderInput | Prisma.SortOrder
+  diasInvTienda?: Prisma.SortOrderInput | Prisma.SortOrder
+  inventarioFisico?: Prisma.SortOrderInput | Prisma.SortOrder
+  inventarioEnTransito?: Prisma.SortOrderInput | Prisma.SortOrder
+  diasInvALaFecha?: Prisma.SortOrderInput | Prisma.SortOrder
+  diasInvFisicoTransito?: Prisma.SortOrderInput | Prisma.SortOrder
+  zonarojaPura?: Prisma.SortOrderInput | Prisma.SortOrder
+  zonaroja?: Prisma.SortOrderInput | Prisma.SortOrder
+  zonaamarilla?: Prisma.SortOrderInput | Prisma.SortOrder
+  zonaverde?: Prisma.SortOrderInput | Prisma.SortOrder
+  tamBufferPuroUmp?: Prisma.SortOrderInput | Prisma.SortOrder
+  tamBufferUmp?: Prisma.SortOrderInput | Prisma.SortOrder
+  demandaCalificada?: Prisma.SortOrderInput | Prisma.SortOrder
+  activoLunes?: Prisma.SortOrder
+  activoMartes?: Prisma.SortOrder
+  activoMiercoles?: Prisma.SortOrder
+  activoJueves?: Prisma.SortOrder
+  activoViernes?: Prisma.SortOrder
+  activoSabado?: Prisma.SortOrder
+  activoDomingo?: Prisma.SortOrder
+  pedidoHoy?: Prisma.SortOrder
+  pedidoF1?: Prisma.SortOrderInput | Prisma.SortOrder
+  pedidoF2?: Prisma.SortOrderInput | Prisma.SortOrder
+  pedidoF3?: Prisma.SortOrderInput | Prisma.SortOrder
+  pedidoF4?: Prisma.SortOrderInput | Prisma.SortOrder
+  pedidoF5?: Prisma.SortOrderInput | Prisma.SortOrder
+  pedidoF6?: Prisma.SortOrderInput | Prisma.SortOrder
+  estimadoParaTopeBuffer?: Prisma.SortOrderInput | Prisma.SortOrder
+  cantidadDefinitivaOcHoy?: Prisma.SortOrderInput | Prisma.SortOrder
+  cantidadDefinitivaOcF1?: Prisma.SortOrderInput | Prisma.SortOrder
+  cantidadDefinitivaOcF2?: Prisma.SortOrderInput | Prisma.SortOrder
+  cantidadDefinitivaOcF3?: Prisma.SortOrderInput | Prisma.SortOrder
+  factorVariabilidadVenta?: Prisma.SortOrderInput | Prisma.SortOrder
+  diasMinimoInv?: Prisma.SortOrderInput | Prisma.SortOrder
+  diasPromedioInv?: Prisma.SortOrderInput | Prisma.SortOrder
+  diasMaximoInv?: Prisma.SortOrderInput | Prisma.SortOrder
+  diasInvCantidadDefinitiva?: Prisma.SortOrderInput | Prisma.SortOrder
+  diasInvCdF1?: Prisma.SortOrderInput | Prisma.SortOrder
+  diasInvCdF2?: Prisma.SortOrderInput | Prisma.SortOrder
+  diasInvCdF3?: Prisma.SortOrderInput | Prisma.SortOrder
+  diaDePedido?: Prisma.SortOrderInput | Prisma.SortOrder
+  diaDeLlegada?: Prisma.SortOrderInput | Prisma.SortOrder
+  fechaEstimadaEntrega?: Prisma.SortOrderInput | Prisma.SortOrder
+  nomDiaEntrega?: Prisma.SortOrderInput | Prisma.SortOrder
+  fechaEntregaF1?: Prisma.SortOrderInput | Prisma.SortOrder
+  fechaEntregaF2?: Prisma.SortOrderInput | Prisma.SortOrder
+  fechaEntregaF3?: Prisma.SortOrderInput | Prisma.SortOrder
+  alertaStock?: Prisma.SortOrderInput | Prisma.SortOrder
+  vidaUtilMinDiasReciboCedi?: Prisma.SortOrderInput | Prisma.SortOrder
+  alertaVidaUtil?: Prisma.SortOrderInput | Prisma.SortOrder
+  crossDock?: Prisma.SortOrderInput | Prisma.SortOrder
+  moq?: Prisma.SortOrderInput | Prisma.SortOrder
+  subcategoria?: Prisma.SortOrderInput | Prisma.SortOrder
+  temperaturaAlmacenamiento?: Prisma.SortOrderInput | Prisma.SortOrder
+  responsableDeCompra?: Prisma.SortOrderInput | Prisma.SortOrder
+  category?: Prisma.SortOrderInput | Prisma.SortOrder
+  multiploDeCompra?: Prisma.SortOrderInput | Prisma.SortOrder
+  estado?: Prisma.SortOrderInput | Prisma.SortOrder
+  fechaCreacion?: Prisma.SortOrder
+  fechaActualizacion?: Prisma.SortOrder
   _count?: Prisma.PurchaseSuggestionCountOrderByAggregateInput
   _avg?: Prisma.PurchaseSuggestionAvgOrderByAggregateInput
   _max?: Prisma.PurchaseSuggestionMaxOrderByAggregateInput
@@ -372,129 +1386,730 @@ export type PurchaseSuggestionScalarWhereWithAggregatesInput = {
   OR?: Prisma.PurchaseSuggestionScalarWhereWithAggregatesInput[]
   NOT?: Prisma.PurchaseSuggestionScalarWhereWithAggregatesInput | Prisma.PurchaseSuggestionScalarWhereWithAggregatesInput[]
   id?: Prisma.IntWithAggregatesFilter<"PurchaseSuggestion"> | number
-  materialCode?: Prisma.StringWithAggregatesFilter<"PurchaseSuggestion"> | string
-  materialDescription?: Prisma.StringWithAggregatesFilter<"PurchaseSuggestion"> | string
-  supplier?: Prisma.StringWithAggregatesFilter<"PurchaseSuggestion"> | string
-  supplyCenter?: Prisma.StringWithAggregatesFilter<"PurchaseSuggestion"> | string
-  warehouse?: Prisma.StringWithAggregatesFilter<"PurchaseSuggestion"> | string
-  leadTime?: Prisma.IntWithAggregatesFilter<"PurchaseSuggestion"> | number
-  finalInventoryDaysQuantity?: Prisma.FloatWithAggregatesFilter<"PurchaseSuggestion"> | number
-  orderToday?: Prisma.IntWithAggregatesFilter<"PurchaseSuggestion"> | number
-  purchaseStatusId?: Prisma.IntWithAggregatesFilter<"PurchaseSuggestion"> | number
-  createdAt?: Prisma.DateTimeWithAggregatesFilter<"PurchaseSuggestion"> | Date | string
-  updatedAt?: Prisma.DateTimeWithAggregatesFilter<"PurchaseSuggestion"> | Date | string
-  createdById?: Prisma.IntWithAggregatesFilter<"PurchaseSuggestion"> | number
+  mc?: Prisma.StringWithAggregatesFilter<"PurchaseSuggestion"> | string
+  mca?: Prisma.StringWithAggregatesFilter<"PurchaseSuggestion"> | string
+  mcap?: Prisma.StringNullableWithAggregatesFilter<"PurchaseSuggestion"> | string | null
+  codigoMaterial?: Prisma.IntWithAggregatesFilter<"PurchaseSuggestion"> | number
+  descripcionMaterial?: Prisma.StringWithAggregatesFilter<"PurchaseSuggestion"> | string
+  codProv?: Prisma.StringWithAggregatesFilter<"PurchaseSuggestion"> | string
+  proveedor?: Prisma.StringWithAggregatesFilter<"PurchaseSuggestion"> | string
+  centroAbastecedor?: Prisma.StringWithAggregatesFilter<"PurchaseSuggestion"> | string
+  desDentro?: Prisma.StringNullableWithAggregatesFilter<"PurchaseSuggestion"> | string | null
+  porcCompra?: Prisma.IntNullableWithAggregatesFilter<"PurchaseSuggestion"> | number | null
+  almacen?: Prisma.IntWithAggregatesFilter<"PurchaseSuggestion"> | number
+  categoria?: Prisma.StringNullableWithAggregatesFilter<"PurchaseSuggestion"> | string | null
+  ltReal?: Prisma.IntWithAggregatesFilter<"PurchaseSuggestion"> | number
+  factorLt?: Prisma.DecimalWithAggregatesFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  frec?: Prisma.DecimalWithAggregatesFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  ump?: Prisma.IntWithAggregatesFilter<"PurchaseSuggestion"> | number
+  ums?: Prisma.IntWithAggregatesFilter<"PurchaseSuggestion"> | number
+  venta30DiasDiaDelDia?: Prisma.DecimalWithAggregatesFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  ventaFcDiaAjustada?: Prisma.DecimalWithAggregatesFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  porcDesviacionFcVsVenta?: Prisma.DecimalNullableWithAggregatesFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  porcIncPlaneacionDemanda?: Prisma.DecimalNullableWithAggregatesFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  aplica?: Prisma.StringNullableWithAggregatesFilter<"PurchaseSuggestion"> | string | null
+  pedidoPromedioDiaUmp?: Prisma.IntWithAggregatesFilter<"PurchaseSuggestion"> | number
+  tiendasAgotadas?: Prisma.IntNullableWithAggregatesFilter<"PurchaseSuggestion"> | number | null
+  tipologia?: Prisma.IntNullableWithAggregatesFilter<"PurchaseSuggestion"> | number | null
+  invTienda?: Prisma.DecimalNullableWithAggregatesFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  stockObjetivoTienda?: Prisma.DecimalNullableWithAggregatesFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  faltanteLlenadoTienda?: Prisma.DecimalNullableWithAggregatesFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvTienda?: Prisma.DecimalNullableWithAggregatesFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  inventarioFisico?: Prisma.DecimalNullableWithAggregatesFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  inventarioEnTransito?: Prisma.IntNullableWithAggregatesFilter<"PurchaseSuggestion"> | number | null
+  diasInvALaFecha?: Prisma.DecimalNullableWithAggregatesFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvFisicoTransito?: Prisma.DecimalNullableWithAggregatesFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonarojaPura?: Prisma.DecimalNullableWithAggregatesFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaroja?: Prisma.DecimalNullableWithAggregatesFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaamarilla?: Prisma.DecimalNullableWithAggregatesFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaverde?: Prisma.DecimalNullableWithAggregatesFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  tamBufferPuroUmp?: Prisma.DecimalNullableWithAggregatesFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  tamBufferUmp?: Prisma.DecimalNullableWithAggregatesFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  demandaCalificada?: Prisma.DecimalNullableWithAggregatesFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  activoLunes?: Prisma.BoolWithAggregatesFilter<"PurchaseSuggestion"> | boolean
+  activoMartes?: Prisma.BoolWithAggregatesFilter<"PurchaseSuggestion"> | boolean
+  activoMiercoles?: Prisma.BoolWithAggregatesFilter<"PurchaseSuggestion"> | boolean
+  activoJueves?: Prisma.BoolWithAggregatesFilter<"PurchaseSuggestion"> | boolean
+  activoViernes?: Prisma.BoolWithAggregatesFilter<"PurchaseSuggestion"> | boolean
+  activoSabado?: Prisma.BoolWithAggregatesFilter<"PurchaseSuggestion"> | boolean
+  activoDomingo?: Prisma.BoolWithAggregatesFilter<"PurchaseSuggestion"> | boolean
+  pedidoHoy?: Prisma.IntWithAggregatesFilter<"PurchaseSuggestion"> | number
+  pedidoF1?: Prisma.IntNullableWithAggregatesFilter<"PurchaseSuggestion"> | number | null
+  pedidoF2?: Prisma.IntNullableWithAggregatesFilter<"PurchaseSuggestion"> | number | null
+  pedidoF3?: Prisma.IntNullableWithAggregatesFilter<"PurchaseSuggestion"> | number | null
+  pedidoF4?: Prisma.IntNullableWithAggregatesFilter<"PurchaseSuggestion"> | number | null
+  pedidoF5?: Prisma.IntNullableWithAggregatesFilter<"PurchaseSuggestion"> | number | null
+  pedidoF6?: Prisma.IntNullableWithAggregatesFilter<"PurchaseSuggestion"> | number | null
+  estimadoParaTopeBuffer?: Prisma.IntNullableWithAggregatesFilter<"PurchaseSuggestion"> | number | null
+  cantidadDefinitivaOcHoy?: Prisma.DecimalNullableWithAggregatesFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF1?: Prisma.DecimalNullableWithAggregatesFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF2?: Prisma.DecimalNullableWithAggregatesFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF3?: Prisma.DecimalNullableWithAggregatesFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  factorVariabilidadVenta?: Prisma.DecimalNullableWithAggregatesFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasMinimoInv?: Prisma.DecimalNullableWithAggregatesFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasPromedioInv?: Prisma.DecimalNullableWithAggregatesFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasMaximoInv?: Prisma.DecimalNullableWithAggregatesFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCantidadDefinitiva?: Prisma.DecimalNullableWithAggregatesFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF1?: Prisma.DecimalNullableWithAggregatesFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF2?: Prisma.DecimalNullableWithAggregatesFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF3?: Prisma.DecimalNullableWithAggregatesFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diaDePedido?: Prisma.StringNullableWithAggregatesFilter<"PurchaseSuggestion"> | string | null
+  diaDeLlegada?: Prisma.StringNullableWithAggregatesFilter<"PurchaseSuggestion"> | string | null
+  fechaEstimadaEntrega?: Prisma.DateTimeNullableWithAggregatesFilter<"PurchaseSuggestion"> | Date | string | null
+  nomDiaEntrega?: Prisma.StringNullableWithAggregatesFilter<"PurchaseSuggestion"> | string | null
+  fechaEntregaF1?: Prisma.DateTimeNullableWithAggregatesFilter<"PurchaseSuggestion"> | Date | string | null
+  fechaEntregaF2?: Prisma.DateTimeNullableWithAggregatesFilter<"PurchaseSuggestion"> | Date | string | null
+  fechaEntregaF3?: Prisma.DateTimeNullableWithAggregatesFilter<"PurchaseSuggestion"> | Date | string | null
+  alertaStock?: Prisma.StringNullableWithAggregatesFilter<"PurchaseSuggestion"> | string | null
+  vidaUtilMinDiasReciboCedi?: Prisma.IntNullableWithAggregatesFilter<"PurchaseSuggestion"> | number | null
+  alertaVidaUtil?: Prisma.StringNullableWithAggregatesFilter<"PurchaseSuggestion"> | string | null
+  crossDock?: Prisma.BoolNullableWithAggregatesFilter<"PurchaseSuggestion"> | boolean | null
+  moq?: Prisma.IntNullableWithAggregatesFilter<"PurchaseSuggestion"> | number | null
+  subcategoria?: Prisma.StringNullableWithAggregatesFilter<"PurchaseSuggestion"> | string | null
+  temperaturaAlmacenamiento?: Prisma.StringNullableWithAggregatesFilter<"PurchaseSuggestion"> | string | null
+  responsableDeCompra?: Prisma.StringNullableWithAggregatesFilter<"PurchaseSuggestion"> | string | null
+  category?: Prisma.StringNullableWithAggregatesFilter<"PurchaseSuggestion"> | string | null
+  multiploDeCompra?: Prisma.IntNullableWithAggregatesFilter<"PurchaseSuggestion"> | number | null
+  estado?: Prisma.StringNullableWithAggregatesFilter<"PurchaseSuggestion"> | string | null
+  fechaCreacion?: Prisma.DateTimeWithAggregatesFilter<"PurchaseSuggestion"> | Date | string
+  fechaActualizacion?: Prisma.DateTimeWithAggregatesFilter<"PurchaseSuggestion"> | Date | string
 }
 
 export type PurchaseSuggestionCreateInput = {
-  materialCode: string
-  materialDescription: string
-  supplier: string
-  supplyCenter: string
-  warehouse: string
-  leadTime: number
-  finalInventoryDaysQuantity: number
-  orderToday: number
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  status: Prisma.PurchaseSuggestionStatusCreateNestedOneWithoutSuggestionsInput
-  createdBy: Prisma.UserCreateNestedOneWithoutCreatedSuggestionsInput
-  history?: Prisma.PurchaseHistoryCreateNestedManyWithoutPurchaseInput
+  mc: string
+  mca: string
+  mcap?: string | null
+  codigoMaterial: number
+  descripcionMaterial: string
+  codProv: string
+  proveedor: string
+  centroAbastecedor: string
+  desDentro?: string | null
+  porcCompra?: number | null
+  almacen: number
+  categoria?: string | null
+  ltReal: number
+  factorLt: runtime.Decimal | runtime.DecimalJsLike | number | string
+  frec: runtime.Decimal | runtime.DecimalJsLike | number | string
+  ump: number
+  ums: number
+  venta30DiasDiaDelDia: runtime.Decimal | runtime.DecimalJsLike | number | string
+  ventaFcDiaAjustada: runtime.Decimal | runtime.DecimalJsLike | number | string
+  porcDesviacionFcVsVenta?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  porcIncPlaneacionDemanda?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  aplica?: string | null
+  pedidoPromedioDiaUmp: number
+  tiendasAgotadas?: number | null
+  tipologia?: number | null
+  invTienda?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  stockObjetivoTienda?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  faltanteLlenadoTienda?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvTienda?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  inventarioFisico?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  inventarioEnTransito?: number | null
+  diasInvALaFecha?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvFisicoTransito?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonarojaPura?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaroja?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaamarilla?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaverde?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  tamBufferPuroUmp?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  tamBufferUmp?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  demandaCalificada?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  activoLunes: boolean
+  activoMartes: boolean
+  activoMiercoles: boolean
+  activoJueves: boolean
+  activoViernes: boolean
+  activoSabado: boolean
+  activoDomingo: boolean
+  pedidoHoy: number
+  pedidoF1?: number | null
+  pedidoF2?: number | null
+  pedidoF3?: number | null
+  pedidoF4?: number | null
+  pedidoF5?: number | null
+  pedidoF6?: number | null
+  estimadoParaTopeBuffer?: number | null
+  cantidadDefinitivaOcHoy?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF1?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF2?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF3?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  factorVariabilidadVenta?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasMinimoInv?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasPromedioInv?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasMaximoInv?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCantidadDefinitiva?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF1?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF2?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF3?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diaDePedido?: string | null
+  diaDeLlegada?: string | null
+  fechaEstimadaEntrega?: Date | string | null
+  nomDiaEntrega?: string | null
+  fechaEntregaF1?: Date | string | null
+  fechaEntregaF2?: Date | string | null
+  fechaEntregaF3?: Date | string | null
+  alertaStock?: string | null
+  vidaUtilMinDiasReciboCedi?: number | null
+  alertaVidaUtil?: string | null
+  crossDock?: boolean | null
+  moq?: number | null
+  subcategoria?: string | null
+  temperaturaAlmacenamiento?: string | null
+  responsableDeCompra?: string | null
+  category?: string | null
+  multiploDeCompra?: number | null
+  fechaCreacion?: Date | string
+  fechaActualizacion?: Date | string
+  historial?: Prisma.PurchaseSuggestionHistoryCreateNestedManyWithoutCompraSugeridaInput
+  estadoCompraSugerida?: Prisma.PurchaseSuggestionStatusCreateNestedOneWithoutCompraSugeridaInput
 }
 
 export type PurchaseSuggestionUncheckedCreateInput = {
   id?: number
-  materialCode: string
-  materialDescription: string
-  supplier: string
-  supplyCenter: string
-  warehouse: string
-  leadTime: number
-  finalInventoryDaysQuantity: number
-  orderToday: number
-  purchaseStatusId: number
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  createdById: number
-  history?: Prisma.PurchaseHistoryUncheckedCreateNestedManyWithoutPurchaseInput
+  mc: string
+  mca: string
+  mcap?: string | null
+  codigoMaterial: number
+  descripcionMaterial: string
+  codProv: string
+  proveedor: string
+  centroAbastecedor: string
+  desDentro?: string | null
+  porcCompra?: number | null
+  almacen: number
+  categoria?: string | null
+  ltReal: number
+  factorLt: runtime.Decimal | runtime.DecimalJsLike | number | string
+  frec: runtime.Decimal | runtime.DecimalJsLike | number | string
+  ump: number
+  ums: number
+  venta30DiasDiaDelDia: runtime.Decimal | runtime.DecimalJsLike | number | string
+  ventaFcDiaAjustada: runtime.Decimal | runtime.DecimalJsLike | number | string
+  porcDesviacionFcVsVenta?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  porcIncPlaneacionDemanda?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  aplica?: string | null
+  pedidoPromedioDiaUmp: number
+  tiendasAgotadas?: number | null
+  tipologia?: number | null
+  invTienda?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  stockObjetivoTienda?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  faltanteLlenadoTienda?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvTienda?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  inventarioFisico?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  inventarioEnTransito?: number | null
+  diasInvALaFecha?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvFisicoTransito?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonarojaPura?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaroja?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaamarilla?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaverde?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  tamBufferPuroUmp?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  tamBufferUmp?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  demandaCalificada?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  activoLunes: boolean
+  activoMartes: boolean
+  activoMiercoles: boolean
+  activoJueves: boolean
+  activoViernes: boolean
+  activoSabado: boolean
+  activoDomingo: boolean
+  pedidoHoy: number
+  pedidoF1?: number | null
+  pedidoF2?: number | null
+  pedidoF3?: number | null
+  pedidoF4?: number | null
+  pedidoF5?: number | null
+  pedidoF6?: number | null
+  estimadoParaTopeBuffer?: number | null
+  cantidadDefinitivaOcHoy?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF1?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF2?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF3?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  factorVariabilidadVenta?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasMinimoInv?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasPromedioInv?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasMaximoInv?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCantidadDefinitiva?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF1?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF2?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF3?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diaDePedido?: string | null
+  diaDeLlegada?: string | null
+  fechaEstimadaEntrega?: Date | string | null
+  nomDiaEntrega?: string | null
+  fechaEntregaF1?: Date | string | null
+  fechaEntregaF2?: Date | string | null
+  fechaEntregaF3?: Date | string | null
+  alertaStock?: string | null
+  vidaUtilMinDiasReciboCedi?: number | null
+  alertaVidaUtil?: string | null
+  crossDock?: boolean | null
+  moq?: number | null
+  subcategoria?: string | null
+  temperaturaAlmacenamiento?: string | null
+  responsableDeCompra?: string | null
+  category?: string | null
+  multiploDeCompra?: number | null
+  estado?: string | null
+  fechaCreacion?: Date | string
+  fechaActualizacion?: Date | string
+  historial?: Prisma.PurchaseSuggestionHistoryUncheckedCreateNestedManyWithoutCompraSugeridaInput
 }
 
 export type PurchaseSuggestionUpdateInput = {
-  materialCode?: Prisma.StringFieldUpdateOperationsInput | string
-  materialDescription?: Prisma.StringFieldUpdateOperationsInput | string
-  supplier?: Prisma.StringFieldUpdateOperationsInput | string
-  supplyCenter?: Prisma.StringFieldUpdateOperationsInput | string
-  warehouse?: Prisma.StringFieldUpdateOperationsInput | string
-  leadTime?: Prisma.IntFieldUpdateOperationsInput | number
-  finalInventoryDaysQuantity?: Prisma.FloatFieldUpdateOperationsInput | number
-  orderToday?: Prisma.IntFieldUpdateOperationsInput | number
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  status?: Prisma.PurchaseSuggestionStatusUpdateOneRequiredWithoutSuggestionsNestedInput
-  createdBy?: Prisma.UserUpdateOneRequiredWithoutCreatedSuggestionsNestedInput
-  history?: Prisma.PurchaseHistoryUpdateManyWithoutPurchaseNestedInput
+  mc?: Prisma.StringFieldUpdateOperationsInput | string
+  mca?: Prisma.StringFieldUpdateOperationsInput | string
+  mcap?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  codigoMaterial?: Prisma.IntFieldUpdateOperationsInput | number
+  descripcionMaterial?: Prisma.StringFieldUpdateOperationsInput | string
+  codProv?: Prisma.StringFieldUpdateOperationsInput | string
+  proveedor?: Prisma.StringFieldUpdateOperationsInput | string
+  centroAbastecedor?: Prisma.StringFieldUpdateOperationsInput | string
+  desDentro?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  porcCompra?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  almacen?: Prisma.IntFieldUpdateOperationsInput | number
+  categoria?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  ltReal?: Prisma.IntFieldUpdateOperationsInput | number
+  factorLt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  frec?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  ump?: Prisma.IntFieldUpdateOperationsInput | number
+  ums?: Prisma.IntFieldUpdateOperationsInput | number
+  venta30DiasDiaDelDia?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  ventaFcDiaAjustada?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  porcDesviacionFcVsVenta?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  porcIncPlaneacionDemanda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  aplica?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  pedidoPromedioDiaUmp?: Prisma.IntFieldUpdateOperationsInput | number
+  tiendasAgotadas?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  tipologia?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  invTienda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  stockObjetivoTienda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  faltanteLlenadoTienda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvTienda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  inventarioFisico?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  inventarioEnTransito?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  diasInvALaFecha?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvFisicoTransito?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonarojaPura?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaroja?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaamarilla?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaverde?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  tamBufferPuroUmp?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  tamBufferUmp?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  demandaCalificada?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  activoLunes?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoMartes?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoMiercoles?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoJueves?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoViernes?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoSabado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoDomingo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  pedidoHoy?: Prisma.IntFieldUpdateOperationsInput | number
+  pedidoF1?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF2?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF3?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF4?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF5?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF6?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  estimadoParaTopeBuffer?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  cantidadDefinitivaOcHoy?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF1?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF2?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF3?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  factorVariabilidadVenta?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasMinimoInv?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasPromedioInv?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasMaximoInv?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCantidadDefinitiva?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF1?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF2?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF3?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diaDePedido?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diaDeLlegada?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaEstimadaEntrega?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  nomDiaEntrega?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaEntregaF1?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  fechaEntregaF2?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  fechaEntregaF3?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  alertaStock?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  vidaUtilMinDiasReciboCedi?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  alertaVidaUtil?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  crossDock?: Prisma.NullableBoolFieldUpdateOperationsInput | boolean | null
+  moq?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  subcategoria?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  temperaturaAlmacenamiento?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  responsableDeCompra?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  category?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  multiploDeCompra?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  fechaCreacion?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  fechaActualizacion?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  historial?: Prisma.PurchaseSuggestionHistoryUpdateManyWithoutCompraSugeridaNestedInput
+  estadoCompraSugerida?: Prisma.PurchaseSuggestionStatusUpdateOneWithoutCompraSugeridaNestedInput
 }
 
 export type PurchaseSuggestionUncheckedUpdateInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
-  materialCode?: Prisma.StringFieldUpdateOperationsInput | string
-  materialDescription?: Prisma.StringFieldUpdateOperationsInput | string
-  supplier?: Prisma.StringFieldUpdateOperationsInput | string
-  supplyCenter?: Prisma.StringFieldUpdateOperationsInput | string
-  warehouse?: Prisma.StringFieldUpdateOperationsInput | string
-  leadTime?: Prisma.IntFieldUpdateOperationsInput | number
-  finalInventoryDaysQuantity?: Prisma.FloatFieldUpdateOperationsInput | number
-  orderToday?: Prisma.IntFieldUpdateOperationsInput | number
-  purchaseStatusId?: Prisma.IntFieldUpdateOperationsInput | number
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  createdById?: Prisma.IntFieldUpdateOperationsInput | number
-  history?: Prisma.PurchaseHistoryUncheckedUpdateManyWithoutPurchaseNestedInput
+  mc?: Prisma.StringFieldUpdateOperationsInput | string
+  mca?: Prisma.StringFieldUpdateOperationsInput | string
+  mcap?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  codigoMaterial?: Prisma.IntFieldUpdateOperationsInput | number
+  descripcionMaterial?: Prisma.StringFieldUpdateOperationsInput | string
+  codProv?: Prisma.StringFieldUpdateOperationsInput | string
+  proveedor?: Prisma.StringFieldUpdateOperationsInput | string
+  centroAbastecedor?: Prisma.StringFieldUpdateOperationsInput | string
+  desDentro?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  porcCompra?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  almacen?: Prisma.IntFieldUpdateOperationsInput | number
+  categoria?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  ltReal?: Prisma.IntFieldUpdateOperationsInput | number
+  factorLt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  frec?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  ump?: Prisma.IntFieldUpdateOperationsInput | number
+  ums?: Prisma.IntFieldUpdateOperationsInput | number
+  venta30DiasDiaDelDia?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  ventaFcDiaAjustada?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  porcDesviacionFcVsVenta?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  porcIncPlaneacionDemanda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  aplica?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  pedidoPromedioDiaUmp?: Prisma.IntFieldUpdateOperationsInput | number
+  tiendasAgotadas?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  tipologia?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  invTienda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  stockObjetivoTienda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  faltanteLlenadoTienda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvTienda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  inventarioFisico?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  inventarioEnTransito?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  diasInvALaFecha?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvFisicoTransito?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonarojaPura?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaroja?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaamarilla?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaverde?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  tamBufferPuroUmp?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  tamBufferUmp?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  demandaCalificada?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  activoLunes?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoMartes?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoMiercoles?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoJueves?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoViernes?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoSabado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoDomingo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  pedidoHoy?: Prisma.IntFieldUpdateOperationsInput | number
+  pedidoF1?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF2?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF3?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF4?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF5?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF6?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  estimadoParaTopeBuffer?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  cantidadDefinitivaOcHoy?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF1?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF2?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF3?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  factorVariabilidadVenta?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasMinimoInv?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasPromedioInv?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasMaximoInv?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCantidadDefinitiva?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF1?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF2?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF3?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diaDePedido?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diaDeLlegada?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaEstimadaEntrega?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  nomDiaEntrega?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaEntregaF1?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  fechaEntregaF2?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  fechaEntregaF3?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  alertaStock?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  vidaUtilMinDiasReciboCedi?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  alertaVidaUtil?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  crossDock?: Prisma.NullableBoolFieldUpdateOperationsInput | boolean | null
+  moq?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  subcategoria?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  temperaturaAlmacenamiento?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  responsableDeCompra?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  category?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  multiploDeCompra?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  estado?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaCreacion?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  fechaActualizacion?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  historial?: Prisma.PurchaseSuggestionHistoryUncheckedUpdateManyWithoutCompraSugeridaNestedInput
 }
 
 export type PurchaseSuggestionCreateManyInput = {
   id?: number
-  materialCode: string
-  materialDescription: string
-  supplier: string
-  supplyCenter: string
-  warehouse: string
-  leadTime: number
-  finalInventoryDaysQuantity: number
-  orderToday: number
-  purchaseStatusId: number
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  createdById: number
+  mc: string
+  mca: string
+  mcap?: string | null
+  codigoMaterial: number
+  descripcionMaterial: string
+  codProv: string
+  proveedor: string
+  centroAbastecedor: string
+  desDentro?: string | null
+  porcCompra?: number | null
+  almacen: number
+  categoria?: string | null
+  ltReal: number
+  factorLt: runtime.Decimal | runtime.DecimalJsLike | number | string
+  frec: runtime.Decimal | runtime.DecimalJsLike | number | string
+  ump: number
+  ums: number
+  venta30DiasDiaDelDia: runtime.Decimal | runtime.DecimalJsLike | number | string
+  ventaFcDiaAjustada: runtime.Decimal | runtime.DecimalJsLike | number | string
+  porcDesviacionFcVsVenta?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  porcIncPlaneacionDemanda?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  aplica?: string | null
+  pedidoPromedioDiaUmp: number
+  tiendasAgotadas?: number | null
+  tipologia?: number | null
+  invTienda?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  stockObjetivoTienda?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  faltanteLlenadoTienda?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvTienda?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  inventarioFisico?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  inventarioEnTransito?: number | null
+  diasInvALaFecha?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvFisicoTransito?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonarojaPura?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaroja?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaamarilla?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaverde?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  tamBufferPuroUmp?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  tamBufferUmp?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  demandaCalificada?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  activoLunes: boolean
+  activoMartes: boolean
+  activoMiercoles: boolean
+  activoJueves: boolean
+  activoViernes: boolean
+  activoSabado: boolean
+  activoDomingo: boolean
+  pedidoHoy: number
+  pedidoF1?: number | null
+  pedidoF2?: number | null
+  pedidoF3?: number | null
+  pedidoF4?: number | null
+  pedidoF5?: number | null
+  pedidoF6?: number | null
+  estimadoParaTopeBuffer?: number | null
+  cantidadDefinitivaOcHoy?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF1?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF2?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF3?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  factorVariabilidadVenta?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasMinimoInv?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasPromedioInv?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasMaximoInv?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCantidadDefinitiva?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF1?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF2?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF3?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diaDePedido?: string | null
+  diaDeLlegada?: string | null
+  fechaEstimadaEntrega?: Date | string | null
+  nomDiaEntrega?: string | null
+  fechaEntregaF1?: Date | string | null
+  fechaEntregaF2?: Date | string | null
+  fechaEntregaF3?: Date | string | null
+  alertaStock?: string | null
+  vidaUtilMinDiasReciboCedi?: number | null
+  alertaVidaUtil?: string | null
+  crossDock?: boolean | null
+  moq?: number | null
+  subcategoria?: string | null
+  temperaturaAlmacenamiento?: string | null
+  responsableDeCompra?: string | null
+  category?: string | null
+  multiploDeCompra?: number | null
+  estado?: string | null
+  fechaCreacion?: Date | string
+  fechaActualizacion?: Date | string
 }
 
 export type PurchaseSuggestionUpdateManyMutationInput = {
-  materialCode?: Prisma.StringFieldUpdateOperationsInput | string
-  materialDescription?: Prisma.StringFieldUpdateOperationsInput | string
-  supplier?: Prisma.StringFieldUpdateOperationsInput | string
-  supplyCenter?: Prisma.StringFieldUpdateOperationsInput | string
-  warehouse?: Prisma.StringFieldUpdateOperationsInput | string
-  leadTime?: Prisma.IntFieldUpdateOperationsInput | number
-  finalInventoryDaysQuantity?: Prisma.FloatFieldUpdateOperationsInput | number
-  orderToday?: Prisma.IntFieldUpdateOperationsInput | number
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  mc?: Prisma.StringFieldUpdateOperationsInput | string
+  mca?: Prisma.StringFieldUpdateOperationsInput | string
+  mcap?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  codigoMaterial?: Prisma.IntFieldUpdateOperationsInput | number
+  descripcionMaterial?: Prisma.StringFieldUpdateOperationsInput | string
+  codProv?: Prisma.StringFieldUpdateOperationsInput | string
+  proveedor?: Prisma.StringFieldUpdateOperationsInput | string
+  centroAbastecedor?: Prisma.StringFieldUpdateOperationsInput | string
+  desDentro?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  porcCompra?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  almacen?: Prisma.IntFieldUpdateOperationsInput | number
+  categoria?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  ltReal?: Prisma.IntFieldUpdateOperationsInput | number
+  factorLt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  frec?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  ump?: Prisma.IntFieldUpdateOperationsInput | number
+  ums?: Prisma.IntFieldUpdateOperationsInput | number
+  venta30DiasDiaDelDia?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  ventaFcDiaAjustada?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  porcDesviacionFcVsVenta?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  porcIncPlaneacionDemanda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  aplica?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  pedidoPromedioDiaUmp?: Prisma.IntFieldUpdateOperationsInput | number
+  tiendasAgotadas?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  tipologia?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  invTienda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  stockObjetivoTienda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  faltanteLlenadoTienda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvTienda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  inventarioFisico?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  inventarioEnTransito?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  diasInvALaFecha?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvFisicoTransito?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonarojaPura?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaroja?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaamarilla?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaverde?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  tamBufferPuroUmp?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  tamBufferUmp?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  demandaCalificada?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  activoLunes?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoMartes?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoMiercoles?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoJueves?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoViernes?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoSabado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoDomingo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  pedidoHoy?: Prisma.IntFieldUpdateOperationsInput | number
+  pedidoF1?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF2?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF3?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF4?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF5?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF6?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  estimadoParaTopeBuffer?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  cantidadDefinitivaOcHoy?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF1?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF2?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF3?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  factorVariabilidadVenta?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasMinimoInv?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasPromedioInv?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasMaximoInv?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCantidadDefinitiva?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF1?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF2?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF3?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diaDePedido?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diaDeLlegada?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaEstimadaEntrega?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  nomDiaEntrega?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaEntregaF1?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  fechaEntregaF2?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  fechaEntregaF3?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  alertaStock?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  vidaUtilMinDiasReciboCedi?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  alertaVidaUtil?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  crossDock?: Prisma.NullableBoolFieldUpdateOperationsInput | boolean | null
+  moq?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  subcategoria?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  temperaturaAlmacenamiento?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  responsableDeCompra?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  category?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  multiploDeCompra?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  fechaCreacion?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  fechaActualizacion?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type PurchaseSuggestionUncheckedUpdateManyInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
-  materialCode?: Prisma.StringFieldUpdateOperationsInput | string
-  materialDescription?: Prisma.StringFieldUpdateOperationsInput | string
-  supplier?: Prisma.StringFieldUpdateOperationsInput | string
-  supplyCenter?: Prisma.StringFieldUpdateOperationsInput | string
-  warehouse?: Prisma.StringFieldUpdateOperationsInput | string
-  leadTime?: Prisma.IntFieldUpdateOperationsInput | number
-  finalInventoryDaysQuantity?: Prisma.FloatFieldUpdateOperationsInput | number
-  orderToday?: Prisma.IntFieldUpdateOperationsInput | number
-  purchaseStatusId?: Prisma.IntFieldUpdateOperationsInput | number
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  createdById?: Prisma.IntFieldUpdateOperationsInput | number
+  mc?: Prisma.StringFieldUpdateOperationsInput | string
+  mca?: Prisma.StringFieldUpdateOperationsInput | string
+  mcap?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  codigoMaterial?: Prisma.IntFieldUpdateOperationsInput | number
+  descripcionMaterial?: Prisma.StringFieldUpdateOperationsInput | string
+  codProv?: Prisma.StringFieldUpdateOperationsInput | string
+  proveedor?: Prisma.StringFieldUpdateOperationsInput | string
+  centroAbastecedor?: Prisma.StringFieldUpdateOperationsInput | string
+  desDentro?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  porcCompra?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  almacen?: Prisma.IntFieldUpdateOperationsInput | number
+  categoria?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  ltReal?: Prisma.IntFieldUpdateOperationsInput | number
+  factorLt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  frec?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  ump?: Prisma.IntFieldUpdateOperationsInput | number
+  ums?: Prisma.IntFieldUpdateOperationsInput | number
+  venta30DiasDiaDelDia?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  ventaFcDiaAjustada?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  porcDesviacionFcVsVenta?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  porcIncPlaneacionDemanda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  aplica?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  pedidoPromedioDiaUmp?: Prisma.IntFieldUpdateOperationsInput | number
+  tiendasAgotadas?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  tipologia?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  invTienda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  stockObjetivoTienda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  faltanteLlenadoTienda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvTienda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  inventarioFisico?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  inventarioEnTransito?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  diasInvALaFecha?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvFisicoTransito?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonarojaPura?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaroja?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaamarilla?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaverde?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  tamBufferPuroUmp?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  tamBufferUmp?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  demandaCalificada?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  activoLunes?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoMartes?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoMiercoles?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoJueves?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoViernes?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoSabado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoDomingo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  pedidoHoy?: Prisma.IntFieldUpdateOperationsInput | number
+  pedidoF1?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF2?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF3?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF4?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF5?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF6?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  estimadoParaTopeBuffer?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  cantidadDefinitivaOcHoy?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF1?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF2?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF3?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  factorVariabilidadVenta?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasMinimoInv?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasPromedioInv?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasMaximoInv?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCantidadDefinitiva?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF1?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF2?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF3?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diaDePedido?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diaDeLlegada?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaEstimadaEntrega?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  nomDiaEntrega?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaEntregaF1?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  fechaEntregaF2?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  fechaEntregaF3?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  alertaStock?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  vidaUtilMinDiasReciboCedi?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  alertaVidaUtil?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  crossDock?: Prisma.NullableBoolFieldUpdateOperationsInput | boolean | null
+  moq?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  subcategoria?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  temperaturaAlmacenamiento?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  responsableDeCompra?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  category?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  multiploDeCompra?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  estado?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaCreacion?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  fechaActualizacion?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type PurchaseSuggestionScalarRelationFilter = {
@@ -514,309 +2129,1070 @@ export type PurchaseSuggestionOrderByRelationAggregateInput = {
 
 export type PurchaseSuggestionCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  materialCode?: Prisma.SortOrder
-  materialDescription?: Prisma.SortOrder
-  supplier?: Prisma.SortOrder
-  supplyCenter?: Prisma.SortOrder
-  warehouse?: Prisma.SortOrder
-  leadTime?: Prisma.SortOrder
-  finalInventoryDaysQuantity?: Prisma.SortOrder
-  orderToday?: Prisma.SortOrder
-  purchaseStatusId?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  updatedAt?: Prisma.SortOrder
-  createdById?: Prisma.SortOrder
+  mc?: Prisma.SortOrder
+  mca?: Prisma.SortOrder
+  mcap?: Prisma.SortOrder
+  codigoMaterial?: Prisma.SortOrder
+  descripcionMaterial?: Prisma.SortOrder
+  codProv?: Prisma.SortOrder
+  proveedor?: Prisma.SortOrder
+  centroAbastecedor?: Prisma.SortOrder
+  desDentro?: Prisma.SortOrder
+  porcCompra?: Prisma.SortOrder
+  almacen?: Prisma.SortOrder
+  categoria?: Prisma.SortOrder
+  ltReal?: Prisma.SortOrder
+  factorLt?: Prisma.SortOrder
+  frec?: Prisma.SortOrder
+  ump?: Prisma.SortOrder
+  ums?: Prisma.SortOrder
+  venta30DiasDiaDelDia?: Prisma.SortOrder
+  ventaFcDiaAjustada?: Prisma.SortOrder
+  porcDesviacionFcVsVenta?: Prisma.SortOrder
+  porcIncPlaneacionDemanda?: Prisma.SortOrder
+  aplica?: Prisma.SortOrder
+  pedidoPromedioDiaUmp?: Prisma.SortOrder
+  tiendasAgotadas?: Prisma.SortOrder
+  tipologia?: Prisma.SortOrder
+  invTienda?: Prisma.SortOrder
+  stockObjetivoTienda?: Prisma.SortOrder
+  faltanteLlenadoTienda?: Prisma.SortOrder
+  diasInvTienda?: Prisma.SortOrder
+  inventarioFisico?: Prisma.SortOrder
+  inventarioEnTransito?: Prisma.SortOrder
+  diasInvALaFecha?: Prisma.SortOrder
+  diasInvFisicoTransito?: Prisma.SortOrder
+  zonarojaPura?: Prisma.SortOrder
+  zonaroja?: Prisma.SortOrder
+  zonaamarilla?: Prisma.SortOrder
+  zonaverde?: Prisma.SortOrder
+  tamBufferPuroUmp?: Prisma.SortOrder
+  tamBufferUmp?: Prisma.SortOrder
+  demandaCalificada?: Prisma.SortOrder
+  activoLunes?: Prisma.SortOrder
+  activoMartes?: Prisma.SortOrder
+  activoMiercoles?: Prisma.SortOrder
+  activoJueves?: Prisma.SortOrder
+  activoViernes?: Prisma.SortOrder
+  activoSabado?: Prisma.SortOrder
+  activoDomingo?: Prisma.SortOrder
+  pedidoHoy?: Prisma.SortOrder
+  pedidoF1?: Prisma.SortOrder
+  pedidoF2?: Prisma.SortOrder
+  pedidoF3?: Prisma.SortOrder
+  pedidoF4?: Prisma.SortOrder
+  pedidoF5?: Prisma.SortOrder
+  pedidoF6?: Prisma.SortOrder
+  estimadoParaTopeBuffer?: Prisma.SortOrder
+  cantidadDefinitivaOcHoy?: Prisma.SortOrder
+  cantidadDefinitivaOcF1?: Prisma.SortOrder
+  cantidadDefinitivaOcF2?: Prisma.SortOrder
+  cantidadDefinitivaOcF3?: Prisma.SortOrder
+  factorVariabilidadVenta?: Prisma.SortOrder
+  diasMinimoInv?: Prisma.SortOrder
+  diasPromedioInv?: Prisma.SortOrder
+  diasMaximoInv?: Prisma.SortOrder
+  diasInvCantidadDefinitiva?: Prisma.SortOrder
+  diasInvCdF1?: Prisma.SortOrder
+  diasInvCdF2?: Prisma.SortOrder
+  diasInvCdF3?: Prisma.SortOrder
+  diaDePedido?: Prisma.SortOrder
+  diaDeLlegada?: Prisma.SortOrder
+  fechaEstimadaEntrega?: Prisma.SortOrder
+  nomDiaEntrega?: Prisma.SortOrder
+  fechaEntregaF1?: Prisma.SortOrder
+  fechaEntregaF2?: Prisma.SortOrder
+  fechaEntregaF3?: Prisma.SortOrder
+  alertaStock?: Prisma.SortOrder
+  vidaUtilMinDiasReciboCedi?: Prisma.SortOrder
+  alertaVidaUtil?: Prisma.SortOrder
+  crossDock?: Prisma.SortOrder
+  moq?: Prisma.SortOrder
+  subcategoria?: Prisma.SortOrder
+  temperaturaAlmacenamiento?: Prisma.SortOrder
+  responsableDeCompra?: Prisma.SortOrder
+  category?: Prisma.SortOrder
+  multiploDeCompra?: Prisma.SortOrder
+  estado?: Prisma.SortOrder
+  fechaCreacion?: Prisma.SortOrder
+  fechaActualizacion?: Prisma.SortOrder
 }
 
 export type PurchaseSuggestionAvgOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  leadTime?: Prisma.SortOrder
-  finalInventoryDaysQuantity?: Prisma.SortOrder
-  orderToday?: Prisma.SortOrder
-  purchaseStatusId?: Prisma.SortOrder
-  createdById?: Prisma.SortOrder
+  codigoMaterial?: Prisma.SortOrder
+  porcCompra?: Prisma.SortOrder
+  almacen?: Prisma.SortOrder
+  ltReal?: Prisma.SortOrder
+  factorLt?: Prisma.SortOrder
+  frec?: Prisma.SortOrder
+  ump?: Prisma.SortOrder
+  ums?: Prisma.SortOrder
+  venta30DiasDiaDelDia?: Prisma.SortOrder
+  ventaFcDiaAjustada?: Prisma.SortOrder
+  porcDesviacionFcVsVenta?: Prisma.SortOrder
+  porcIncPlaneacionDemanda?: Prisma.SortOrder
+  pedidoPromedioDiaUmp?: Prisma.SortOrder
+  tiendasAgotadas?: Prisma.SortOrder
+  tipologia?: Prisma.SortOrder
+  invTienda?: Prisma.SortOrder
+  stockObjetivoTienda?: Prisma.SortOrder
+  faltanteLlenadoTienda?: Prisma.SortOrder
+  diasInvTienda?: Prisma.SortOrder
+  inventarioFisico?: Prisma.SortOrder
+  inventarioEnTransito?: Prisma.SortOrder
+  diasInvALaFecha?: Prisma.SortOrder
+  diasInvFisicoTransito?: Prisma.SortOrder
+  zonarojaPura?: Prisma.SortOrder
+  zonaroja?: Prisma.SortOrder
+  zonaamarilla?: Prisma.SortOrder
+  zonaverde?: Prisma.SortOrder
+  tamBufferPuroUmp?: Prisma.SortOrder
+  tamBufferUmp?: Prisma.SortOrder
+  demandaCalificada?: Prisma.SortOrder
+  pedidoHoy?: Prisma.SortOrder
+  pedidoF1?: Prisma.SortOrder
+  pedidoF2?: Prisma.SortOrder
+  pedidoF3?: Prisma.SortOrder
+  pedidoF4?: Prisma.SortOrder
+  pedidoF5?: Prisma.SortOrder
+  pedidoF6?: Prisma.SortOrder
+  estimadoParaTopeBuffer?: Prisma.SortOrder
+  cantidadDefinitivaOcHoy?: Prisma.SortOrder
+  cantidadDefinitivaOcF1?: Prisma.SortOrder
+  cantidadDefinitivaOcF2?: Prisma.SortOrder
+  cantidadDefinitivaOcF3?: Prisma.SortOrder
+  factorVariabilidadVenta?: Prisma.SortOrder
+  diasMinimoInv?: Prisma.SortOrder
+  diasPromedioInv?: Prisma.SortOrder
+  diasMaximoInv?: Prisma.SortOrder
+  diasInvCantidadDefinitiva?: Prisma.SortOrder
+  diasInvCdF1?: Prisma.SortOrder
+  diasInvCdF2?: Prisma.SortOrder
+  diasInvCdF3?: Prisma.SortOrder
+  vidaUtilMinDiasReciboCedi?: Prisma.SortOrder
+  moq?: Prisma.SortOrder
+  multiploDeCompra?: Prisma.SortOrder
 }
 
 export type PurchaseSuggestionMaxOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  materialCode?: Prisma.SortOrder
-  materialDescription?: Prisma.SortOrder
-  supplier?: Prisma.SortOrder
-  supplyCenter?: Prisma.SortOrder
-  warehouse?: Prisma.SortOrder
-  leadTime?: Prisma.SortOrder
-  finalInventoryDaysQuantity?: Prisma.SortOrder
-  orderToday?: Prisma.SortOrder
-  purchaseStatusId?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  updatedAt?: Prisma.SortOrder
-  createdById?: Prisma.SortOrder
+  mc?: Prisma.SortOrder
+  mca?: Prisma.SortOrder
+  mcap?: Prisma.SortOrder
+  codigoMaterial?: Prisma.SortOrder
+  descripcionMaterial?: Prisma.SortOrder
+  codProv?: Prisma.SortOrder
+  proveedor?: Prisma.SortOrder
+  centroAbastecedor?: Prisma.SortOrder
+  desDentro?: Prisma.SortOrder
+  porcCompra?: Prisma.SortOrder
+  almacen?: Prisma.SortOrder
+  categoria?: Prisma.SortOrder
+  ltReal?: Prisma.SortOrder
+  factorLt?: Prisma.SortOrder
+  frec?: Prisma.SortOrder
+  ump?: Prisma.SortOrder
+  ums?: Prisma.SortOrder
+  venta30DiasDiaDelDia?: Prisma.SortOrder
+  ventaFcDiaAjustada?: Prisma.SortOrder
+  porcDesviacionFcVsVenta?: Prisma.SortOrder
+  porcIncPlaneacionDemanda?: Prisma.SortOrder
+  aplica?: Prisma.SortOrder
+  pedidoPromedioDiaUmp?: Prisma.SortOrder
+  tiendasAgotadas?: Prisma.SortOrder
+  tipologia?: Prisma.SortOrder
+  invTienda?: Prisma.SortOrder
+  stockObjetivoTienda?: Prisma.SortOrder
+  faltanteLlenadoTienda?: Prisma.SortOrder
+  diasInvTienda?: Prisma.SortOrder
+  inventarioFisico?: Prisma.SortOrder
+  inventarioEnTransito?: Prisma.SortOrder
+  diasInvALaFecha?: Prisma.SortOrder
+  diasInvFisicoTransito?: Prisma.SortOrder
+  zonarojaPura?: Prisma.SortOrder
+  zonaroja?: Prisma.SortOrder
+  zonaamarilla?: Prisma.SortOrder
+  zonaverde?: Prisma.SortOrder
+  tamBufferPuroUmp?: Prisma.SortOrder
+  tamBufferUmp?: Prisma.SortOrder
+  demandaCalificada?: Prisma.SortOrder
+  activoLunes?: Prisma.SortOrder
+  activoMartes?: Prisma.SortOrder
+  activoMiercoles?: Prisma.SortOrder
+  activoJueves?: Prisma.SortOrder
+  activoViernes?: Prisma.SortOrder
+  activoSabado?: Prisma.SortOrder
+  activoDomingo?: Prisma.SortOrder
+  pedidoHoy?: Prisma.SortOrder
+  pedidoF1?: Prisma.SortOrder
+  pedidoF2?: Prisma.SortOrder
+  pedidoF3?: Prisma.SortOrder
+  pedidoF4?: Prisma.SortOrder
+  pedidoF5?: Prisma.SortOrder
+  pedidoF6?: Prisma.SortOrder
+  estimadoParaTopeBuffer?: Prisma.SortOrder
+  cantidadDefinitivaOcHoy?: Prisma.SortOrder
+  cantidadDefinitivaOcF1?: Prisma.SortOrder
+  cantidadDefinitivaOcF2?: Prisma.SortOrder
+  cantidadDefinitivaOcF3?: Prisma.SortOrder
+  factorVariabilidadVenta?: Prisma.SortOrder
+  diasMinimoInv?: Prisma.SortOrder
+  diasPromedioInv?: Prisma.SortOrder
+  diasMaximoInv?: Prisma.SortOrder
+  diasInvCantidadDefinitiva?: Prisma.SortOrder
+  diasInvCdF1?: Prisma.SortOrder
+  diasInvCdF2?: Prisma.SortOrder
+  diasInvCdF3?: Prisma.SortOrder
+  diaDePedido?: Prisma.SortOrder
+  diaDeLlegada?: Prisma.SortOrder
+  fechaEstimadaEntrega?: Prisma.SortOrder
+  nomDiaEntrega?: Prisma.SortOrder
+  fechaEntregaF1?: Prisma.SortOrder
+  fechaEntregaF2?: Prisma.SortOrder
+  fechaEntregaF3?: Prisma.SortOrder
+  alertaStock?: Prisma.SortOrder
+  vidaUtilMinDiasReciboCedi?: Prisma.SortOrder
+  alertaVidaUtil?: Prisma.SortOrder
+  crossDock?: Prisma.SortOrder
+  moq?: Prisma.SortOrder
+  subcategoria?: Prisma.SortOrder
+  temperaturaAlmacenamiento?: Prisma.SortOrder
+  responsableDeCompra?: Prisma.SortOrder
+  category?: Prisma.SortOrder
+  multiploDeCompra?: Prisma.SortOrder
+  estado?: Prisma.SortOrder
+  fechaCreacion?: Prisma.SortOrder
+  fechaActualizacion?: Prisma.SortOrder
 }
 
 export type PurchaseSuggestionMinOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  materialCode?: Prisma.SortOrder
-  materialDescription?: Prisma.SortOrder
-  supplier?: Prisma.SortOrder
-  supplyCenter?: Prisma.SortOrder
-  warehouse?: Prisma.SortOrder
-  leadTime?: Prisma.SortOrder
-  finalInventoryDaysQuantity?: Prisma.SortOrder
-  orderToday?: Prisma.SortOrder
-  purchaseStatusId?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  updatedAt?: Prisma.SortOrder
-  createdById?: Prisma.SortOrder
+  mc?: Prisma.SortOrder
+  mca?: Prisma.SortOrder
+  mcap?: Prisma.SortOrder
+  codigoMaterial?: Prisma.SortOrder
+  descripcionMaterial?: Prisma.SortOrder
+  codProv?: Prisma.SortOrder
+  proveedor?: Prisma.SortOrder
+  centroAbastecedor?: Prisma.SortOrder
+  desDentro?: Prisma.SortOrder
+  porcCompra?: Prisma.SortOrder
+  almacen?: Prisma.SortOrder
+  categoria?: Prisma.SortOrder
+  ltReal?: Prisma.SortOrder
+  factorLt?: Prisma.SortOrder
+  frec?: Prisma.SortOrder
+  ump?: Prisma.SortOrder
+  ums?: Prisma.SortOrder
+  venta30DiasDiaDelDia?: Prisma.SortOrder
+  ventaFcDiaAjustada?: Prisma.SortOrder
+  porcDesviacionFcVsVenta?: Prisma.SortOrder
+  porcIncPlaneacionDemanda?: Prisma.SortOrder
+  aplica?: Prisma.SortOrder
+  pedidoPromedioDiaUmp?: Prisma.SortOrder
+  tiendasAgotadas?: Prisma.SortOrder
+  tipologia?: Prisma.SortOrder
+  invTienda?: Prisma.SortOrder
+  stockObjetivoTienda?: Prisma.SortOrder
+  faltanteLlenadoTienda?: Prisma.SortOrder
+  diasInvTienda?: Prisma.SortOrder
+  inventarioFisico?: Prisma.SortOrder
+  inventarioEnTransito?: Prisma.SortOrder
+  diasInvALaFecha?: Prisma.SortOrder
+  diasInvFisicoTransito?: Prisma.SortOrder
+  zonarojaPura?: Prisma.SortOrder
+  zonaroja?: Prisma.SortOrder
+  zonaamarilla?: Prisma.SortOrder
+  zonaverde?: Prisma.SortOrder
+  tamBufferPuroUmp?: Prisma.SortOrder
+  tamBufferUmp?: Prisma.SortOrder
+  demandaCalificada?: Prisma.SortOrder
+  activoLunes?: Prisma.SortOrder
+  activoMartes?: Prisma.SortOrder
+  activoMiercoles?: Prisma.SortOrder
+  activoJueves?: Prisma.SortOrder
+  activoViernes?: Prisma.SortOrder
+  activoSabado?: Prisma.SortOrder
+  activoDomingo?: Prisma.SortOrder
+  pedidoHoy?: Prisma.SortOrder
+  pedidoF1?: Prisma.SortOrder
+  pedidoF2?: Prisma.SortOrder
+  pedidoF3?: Prisma.SortOrder
+  pedidoF4?: Prisma.SortOrder
+  pedidoF5?: Prisma.SortOrder
+  pedidoF6?: Prisma.SortOrder
+  estimadoParaTopeBuffer?: Prisma.SortOrder
+  cantidadDefinitivaOcHoy?: Prisma.SortOrder
+  cantidadDefinitivaOcF1?: Prisma.SortOrder
+  cantidadDefinitivaOcF2?: Prisma.SortOrder
+  cantidadDefinitivaOcF3?: Prisma.SortOrder
+  factorVariabilidadVenta?: Prisma.SortOrder
+  diasMinimoInv?: Prisma.SortOrder
+  diasPromedioInv?: Prisma.SortOrder
+  diasMaximoInv?: Prisma.SortOrder
+  diasInvCantidadDefinitiva?: Prisma.SortOrder
+  diasInvCdF1?: Prisma.SortOrder
+  diasInvCdF2?: Prisma.SortOrder
+  diasInvCdF3?: Prisma.SortOrder
+  diaDePedido?: Prisma.SortOrder
+  diaDeLlegada?: Prisma.SortOrder
+  fechaEstimadaEntrega?: Prisma.SortOrder
+  nomDiaEntrega?: Prisma.SortOrder
+  fechaEntregaF1?: Prisma.SortOrder
+  fechaEntregaF2?: Prisma.SortOrder
+  fechaEntregaF3?: Prisma.SortOrder
+  alertaStock?: Prisma.SortOrder
+  vidaUtilMinDiasReciboCedi?: Prisma.SortOrder
+  alertaVidaUtil?: Prisma.SortOrder
+  crossDock?: Prisma.SortOrder
+  moq?: Prisma.SortOrder
+  subcategoria?: Prisma.SortOrder
+  temperaturaAlmacenamiento?: Prisma.SortOrder
+  responsableDeCompra?: Prisma.SortOrder
+  category?: Prisma.SortOrder
+  multiploDeCompra?: Prisma.SortOrder
+  estado?: Prisma.SortOrder
+  fechaCreacion?: Prisma.SortOrder
+  fechaActualizacion?: Prisma.SortOrder
 }
 
 export type PurchaseSuggestionSumOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  leadTime?: Prisma.SortOrder
-  finalInventoryDaysQuantity?: Prisma.SortOrder
-  orderToday?: Prisma.SortOrder
-  purchaseStatusId?: Prisma.SortOrder
-  createdById?: Prisma.SortOrder
+  codigoMaterial?: Prisma.SortOrder
+  porcCompra?: Prisma.SortOrder
+  almacen?: Prisma.SortOrder
+  ltReal?: Prisma.SortOrder
+  factorLt?: Prisma.SortOrder
+  frec?: Prisma.SortOrder
+  ump?: Prisma.SortOrder
+  ums?: Prisma.SortOrder
+  venta30DiasDiaDelDia?: Prisma.SortOrder
+  ventaFcDiaAjustada?: Prisma.SortOrder
+  porcDesviacionFcVsVenta?: Prisma.SortOrder
+  porcIncPlaneacionDemanda?: Prisma.SortOrder
+  pedidoPromedioDiaUmp?: Prisma.SortOrder
+  tiendasAgotadas?: Prisma.SortOrder
+  tipologia?: Prisma.SortOrder
+  invTienda?: Prisma.SortOrder
+  stockObjetivoTienda?: Prisma.SortOrder
+  faltanteLlenadoTienda?: Prisma.SortOrder
+  diasInvTienda?: Prisma.SortOrder
+  inventarioFisico?: Prisma.SortOrder
+  inventarioEnTransito?: Prisma.SortOrder
+  diasInvALaFecha?: Prisma.SortOrder
+  diasInvFisicoTransito?: Prisma.SortOrder
+  zonarojaPura?: Prisma.SortOrder
+  zonaroja?: Prisma.SortOrder
+  zonaamarilla?: Prisma.SortOrder
+  zonaverde?: Prisma.SortOrder
+  tamBufferPuroUmp?: Prisma.SortOrder
+  tamBufferUmp?: Prisma.SortOrder
+  demandaCalificada?: Prisma.SortOrder
+  pedidoHoy?: Prisma.SortOrder
+  pedidoF1?: Prisma.SortOrder
+  pedidoF2?: Prisma.SortOrder
+  pedidoF3?: Prisma.SortOrder
+  pedidoF4?: Prisma.SortOrder
+  pedidoF5?: Prisma.SortOrder
+  pedidoF6?: Prisma.SortOrder
+  estimadoParaTopeBuffer?: Prisma.SortOrder
+  cantidadDefinitivaOcHoy?: Prisma.SortOrder
+  cantidadDefinitivaOcF1?: Prisma.SortOrder
+  cantidadDefinitivaOcF2?: Prisma.SortOrder
+  cantidadDefinitivaOcF3?: Prisma.SortOrder
+  factorVariabilidadVenta?: Prisma.SortOrder
+  diasMinimoInv?: Prisma.SortOrder
+  diasPromedioInv?: Prisma.SortOrder
+  diasMaximoInv?: Prisma.SortOrder
+  diasInvCantidadDefinitiva?: Prisma.SortOrder
+  diasInvCdF1?: Prisma.SortOrder
+  diasInvCdF2?: Prisma.SortOrder
+  diasInvCdF3?: Prisma.SortOrder
+  vidaUtilMinDiasReciboCedi?: Prisma.SortOrder
+  moq?: Prisma.SortOrder
+  multiploDeCompra?: Prisma.SortOrder
 }
 
-export type PurchaseSuggestionCreateNestedOneWithoutHistoryInput = {
-  create?: Prisma.XOR<Prisma.PurchaseSuggestionCreateWithoutHistoryInput, Prisma.PurchaseSuggestionUncheckedCreateWithoutHistoryInput>
-  connectOrCreate?: Prisma.PurchaseSuggestionCreateOrConnectWithoutHistoryInput
+export type PurchaseSuggestionCreateNestedOneWithoutHistorialInput = {
+  create?: Prisma.XOR<Prisma.PurchaseSuggestionCreateWithoutHistorialInput, Prisma.PurchaseSuggestionUncheckedCreateWithoutHistorialInput>
+  connectOrCreate?: Prisma.PurchaseSuggestionCreateOrConnectWithoutHistorialInput
   connect?: Prisma.PurchaseSuggestionWhereUniqueInput
 }
 
-export type PurchaseSuggestionUpdateOneRequiredWithoutHistoryNestedInput = {
-  create?: Prisma.XOR<Prisma.PurchaseSuggestionCreateWithoutHistoryInput, Prisma.PurchaseSuggestionUncheckedCreateWithoutHistoryInput>
-  connectOrCreate?: Prisma.PurchaseSuggestionCreateOrConnectWithoutHistoryInput
-  upsert?: Prisma.PurchaseSuggestionUpsertWithoutHistoryInput
+export type PurchaseSuggestionUpdateOneRequiredWithoutHistorialNestedInput = {
+  create?: Prisma.XOR<Prisma.PurchaseSuggestionCreateWithoutHistorialInput, Prisma.PurchaseSuggestionUncheckedCreateWithoutHistorialInput>
+  connectOrCreate?: Prisma.PurchaseSuggestionCreateOrConnectWithoutHistorialInput
+  upsert?: Prisma.PurchaseSuggestionUpsertWithoutHistorialInput
   connect?: Prisma.PurchaseSuggestionWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.PurchaseSuggestionUpdateToOneWithWhereWithoutHistoryInput, Prisma.PurchaseSuggestionUpdateWithoutHistoryInput>, Prisma.PurchaseSuggestionUncheckedUpdateWithoutHistoryInput>
+  update?: Prisma.XOR<Prisma.XOR<Prisma.PurchaseSuggestionUpdateToOneWithWhereWithoutHistorialInput, Prisma.PurchaseSuggestionUpdateWithoutHistorialInput>, Prisma.PurchaseSuggestionUncheckedUpdateWithoutHistorialInput>
 }
 
-export type PurchaseSuggestionCreateNestedManyWithoutStatusInput = {
-  create?: Prisma.XOR<Prisma.PurchaseSuggestionCreateWithoutStatusInput, Prisma.PurchaseSuggestionUncheckedCreateWithoutStatusInput> | Prisma.PurchaseSuggestionCreateWithoutStatusInput[] | Prisma.PurchaseSuggestionUncheckedCreateWithoutStatusInput[]
-  connectOrCreate?: Prisma.PurchaseSuggestionCreateOrConnectWithoutStatusInput | Prisma.PurchaseSuggestionCreateOrConnectWithoutStatusInput[]
-  createMany?: Prisma.PurchaseSuggestionCreateManyStatusInputEnvelope
+export type PurchaseSuggestionCreateNestedManyWithoutEstadoCompraSugeridaInput = {
+  create?: Prisma.XOR<Prisma.PurchaseSuggestionCreateWithoutEstadoCompraSugeridaInput, Prisma.PurchaseSuggestionUncheckedCreateWithoutEstadoCompraSugeridaInput> | Prisma.PurchaseSuggestionCreateWithoutEstadoCompraSugeridaInput[] | Prisma.PurchaseSuggestionUncheckedCreateWithoutEstadoCompraSugeridaInput[]
+  connectOrCreate?: Prisma.PurchaseSuggestionCreateOrConnectWithoutEstadoCompraSugeridaInput | Prisma.PurchaseSuggestionCreateOrConnectWithoutEstadoCompraSugeridaInput[]
+  createMany?: Prisma.PurchaseSuggestionCreateManyEstadoCompraSugeridaInputEnvelope
   connect?: Prisma.PurchaseSuggestionWhereUniqueInput | Prisma.PurchaseSuggestionWhereUniqueInput[]
 }
 
-export type PurchaseSuggestionUncheckedCreateNestedManyWithoutStatusInput = {
-  create?: Prisma.XOR<Prisma.PurchaseSuggestionCreateWithoutStatusInput, Prisma.PurchaseSuggestionUncheckedCreateWithoutStatusInput> | Prisma.PurchaseSuggestionCreateWithoutStatusInput[] | Prisma.PurchaseSuggestionUncheckedCreateWithoutStatusInput[]
-  connectOrCreate?: Prisma.PurchaseSuggestionCreateOrConnectWithoutStatusInput | Prisma.PurchaseSuggestionCreateOrConnectWithoutStatusInput[]
-  createMany?: Prisma.PurchaseSuggestionCreateManyStatusInputEnvelope
+export type PurchaseSuggestionUncheckedCreateNestedManyWithoutEstadoCompraSugeridaInput = {
+  create?: Prisma.XOR<Prisma.PurchaseSuggestionCreateWithoutEstadoCompraSugeridaInput, Prisma.PurchaseSuggestionUncheckedCreateWithoutEstadoCompraSugeridaInput> | Prisma.PurchaseSuggestionCreateWithoutEstadoCompraSugeridaInput[] | Prisma.PurchaseSuggestionUncheckedCreateWithoutEstadoCompraSugeridaInput[]
+  connectOrCreate?: Prisma.PurchaseSuggestionCreateOrConnectWithoutEstadoCompraSugeridaInput | Prisma.PurchaseSuggestionCreateOrConnectWithoutEstadoCompraSugeridaInput[]
+  createMany?: Prisma.PurchaseSuggestionCreateManyEstadoCompraSugeridaInputEnvelope
   connect?: Prisma.PurchaseSuggestionWhereUniqueInput | Prisma.PurchaseSuggestionWhereUniqueInput[]
 }
 
-export type PurchaseSuggestionUpdateManyWithoutStatusNestedInput = {
-  create?: Prisma.XOR<Prisma.PurchaseSuggestionCreateWithoutStatusInput, Prisma.PurchaseSuggestionUncheckedCreateWithoutStatusInput> | Prisma.PurchaseSuggestionCreateWithoutStatusInput[] | Prisma.PurchaseSuggestionUncheckedCreateWithoutStatusInput[]
-  connectOrCreate?: Prisma.PurchaseSuggestionCreateOrConnectWithoutStatusInput | Prisma.PurchaseSuggestionCreateOrConnectWithoutStatusInput[]
-  upsert?: Prisma.PurchaseSuggestionUpsertWithWhereUniqueWithoutStatusInput | Prisma.PurchaseSuggestionUpsertWithWhereUniqueWithoutStatusInput[]
-  createMany?: Prisma.PurchaseSuggestionCreateManyStatusInputEnvelope
+export type PurchaseSuggestionUpdateManyWithoutEstadoCompraSugeridaNestedInput = {
+  create?: Prisma.XOR<Prisma.PurchaseSuggestionCreateWithoutEstadoCompraSugeridaInput, Prisma.PurchaseSuggestionUncheckedCreateWithoutEstadoCompraSugeridaInput> | Prisma.PurchaseSuggestionCreateWithoutEstadoCompraSugeridaInput[] | Prisma.PurchaseSuggestionUncheckedCreateWithoutEstadoCompraSugeridaInput[]
+  connectOrCreate?: Prisma.PurchaseSuggestionCreateOrConnectWithoutEstadoCompraSugeridaInput | Prisma.PurchaseSuggestionCreateOrConnectWithoutEstadoCompraSugeridaInput[]
+  upsert?: Prisma.PurchaseSuggestionUpsertWithWhereUniqueWithoutEstadoCompraSugeridaInput | Prisma.PurchaseSuggestionUpsertWithWhereUniqueWithoutEstadoCompraSugeridaInput[]
+  createMany?: Prisma.PurchaseSuggestionCreateManyEstadoCompraSugeridaInputEnvelope
   set?: Prisma.PurchaseSuggestionWhereUniqueInput | Prisma.PurchaseSuggestionWhereUniqueInput[]
   disconnect?: Prisma.PurchaseSuggestionWhereUniqueInput | Prisma.PurchaseSuggestionWhereUniqueInput[]
   delete?: Prisma.PurchaseSuggestionWhereUniqueInput | Prisma.PurchaseSuggestionWhereUniqueInput[]
   connect?: Prisma.PurchaseSuggestionWhereUniqueInput | Prisma.PurchaseSuggestionWhereUniqueInput[]
-  update?: Prisma.PurchaseSuggestionUpdateWithWhereUniqueWithoutStatusInput | Prisma.PurchaseSuggestionUpdateWithWhereUniqueWithoutStatusInput[]
-  updateMany?: Prisma.PurchaseSuggestionUpdateManyWithWhereWithoutStatusInput | Prisma.PurchaseSuggestionUpdateManyWithWhereWithoutStatusInput[]
+  update?: Prisma.PurchaseSuggestionUpdateWithWhereUniqueWithoutEstadoCompraSugeridaInput | Prisma.PurchaseSuggestionUpdateWithWhereUniqueWithoutEstadoCompraSugeridaInput[]
+  updateMany?: Prisma.PurchaseSuggestionUpdateManyWithWhereWithoutEstadoCompraSugeridaInput | Prisma.PurchaseSuggestionUpdateManyWithWhereWithoutEstadoCompraSugeridaInput[]
   deleteMany?: Prisma.PurchaseSuggestionScalarWhereInput | Prisma.PurchaseSuggestionScalarWhereInput[]
 }
 
-export type PurchaseSuggestionUncheckedUpdateManyWithoutStatusNestedInput = {
-  create?: Prisma.XOR<Prisma.PurchaseSuggestionCreateWithoutStatusInput, Prisma.PurchaseSuggestionUncheckedCreateWithoutStatusInput> | Prisma.PurchaseSuggestionCreateWithoutStatusInput[] | Prisma.PurchaseSuggestionUncheckedCreateWithoutStatusInput[]
-  connectOrCreate?: Prisma.PurchaseSuggestionCreateOrConnectWithoutStatusInput | Prisma.PurchaseSuggestionCreateOrConnectWithoutStatusInput[]
-  upsert?: Prisma.PurchaseSuggestionUpsertWithWhereUniqueWithoutStatusInput | Prisma.PurchaseSuggestionUpsertWithWhereUniqueWithoutStatusInput[]
-  createMany?: Prisma.PurchaseSuggestionCreateManyStatusInputEnvelope
+export type PurchaseSuggestionUncheckedUpdateManyWithoutEstadoCompraSugeridaNestedInput = {
+  create?: Prisma.XOR<Prisma.PurchaseSuggestionCreateWithoutEstadoCompraSugeridaInput, Prisma.PurchaseSuggestionUncheckedCreateWithoutEstadoCompraSugeridaInput> | Prisma.PurchaseSuggestionCreateWithoutEstadoCompraSugeridaInput[] | Prisma.PurchaseSuggestionUncheckedCreateWithoutEstadoCompraSugeridaInput[]
+  connectOrCreate?: Prisma.PurchaseSuggestionCreateOrConnectWithoutEstadoCompraSugeridaInput | Prisma.PurchaseSuggestionCreateOrConnectWithoutEstadoCompraSugeridaInput[]
+  upsert?: Prisma.PurchaseSuggestionUpsertWithWhereUniqueWithoutEstadoCompraSugeridaInput | Prisma.PurchaseSuggestionUpsertWithWhereUniqueWithoutEstadoCompraSugeridaInput[]
+  createMany?: Prisma.PurchaseSuggestionCreateManyEstadoCompraSugeridaInputEnvelope
   set?: Prisma.PurchaseSuggestionWhereUniqueInput | Prisma.PurchaseSuggestionWhereUniqueInput[]
   disconnect?: Prisma.PurchaseSuggestionWhereUniqueInput | Prisma.PurchaseSuggestionWhereUniqueInput[]
   delete?: Prisma.PurchaseSuggestionWhereUniqueInput | Prisma.PurchaseSuggestionWhereUniqueInput[]
   connect?: Prisma.PurchaseSuggestionWhereUniqueInput | Prisma.PurchaseSuggestionWhereUniqueInput[]
-  update?: Prisma.PurchaseSuggestionUpdateWithWhereUniqueWithoutStatusInput | Prisma.PurchaseSuggestionUpdateWithWhereUniqueWithoutStatusInput[]
-  updateMany?: Prisma.PurchaseSuggestionUpdateManyWithWhereWithoutStatusInput | Prisma.PurchaseSuggestionUpdateManyWithWhereWithoutStatusInput[]
+  update?: Prisma.PurchaseSuggestionUpdateWithWhereUniqueWithoutEstadoCompraSugeridaInput | Prisma.PurchaseSuggestionUpdateWithWhereUniqueWithoutEstadoCompraSugeridaInput[]
+  updateMany?: Prisma.PurchaseSuggestionUpdateManyWithWhereWithoutEstadoCompraSugeridaInput | Prisma.PurchaseSuggestionUpdateManyWithWhereWithoutEstadoCompraSugeridaInput[]
   deleteMany?: Prisma.PurchaseSuggestionScalarWhereInput | Prisma.PurchaseSuggestionScalarWhereInput[]
 }
 
-export type FloatFieldUpdateOperationsInput = {
-  set?: number
+export type NullableStringFieldUpdateOperationsInput = {
+  set?: string | null
+}
+
+export type NullableIntFieldUpdateOperationsInput = {
+  set?: number | null
   increment?: number
   decrement?: number
   multiply?: number
   divide?: number
 }
 
-export type PurchaseSuggestionCreateNestedManyWithoutCreatedByInput = {
-  create?: Prisma.XOR<Prisma.PurchaseSuggestionCreateWithoutCreatedByInput, Prisma.PurchaseSuggestionUncheckedCreateWithoutCreatedByInput> | Prisma.PurchaseSuggestionCreateWithoutCreatedByInput[] | Prisma.PurchaseSuggestionUncheckedCreateWithoutCreatedByInput[]
-  connectOrCreate?: Prisma.PurchaseSuggestionCreateOrConnectWithoutCreatedByInput | Prisma.PurchaseSuggestionCreateOrConnectWithoutCreatedByInput[]
-  createMany?: Prisma.PurchaseSuggestionCreateManyCreatedByInputEnvelope
-  connect?: Prisma.PurchaseSuggestionWhereUniqueInput | Prisma.PurchaseSuggestionWhereUniqueInput[]
+export type DecimalFieldUpdateOperationsInput = {
+  set?: runtime.Decimal | runtime.DecimalJsLike | number | string
+  increment?: runtime.Decimal | runtime.DecimalJsLike | number | string
+  decrement?: runtime.Decimal | runtime.DecimalJsLike | number | string
+  multiply?: runtime.Decimal | runtime.DecimalJsLike | number | string
+  divide?: runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
-export type PurchaseSuggestionUncheckedCreateNestedManyWithoutCreatedByInput = {
-  create?: Prisma.XOR<Prisma.PurchaseSuggestionCreateWithoutCreatedByInput, Prisma.PurchaseSuggestionUncheckedCreateWithoutCreatedByInput> | Prisma.PurchaseSuggestionCreateWithoutCreatedByInput[] | Prisma.PurchaseSuggestionUncheckedCreateWithoutCreatedByInput[]
-  connectOrCreate?: Prisma.PurchaseSuggestionCreateOrConnectWithoutCreatedByInput | Prisma.PurchaseSuggestionCreateOrConnectWithoutCreatedByInput[]
-  createMany?: Prisma.PurchaseSuggestionCreateManyCreatedByInputEnvelope
-  connect?: Prisma.PurchaseSuggestionWhereUniqueInput | Prisma.PurchaseSuggestionWhereUniqueInput[]
+export type NullableDecimalFieldUpdateOperationsInput = {
+  set?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  increment?: runtime.Decimal | runtime.DecimalJsLike | number | string
+  decrement?: runtime.Decimal | runtime.DecimalJsLike | number | string
+  multiply?: runtime.Decimal | runtime.DecimalJsLike | number | string
+  divide?: runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
-export type PurchaseSuggestionUpdateManyWithoutCreatedByNestedInput = {
-  create?: Prisma.XOR<Prisma.PurchaseSuggestionCreateWithoutCreatedByInput, Prisma.PurchaseSuggestionUncheckedCreateWithoutCreatedByInput> | Prisma.PurchaseSuggestionCreateWithoutCreatedByInput[] | Prisma.PurchaseSuggestionUncheckedCreateWithoutCreatedByInput[]
-  connectOrCreate?: Prisma.PurchaseSuggestionCreateOrConnectWithoutCreatedByInput | Prisma.PurchaseSuggestionCreateOrConnectWithoutCreatedByInput[]
-  upsert?: Prisma.PurchaseSuggestionUpsertWithWhereUniqueWithoutCreatedByInput | Prisma.PurchaseSuggestionUpsertWithWhereUniqueWithoutCreatedByInput[]
-  createMany?: Prisma.PurchaseSuggestionCreateManyCreatedByInputEnvelope
-  set?: Prisma.PurchaseSuggestionWhereUniqueInput | Prisma.PurchaseSuggestionWhereUniqueInput[]
-  disconnect?: Prisma.PurchaseSuggestionWhereUniqueInput | Prisma.PurchaseSuggestionWhereUniqueInput[]
-  delete?: Prisma.PurchaseSuggestionWhereUniqueInput | Prisma.PurchaseSuggestionWhereUniqueInput[]
-  connect?: Prisma.PurchaseSuggestionWhereUniqueInput | Prisma.PurchaseSuggestionWhereUniqueInput[]
-  update?: Prisma.PurchaseSuggestionUpdateWithWhereUniqueWithoutCreatedByInput | Prisma.PurchaseSuggestionUpdateWithWhereUniqueWithoutCreatedByInput[]
-  updateMany?: Prisma.PurchaseSuggestionUpdateManyWithWhereWithoutCreatedByInput | Prisma.PurchaseSuggestionUpdateManyWithWhereWithoutCreatedByInput[]
-  deleteMany?: Prisma.PurchaseSuggestionScalarWhereInput | Prisma.PurchaseSuggestionScalarWhereInput[]
+export type BoolFieldUpdateOperationsInput = {
+  set?: boolean
 }
 
-export type PurchaseSuggestionUncheckedUpdateManyWithoutCreatedByNestedInput = {
-  create?: Prisma.XOR<Prisma.PurchaseSuggestionCreateWithoutCreatedByInput, Prisma.PurchaseSuggestionUncheckedCreateWithoutCreatedByInput> | Prisma.PurchaseSuggestionCreateWithoutCreatedByInput[] | Prisma.PurchaseSuggestionUncheckedCreateWithoutCreatedByInput[]
-  connectOrCreate?: Prisma.PurchaseSuggestionCreateOrConnectWithoutCreatedByInput | Prisma.PurchaseSuggestionCreateOrConnectWithoutCreatedByInput[]
-  upsert?: Prisma.PurchaseSuggestionUpsertWithWhereUniqueWithoutCreatedByInput | Prisma.PurchaseSuggestionUpsertWithWhereUniqueWithoutCreatedByInput[]
-  createMany?: Prisma.PurchaseSuggestionCreateManyCreatedByInputEnvelope
-  set?: Prisma.PurchaseSuggestionWhereUniqueInput | Prisma.PurchaseSuggestionWhereUniqueInput[]
-  disconnect?: Prisma.PurchaseSuggestionWhereUniqueInput | Prisma.PurchaseSuggestionWhereUniqueInput[]
-  delete?: Prisma.PurchaseSuggestionWhereUniqueInput | Prisma.PurchaseSuggestionWhereUniqueInput[]
-  connect?: Prisma.PurchaseSuggestionWhereUniqueInput | Prisma.PurchaseSuggestionWhereUniqueInput[]
-  update?: Prisma.PurchaseSuggestionUpdateWithWhereUniqueWithoutCreatedByInput | Prisma.PurchaseSuggestionUpdateWithWhereUniqueWithoutCreatedByInput[]
-  updateMany?: Prisma.PurchaseSuggestionUpdateManyWithWhereWithoutCreatedByInput | Prisma.PurchaseSuggestionUpdateManyWithWhereWithoutCreatedByInput[]
-  deleteMany?: Prisma.PurchaseSuggestionScalarWhereInput | Prisma.PurchaseSuggestionScalarWhereInput[]
+export type NullableDateTimeFieldUpdateOperationsInput = {
+  set?: Date | string | null
 }
 
-export type PurchaseSuggestionCreateWithoutHistoryInput = {
-  materialCode: string
-  materialDescription: string
-  supplier: string
-  supplyCenter: string
-  warehouse: string
-  leadTime: number
-  finalInventoryDaysQuantity: number
-  orderToday: number
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  status: Prisma.PurchaseSuggestionStatusCreateNestedOneWithoutSuggestionsInput
-  createdBy: Prisma.UserCreateNestedOneWithoutCreatedSuggestionsInput
+export type NullableBoolFieldUpdateOperationsInput = {
+  set?: boolean | null
 }
 
-export type PurchaseSuggestionUncheckedCreateWithoutHistoryInput = {
+export type PurchaseSuggestionCreateWithoutHistorialInput = {
+  mc: string
+  mca: string
+  mcap?: string | null
+  codigoMaterial: number
+  descripcionMaterial: string
+  codProv: string
+  proveedor: string
+  centroAbastecedor: string
+  desDentro?: string | null
+  porcCompra?: number | null
+  almacen: number
+  categoria?: string | null
+  ltReal: number
+  factorLt: runtime.Decimal | runtime.DecimalJsLike | number | string
+  frec: runtime.Decimal | runtime.DecimalJsLike | number | string
+  ump: number
+  ums: number
+  venta30DiasDiaDelDia: runtime.Decimal | runtime.DecimalJsLike | number | string
+  ventaFcDiaAjustada: runtime.Decimal | runtime.DecimalJsLike | number | string
+  porcDesviacionFcVsVenta?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  porcIncPlaneacionDemanda?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  aplica?: string | null
+  pedidoPromedioDiaUmp: number
+  tiendasAgotadas?: number | null
+  tipologia?: number | null
+  invTienda?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  stockObjetivoTienda?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  faltanteLlenadoTienda?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvTienda?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  inventarioFisico?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  inventarioEnTransito?: number | null
+  diasInvALaFecha?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvFisicoTransito?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonarojaPura?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaroja?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaamarilla?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaverde?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  tamBufferPuroUmp?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  tamBufferUmp?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  demandaCalificada?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  activoLunes: boolean
+  activoMartes: boolean
+  activoMiercoles: boolean
+  activoJueves: boolean
+  activoViernes: boolean
+  activoSabado: boolean
+  activoDomingo: boolean
+  pedidoHoy: number
+  pedidoF1?: number | null
+  pedidoF2?: number | null
+  pedidoF3?: number | null
+  pedidoF4?: number | null
+  pedidoF5?: number | null
+  pedidoF6?: number | null
+  estimadoParaTopeBuffer?: number | null
+  cantidadDefinitivaOcHoy?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF1?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF2?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF3?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  factorVariabilidadVenta?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasMinimoInv?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasPromedioInv?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasMaximoInv?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCantidadDefinitiva?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF1?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF2?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF3?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diaDePedido?: string | null
+  diaDeLlegada?: string | null
+  fechaEstimadaEntrega?: Date | string | null
+  nomDiaEntrega?: string | null
+  fechaEntregaF1?: Date | string | null
+  fechaEntregaF2?: Date | string | null
+  fechaEntregaF3?: Date | string | null
+  alertaStock?: string | null
+  vidaUtilMinDiasReciboCedi?: number | null
+  alertaVidaUtil?: string | null
+  crossDock?: boolean | null
+  moq?: number | null
+  subcategoria?: string | null
+  temperaturaAlmacenamiento?: string | null
+  responsableDeCompra?: string | null
+  category?: string | null
+  multiploDeCompra?: number | null
+  fechaCreacion?: Date | string
+  fechaActualizacion?: Date | string
+  estadoCompraSugerida?: Prisma.PurchaseSuggestionStatusCreateNestedOneWithoutCompraSugeridaInput
+}
+
+export type PurchaseSuggestionUncheckedCreateWithoutHistorialInput = {
   id?: number
-  materialCode: string
-  materialDescription: string
-  supplier: string
-  supplyCenter: string
-  warehouse: string
-  leadTime: number
-  finalInventoryDaysQuantity: number
-  orderToday: number
-  purchaseStatusId: number
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  createdById: number
+  mc: string
+  mca: string
+  mcap?: string | null
+  codigoMaterial: number
+  descripcionMaterial: string
+  codProv: string
+  proveedor: string
+  centroAbastecedor: string
+  desDentro?: string | null
+  porcCompra?: number | null
+  almacen: number
+  categoria?: string | null
+  ltReal: number
+  factorLt: runtime.Decimal | runtime.DecimalJsLike | number | string
+  frec: runtime.Decimal | runtime.DecimalJsLike | number | string
+  ump: number
+  ums: number
+  venta30DiasDiaDelDia: runtime.Decimal | runtime.DecimalJsLike | number | string
+  ventaFcDiaAjustada: runtime.Decimal | runtime.DecimalJsLike | number | string
+  porcDesviacionFcVsVenta?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  porcIncPlaneacionDemanda?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  aplica?: string | null
+  pedidoPromedioDiaUmp: number
+  tiendasAgotadas?: number | null
+  tipologia?: number | null
+  invTienda?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  stockObjetivoTienda?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  faltanteLlenadoTienda?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvTienda?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  inventarioFisico?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  inventarioEnTransito?: number | null
+  diasInvALaFecha?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvFisicoTransito?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonarojaPura?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaroja?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaamarilla?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaverde?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  tamBufferPuroUmp?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  tamBufferUmp?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  demandaCalificada?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  activoLunes: boolean
+  activoMartes: boolean
+  activoMiercoles: boolean
+  activoJueves: boolean
+  activoViernes: boolean
+  activoSabado: boolean
+  activoDomingo: boolean
+  pedidoHoy: number
+  pedidoF1?: number | null
+  pedidoF2?: number | null
+  pedidoF3?: number | null
+  pedidoF4?: number | null
+  pedidoF5?: number | null
+  pedidoF6?: number | null
+  estimadoParaTopeBuffer?: number | null
+  cantidadDefinitivaOcHoy?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF1?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF2?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF3?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  factorVariabilidadVenta?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasMinimoInv?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasPromedioInv?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasMaximoInv?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCantidadDefinitiva?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF1?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF2?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF3?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diaDePedido?: string | null
+  diaDeLlegada?: string | null
+  fechaEstimadaEntrega?: Date | string | null
+  nomDiaEntrega?: string | null
+  fechaEntregaF1?: Date | string | null
+  fechaEntregaF2?: Date | string | null
+  fechaEntregaF3?: Date | string | null
+  alertaStock?: string | null
+  vidaUtilMinDiasReciboCedi?: number | null
+  alertaVidaUtil?: string | null
+  crossDock?: boolean | null
+  moq?: number | null
+  subcategoria?: string | null
+  temperaturaAlmacenamiento?: string | null
+  responsableDeCompra?: string | null
+  category?: string | null
+  multiploDeCompra?: number | null
+  estado?: string | null
+  fechaCreacion?: Date | string
+  fechaActualizacion?: Date | string
 }
 
-export type PurchaseSuggestionCreateOrConnectWithoutHistoryInput = {
+export type PurchaseSuggestionCreateOrConnectWithoutHistorialInput = {
   where: Prisma.PurchaseSuggestionWhereUniqueInput
-  create: Prisma.XOR<Prisma.PurchaseSuggestionCreateWithoutHistoryInput, Prisma.PurchaseSuggestionUncheckedCreateWithoutHistoryInput>
+  create: Prisma.XOR<Prisma.PurchaseSuggestionCreateWithoutHistorialInput, Prisma.PurchaseSuggestionUncheckedCreateWithoutHistorialInput>
 }
 
-export type PurchaseSuggestionUpsertWithoutHistoryInput = {
-  update: Prisma.XOR<Prisma.PurchaseSuggestionUpdateWithoutHistoryInput, Prisma.PurchaseSuggestionUncheckedUpdateWithoutHistoryInput>
-  create: Prisma.XOR<Prisma.PurchaseSuggestionCreateWithoutHistoryInput, Prisma.PurchaseSuggestionUncheckedCreateWithoutHistoryInput>
+export type PurchaseSuggestionUpsertWithoutHistorialInput = {
+  update: Prisma.XOR<Prisma.PurchaseSuggestionUpdateWithoutHistorialInput, Prisma.PurchaseSuggestionUncheckedUpdateWithoutHistorialInput>
+  create: Prisma.XOR<Prisma.PurchaseSuggestionCreateWithoutHistorialInput, Prisma.PurchaseSuggestionUncheckedCreateWithoutHistorialInput>
   where?: Prisma.PurchaseSuggestionWhereInput
 }
 
-export type PurchaseSuggestionUpdateToOneWithWhereWithoutHistoryInput = {
+export type PurchaseSuggestionUpdateToOneWithWhereWithoutHistorialInput = {
   where?: Prisma.PurchaseSuggestionWhereInput
-  data: Prisma.XOR<Prisma.PurchaseSuggestionUpdateWithoutHistoryInput, Prisma.PurchaseSuggestionUncheckedUpdateWithoutHistoryInput>
+  data: Prisma.XOR<Prisma.PurchaseSuggestionUpdateWithoutHistorialInput, Prisma.PurchaseSuggestionUncheckedUpdateWithoutHistorialInput>
 }
 
-export type PurchaseSuggestionUpdateWithoutHistoryInput = {
-  materialCode?: Prisma.StringFieldUpdateOperationsInput | string
-  materialDescription?: Prisma.StringFieldUpdateOperationsInput | string
-  supplier?: Prisma.StringFieldUpdateOperationsInput | string
-  supplyCenter?: Prisma.StringFieldUpdateOperationsInput | string
-  warehouse?: Prisma.StringFieldUpdateOperationsInput | string
-  leadTime?: Prisma.IntFieldUpdateOperationsInput | number
-  finalInventoryDaysQuantity?: Prisma.FloatFieldUpdateOperationsInput | number
-  orderToday?: Prisma.IntFieldUpdateOperationsInput | number
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  status?: Prisma.PurchaseSuggestionStatusUpdateOneRequiredWithoutSuggestionsNestedInput
-  createdBy?: Prisma.UserUpdateOneRequiredWithoutCreatedSuggestionsNestedInput
+export type PurchaseSuggestionUpdateWithoutHistorialInput = {
+  mc?: Prisma.StringFieldUpdateOperationsInput | string
+  mca?: Prisma.StringFieldUpdateOperationsInput | string
+  mcap?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  codigoMaterial?: Prisma.IntFieldUpdateOperationsInput | number
+  descripcionMaterial?: Prisma.StringFieldUpdateOperationsInput | string
+  codProv?: Prisma.StringFieldUpdateOperationsInput | string
+  proveedor?: Prisma.StringFieldUpdateOperationsInput | string
+  centroAbastecedor?: Prisma.StringFieldUpdateOperationsInput | string
+  desDentro?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  porcCompra?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  almacen?: Prisma.IntFieldUpdateOperationsInput | number
+  categoria?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  ltReal?: Prisma.IntFieldUpdateOperationsInput | number
+  factorLt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  frec?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  ump?: Prisma.IntFieldUpdateOperationsInput | number
+  ums?: Prisma.IntFieldUpdateOperationsInput | number
+  venta30DiasDiaDelDia?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  ventaFcDiaAjustada?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  porcDesviacionFcVsVenta?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  porcIncPlaneacionDemanda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  aplica?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  pedidoPromedioDiaUmp?: Prisma.IntFieldUpdateOperationsInput | number
+  tiendasAgotadas?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  tipologia?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  invTienda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  stockObjetivoTienda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  faltanteLlenadoTienda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvTienda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  inventarioFisico?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  inventarioEnTransito?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  diasInvALaFecha?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvFisicoTransito?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonarojaPura?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaroja?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaamarilla?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaverde?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  tamBufferPuroUmp?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  tamBufferUmp?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  demandaCalificada?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  activoLunes?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoMartes?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoMiercoles?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoJueves?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoViernes?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoSabado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoDomingo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  pedidoHoy?: Prisma.IntFieldUpdateOperationsInput | number
+  pedidoF1?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF2?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF3?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF4?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF5?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF6?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  estimadoParaTopeBuffer?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  cantidadDefinitivaOcHoy?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF1?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF2?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF3?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  factorVariabilidadVenta?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasMinimoInv?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasPromedioInv?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasMaximoInv?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCantidadDefinitiva?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF1?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF2?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF3?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diaDePedido?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diaDeLlegada?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaEstimadaEntrega?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  nomDiaEntrega?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaEntregaF1?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  fechaEntregaF2?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  fechaEntregaF3?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  alertaStock?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  vidaUtilMinDiasReciboCedi?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  alertaVidaUtil?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  crossDock?: Prisma.NullableBoolFieldUpdateOperationsInput | boolean | null
+  moq?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  subcategoria?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  temperaturaAlmacenamiento?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  responsableDeCompra?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  category?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  multiploDeCompra?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  fechaCreacion?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  fechaActualizacion?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  estadoCompraSugerida?: Prisma.PurchaseSuggestionStatusUpdateOneWithoutCompraSugeridaNestedInput
 }
 
-export type PurchaseSuggestionUncheckedUpdateWithoutHistoryInput = {
+export type PurchaseSuggestionUncheckedUpdateWithoutHistorialInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
-  materialCode?: Prisma.StringFieldUpdateOperationsInput | string
-  materialDescription?: Prisma.StringFieldUpdateOperationsInput | string
-  supplier?: Prisma.StringFieldUpdateOperationsInput | string
-  supplyCenter?: Prisma.StringFieldUpdateOperationsInput | string
-  warehouse?: Prisma.StringFieldUpdateOperationsInput | string
-  leadTime?: Prisma.IntFieldUpdateOperationsInput | number
-  finalInventoryDaysQuantity?: Prisma.FloatFieldUpdateOperationsInput | number
-  orderToday?: Prisma.IntFieldUpdateOperationsInput | number
-  purchaseStatusId?: Prisma.IntFieldUpdateOperationsInput | number
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  createdById?: Prisma.IntFieldUpdateOperationsInput | number
+  mc?: Prisma.StringFieldUpdateOperationsInput | string
+  mca?: Prisma.StringFieldUpdateOperationsInput | string
+  mcap?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  codigoMaterial?: Prisma.IntFieldUpdateOperationsInput | number
+  descripcionMaterial?: Prisma.StringFieldUpdateOperationsInput | string
+  codProv?: Prisma.StringFieldUpdateOperationsInput | string
+  proveedor?: Prisma.StringFieldUpdateOperationsInput | string
+  centroAbastecedor?: Prisma.StringFieldUpdateOperationsInput | string
+  desDentro?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  porcCompra?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  almacen?: Prisma.IntFieldUpdateOperationsInput | number
+  categoria?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  ltReal?: Prisma.IntFieldUpdateOperationsInput | number
+  factorLt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  frec?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  ump?: Prisma.IntFieldUpdateOperationsInput | number
+  ums?: Prisma.IntFieldUpdateOperationsInput | number
+  venta30DiasDiaDelDia?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  ventaFcDiaAjustada?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  porcDesviacionFcVsVenta?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  porcIncPlaneacionDemanda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  aplica?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  pedidoPromedioDiaUmp?: Prisma.IntFieldUpdateOperationsInput | number
+  tiendasAgotadas?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  tipologia?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  invTienda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  stockObjetivoTienda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  faltanteLlenadoTienda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvTienda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  inventarioFisico?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  inventarioEnTransito?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  diasInvALaFecha?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvFisicoTransito?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonarojaPura?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaroja?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaamarilla?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaverde?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  tamBufferPuroUmp?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  tamBufferUmp?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  demandaCalificada?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  activoLunes?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoMartes?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoMiercoles?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoJueves?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoViernes?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoSabado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoDomingo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  pedidoHoy?: Prisma.IntFieldUpdateOperationsInput | number
+  pedidoF1?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF2?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF3?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF4?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF5?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF6?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  estimadoParaTopeBuffer?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  cantidadDefinitivaOcHoy?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF1?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF2?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF3?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  factorVariabilidadVenta?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasMinimoInv?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasPromedioInv?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasMaximoInv?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCantidadDefinitiva?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF1?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF2?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF3?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diaDePedido?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diaDeLlegada?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaEstimadaEntrega?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  nomDiaEntrega?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaEntregaF1?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  fechaEntregaF2?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  fechaEntregaF3?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  alertaStock?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  vidaUtilMinDiasReciboCedi?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  alertaVidaUtil?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  crossDock?: Prisma.NullableBoolFieldUpdateOperationsInput | boolean | null
+  moq?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  subcategoria?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  temperaturaAlmacenamiento?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  responsableDeCompra?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  category?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  multiploDeCompra?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  estado?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaCreacion?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  fechaActualizacion?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
-export type PurchaseSuggestionCreateWithoutStatusInput = {
-  materialCode: string
-  materialDescription: string
-  supplier: string
-  supplyCenter: string
-  warehouse: string
-  leadTime: number
-  finalInventoryDaysQuantity: number
-  orderToday: number
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  createdBy: Prisma.UserCreateNestedOneWithoutCreatedSuggestionsInput
-  history?: Prisma.PurchaseHistoryCreateNestedManyWithoutPurchaseInput
+export type PurchaseSuggestionCreateWithoutEstadoCompraSugeridaInput = {
+  mc: string
+  mca: string
+  mcap?: string | null
+  codigoMaterial: number
+  descripcionMaterial: string
+  codProv: string
+  proveedor: string
+  centroAbastecedor: string
+  desDentro?: string | null
+  porcCompra?: number | null
+  almacen: number
+  categoria?: string | null
+  ltReal: number
+  factorLt: runtime.Decimal | runtime.DecimalJsLike | number | string
+  frec: runtime.Decimal | runtime.DecimalJsLike | number | string
+  ump: number
+  ums: number
+  venta30DiasDiaDelDia: runtime.Decimal | runtime.DecimalJsLike | number | string
+  ventaFcDiaAjustada: runtime.Decimal | runtime.DecimalJsLike | number | string
+  porcDesviacionFcVsVenta?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  porcIncPlaneacionDemanda?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  aplica?: string | null
+  pedidoPromedioDiaUmp: number
+  tiendasAgotadas?: number | null
+  tipologia?: number | null
+  invTienda?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  stockObjetivoTienda?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  faltanteLlenadoTienda?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvTienda?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  inventarioFisico?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  inventarioEnTransito?: number | null
+  diasInvALaFecha?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvFisicoTransito?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonarojaPura?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaroja?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaamarilla?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaverde?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  tamBufferPuroUmp?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  tamBufferUmp?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  demandaCalificada?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  activoLunes: boolean
+  activoMartes: boolean
+  activoMiercoles: boolean
+  activoJueves: boolean
+  activoViernes: boolean
+  activoSabado: boolean
+  activoDomingo: boolean
+  pedidoHoy: number
+  pedidoF1?: number | null
+  pedidoF2?: number | null
+  pedidoF3?: number | null
+  pedidoF4?: number | null
+  pedidoF5?: number | null
+  pedidoF6?: number | null
+  estimadoParaTopeBuffer?: number | null
+  cantidadDefinitivaOcHoy?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF1?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF2?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF3?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  factorVariabilidadVenta?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasMinimoInv?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasPromedioInv?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasMaximoInv?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCantidadDefinitiva?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF1?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF2?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF3?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diaDePedido?: string | null
+  diaDeLlegada?: string | null
+  fechaEstimadaEntrega?: Date | string | null
+  nomDiaEntrega?: string | null
+  fechaEntregaF1?: Date | string | null
+  fechaEntregaF2?: Date | string | null
+  fechaEntregaF3?: Date | string | null
+  alertaStock?: string | null
+  vidaUtilMinDiasReciboCedi?: number | null
+  alertaVidaUtil?: string | null
+  crossDock?: boolean | null
+  moq?: number | null
+  subcategoria?: string | null
+  temperaturaAlmacenamiento?: string | null
+  responsableDeCompra?: string | null
+  category?: string | null
+  multiploDeCompra?: number | null
+  fechaCreacion?: Date | string
+  fechaActualizacion?: Date | string
+  historial?: Prisma.PurchaseSuggestionHistoryCreateNestedManyWithoutCompraSugeridaInput
 }
 
-export type PurchaseSuggestionUncheckedCreateWithoutStatusInput = {
+export type PurchaseSuggestionUncheckedCreateWithoutEstadoCompraSugeridaInput = {
   id?: number
-  materialCode: string
-  materialDescription: string
-  supplier: string
-  supplyCenter: string
-  warehouse: string
-  leadTime: number
-  finalInventoryDaysQuantity: number
-  orderToday: number
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  createdById: number
-  history?: Prisma.PurchaseHistoryUncheckedCreateNestedManyWithoutPurchaseInput
+  mc: string
+  mca: string
+  mcap?: string | null
+  codigoMaterial: number
+  descripcionMaterial: string
+  codProv: string
+  proveedor: string
+  centroAbastecedor: string
+  desDentro?: string | null
+  porcCompra?: number | null
+  almacen: number
+  categoria?: string | null
+  ltReal: number
+  factorLt: runtime.Decimal | runtime.DecimalJsLike | number | string
+  frec: runtime.Decimal | runtime.DecimalJsLike | number | string
+  ump: number
+  ums: number
+  venta30DiasDiaDelDia: runtime.Decimal | runtime.DecimalJsLike | number | string
+  ventaFcDiaAjustada: runtime.Decimal | runtime.DecimalJsLike | number | string
+  porcDesviacionFcVsVenta?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  porcIncPlaneacionDemanda?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  aplica?: string | null
+  pedidoPromedioDiaUmp: number
+  tiendasAgotadas?: number | null
+  tipologia?: number | null
+  invTienda?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  stockObjetivoTienda?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  faltanteLlenadoTienda?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvTienda?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  inventarioFisico?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  inventarioEnTransito?: number | null
+  diasInvALaFecha?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvFisicoTransito?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonarojaPura?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaroja?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaamarilla?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaverde?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  tamBufferPuroUmp?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  tamBufferUmp?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  demandaCalificada?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  activoLunes: boolean
+  activoMartes: boolean
+  activoMiercoles: boolean
+  activoJueves: boolean
+  activoViernes: boolean
+  activoSabado: boolean
+  activoDomingo: boolean
+  pedidoHoy: number
+  pedidoF1?: number | null
+  pedidoF2?: number | null
+  pedidoF3?: number | null
+  pedidoF4?: number | null
+  pedidoF5?: number | null
+  pedidoF6?: number | null
+  estimadoParaTopeBuffer?: number | null
+  cantidadDefinitivaOcHoy?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF1?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF2?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF3?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  factorVariabilidadVenta?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasMinimoInv?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasPromedioInv?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasMaximoInv?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCantidadDefinitiva?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF1?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF2?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF3?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diaDePedido?: string | null
+  diaDeLlegada?: string | null
+  fechaEstimadaEntrega?: Date | string | null
+  nomDiaEntrega?: string | null
+  fechaEntregaF1?: Date | string | null
+  fechaEntregaF2?: Date | string | null
+  fechaEntregaF3?: Date | string | null
+  alertaStock?: string | null
+  vidaUtilMinDiasReciboCedi?: number | null
+  alertaVidaUtil?: string | null
+  crossDock?: boolean | null
+  moq?: number | null
+  subcategoria?: string | null
+  temperaturaAlmacenamiento?: string | null
+  responsableDeCompra?: string | null
+  category?: string | null
+  multiploDeCompra?: number | null
+  fechaCreacion?: Date | string
+  fechaActualizacion?: Date | string
+  historial?: Prisma.PurchaseSuggestionHistoryUncheckedCreateNestedManyWithoutCompraSugeridaInput
 }
 
-export type PurchaseSuggestionCreateOrConnectWithoutStatusInput = {
+export type PurchaseSuggestionCreateOrConnectWithoutEstadoCompraSugeridaInput = {
   where: Prisma.PurchaseSuggestionWhereUniqueInput
-  create: Prisma.XOR<Prisma.PurchaseSuggestionCreateWithoutStatusInput, Prisma.PurchaseSuggestionUncheckedCreateWithoutStatusInput>
+  create: Prisma.XOR<Prisma.PurchaseSuggestionCreateWithoutEstadoCompraSugeridaInput, Prisma.PurchaseSuggestionUncheckedCreateWithoutEstadoCompraSugeridaInput>
 }
 
-export type PurchaseSuggestionCreateManyStatusInputEnvelope = {
-  data: Prisma.PurchaseSuggestionCreateManyStatusInput | Prisma.PurchaseSuggestionCreateManyStatusInput[]
+export type PurchaseSuggestionCreateManyEstadoCompraSugeridaInputEnvelope = {
+  data: Prisma.PurchaseSuggestionCreateManyEstadoCompraSugeridaInput | Prisma.PurchaseSuggestionCreateManyEstadoCompraSugeridaInput[]
   skipDuplicates?: boolean
 }
 
-export type PurchaseSuggestionUpsertWithWhereUniqueWithoutStatusInput = {
+export type PurchaseSuggestionUpsertWithWhereUniqueWithoutEstadoCompraSugeridaInput = {
   where: Prisma.PurchaseSuggestionWhereUniqueInput
-  update: Prisma.XOR<Prisma.PurchaseSuggestionUpdateWithoutStatusInput, Prisma.PurchaseSuggestionUncheckedUpdateWithoutStatusInput>
-  create: Prisma.XOR<Prisma.PurchaseSuggestionCreateWithoutStatusInput, Prisma.PurchaseSuggestionUncheckedCreateWithoutStatusInput>
+  update: Prisma.XOR<Prisma.PurchaseSuggestionUpdateWithoutEstadoCompraSugeridaInput, Prisma.PurchaseSuggestionUncheckedUpdateWithoutEstadoCompraSugeridaInput>
+  create: Prisma.XOR<Prisma.PurchaseSuggestionCreateWithoutEstadoCompraSugeridaInput, Prisma.PurchaseSuggestionUncheckedCreateWithoutEstadoCompraSugeridaInput>
 }
 
-export type PurchaseSuggestionUpdateWithWhereUniqueWithoutStatusInput = {
+export type PurchaseSuggestionUpdateWithWhereUniqueWithoutEstadoCompraSugeridaInput = {
   where: Prisma.PurchaseSuggestionWhereUniqueInput
-  data: Prisma.XOR<Prisma.PurchaseSuggestionUpdateWithoutStatusInput, Prisma.PurchaseSuggestionUncheckedUpdateWithoutStatusInput>
+  data: Prisma.XOR<Prisma.PurchaseSuggestionUpdateWithoutEstadoCompraSugeridaInput, Prisma.PurchaseSuggestionUncheckedUpdateWithoutEstadoCompraSugeridaInput>
 }
 
-export type PurchaseSuggestionUpdateManyWithWhereWithoutStatusInput = {
+export type PurchaseSuggestionUpdateManyWithWhereWithoutEstadoCompraSugeridaInput = {
   where: Prisma.PurchaseSuggestionScalarWhereInput
-  data: Prisma.XOR<Prisma.PurchaseSuggestionUpdateManyMutationInput, Prisma.PurchaseSuggestionUncheckedUpdateManyWithoutStatusInput>
+  data: Prisma.XOR<Prisma.PurchaseSuggestionUpdateManyMutationInput, Prisma.PurchaseSuggestionUncheckedUpdateManyWithoutEstadoCompraSugeridaInput>
 }
 
 export type PurchaseSuggestionScalarWhereInput = {
@@ -824,197 +3200,454 @@ export type PurchaseSuggestionScalarWhereInput = {
   OR?: Prisma.PurchaseSuggestionScalarWhereInput[]
   NOT?: Prisma.PurchaseSuggestionScalarWhereInput | Prisma.PurchaseSuggestionScalarWhereInput[]
   id?: Prisma.IntFilter<"PurchaseSuggestion"> | number
-  materialCode?: Prisma.StringFilter<"PurchaseSuggestion"> | string
-  materialDescription?: Prisma.StringFilter<"PurchaseSuggestion"> | string
-  supplier?: Prisma.StringFilter<"PurchaseSuggestion"> | string
-  supplyCenter?: Prisma.StringFilter<"PurchaseSuggestion"> | string
-  warehouse?: Prisma.StringFilter<"PurchaseSuggestion"> | string
-  leadTime?: Prisma.IntFilter<"PurchaseSuggestion"> | number
-  finalInventoryDaysQuantity?: Prisma.FloatFilter<"PurchaseSuggestion"> | number
-  orderToday?: Prisma.IntFilter<"PurchaseSuggestion"> | number
-  purchaseStatusId?: Prisma.IntFilter<"PurchaseSuggestion"> | number
-  createdAt?: Prisma.DateTimeFilter<"PurchaseSuggestion"> | Date | string
-  updatedAt?: Prisma.DateTimeFilter<"PurchaseSuggestion"> | Date | string
-  createdById?: Prisma.IntFilter<"PurchaseSuggestion"> | number
+  mc?: Prisma.StringFilter<"PurchaseSuggestion"> | string
+  mca?: Prisma.StringFilter<"PurchaseSuggestion"> | string
+  mcap?: Prisma.StringNullableFilter<"PurchaseSuggestion"> | string | null
+  codigoMaterial?: Prisma.IntFilter<"PurchaseSuggestion"> | number
+  descripcionMaterial?: Prisma.StringFilter<"PurchaseSuggestion"> | string
+  codProv?: Prisma.StringFilter<"PurchaseSuggestion"> | string
+  proveedor?: Prisma.StringFilter<"PurchaseSuggestion"> | string
+  centroAbastecedor?: Prisma.StringFilter<"PurchaseSuggestion"> | string
+  desDentro?: Prisma.StringNullableFilter<"PurchaseSuggestion"> | string | null
+  porcCompra?: Prisma.IntNullableFilter<"PurchaseSuggestion"> | number | null
+  almacen?: Prisma.IntFilter<"PurchaseSuggestion"> | number
+  categoria?: Prisma.StringNullableFilter<"PurchaseSuggestion"> | string | null
+  ltReal?: Prisma.IntFilter<"PurchaseSuggestion"> | number
+  factorLt?: Prisma.DecimalFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  frec?: Prisma.DecimalFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  ump?: Prisma.IntFilter<"PurchaseSuggestion"> | number
+  ums?: Prisma.IntFilter<"PurchaseSuggestion"> | number
+  venta30DiasDiaDelDia?: Prisma.DecimalFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  ventaFcDiaAjustada?: Prisma.DecimalFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  porcDesviacionFcVsVenta?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  porcIncPlaneacionDemanda?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  aplica?: Prisma.StringNullableFilter<"PurchaseSuggestion"> | string | null
+  pedidoPromedioDiaUmp?: Prisma.IntFilter<"PurchaseSuggestion"> | number
+  tiendasAgotadas?: Prisma.IntNullableFilter<"PurchaseSuggestion"> | number | null
+  tipologia?: Prisma.IntNullableFilter<"PurchaseSuggestion"> | number | null
+  invTienda?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  stockObjetivoTienda?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  faltanteLlenadoTienda?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvTienda?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  inventarioFisico?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  inventarioEnTransito?: Prisma.IntNullableFilter<"PurchaseSuggestion"> | number | null
+  diasInvALaFecha?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvFisicoTransito?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonarojaPura?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaroja?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaamarilla?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaverde?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  tamBufferPuroUmp?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  tamBufferUmp?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  demandaCalificada?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  activoLunes?: Prisma.BoolFilter<"PurchaseSuggestion"> | boolean
+  activoMartes?: Prisma.BoolFilter<"PurchaseSuggestion"> | boolean
+  activoMiercoles?: Prisma.BoolFilter<"PurchaseSuggestion"> | boolean
+  activoJueves?: Prisma.BoolFilter<"PurchaseSuggestion"> | boolean
+  activoViernes?: Prisma.BoolFilter<"PurchaseSuggestion"> | boolean
+  activoSabado?: Prisma.BoolFilter<"PurchaseSuggestion"> | boolean
+  activoDomingo?: Prisma.BoolFilter<"PurchaseSuggestion"> | boolean
+  pedidoHoy?: Prisma.IntFilter<"PurchaseSuggestion"> | number
+  pedidoF1?: Prisma.IntNullableFilter<"PurchaseSuggestion"> | number | null
+  pedidoF2?: Prisma.IntNullableFilter<"PurchaseSuggestion"> | number | null
+  pedidoF3?: Prisma.IntNullableFilter<"PurchaseSuggestion"> | number | null
+  pedidoF4?: Prisma.IntNullableFilter<"PurchaseSuggestion"> | number | null
+  pedidoF5?: Prisma.IntNullableFilter<"PurchaseSuggestion"> | number | null
+  pedidoF6?: Prisma.IntNullableFilter<"PurchaseSuggestion"> | number | null
+  estimadoParaTopeBuffer?: Prisma.IntNullableFilter<"PurchaseSuggestion"> | number | null
+  cantidadDefinitivaOcHoy?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF1?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF2?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF3?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  factorVariabilidadVenta?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasMinimoInv?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasPromedioInv?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasMaximoInv?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCantidadDefinitiva?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF1?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF2?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF3?: Prisma.DecimalNullableFilter<"PurchaseSuggestion"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diaDePedido?: Prisma.StringNullableFilter<"PurchaseSuggestion"> | string | null
+  diaDeLlegada?: Prisma.StringNullableFilter<"PurchaseSuggestion"> | string | null
+  fechaEstimadaEntrega?: Prisma.DateTimeNullableFilter<"PurchaseSuggestion"> | Date | string | null
+  nomDiaEntrega?: Prisma.StringNullableFilter<"PurchaseSuggestion"> | string | null
+  fechaEntregaF1?: Prisma.DateTimeNullableFilter<"PurchaseSuggestion"> | Date | string | null
+  fechaEntregaF2?: Prisma.DateTimeNullableFilter<"PurchaseSuggestion"> | Date | string | null
+  fechaEntregaF3?: Prisma.DateTimeNullableFilter<"PurchaseSuggestion"> | Date | string | null
+  alertaStock?: Prisma.StringNullableFilter<"PurchaseSuggestion"> | string | null
+  vidaUtilMinDiasReciboCedi?: Prisma.IntNullableFilter<"PurchaseSuggestion"> | number | null
+  alertaVidaUtil?: Prisma.StringNullableFilter<"PurchaseSuggestion"> | string | null
+  crossDock?: Prisma.BoolNullableFilter<"PurchaseSuggestion"> | boolean | null
+  moq?: Prisma.IntNullableFilter<"PurchaseSuggestion"> | number | null
+  subcategoria?: Prisma.StringNullableFilter<"PurchaseSuggestion"> | string | null
+  temperaturaAlmacenamiento?: Prisma.StringNullableFilter<"PurchaseSuggestion"> | string | null
+  responsableDeCompra?: Prisma.StringNullableFilter<"PurchaseSuggestion"> | string | null
+  category?: Prisma.StringNullableFilter<"PurchaseSuggestion"> | string | null
+  multiploDeCompra?: Prisma.IntNullableFilter<"PurchaseSuggestion"> | number | null
+  estado?: Prisma.StringNullableFilter<"PurchaseSuggestion"> | string | null
+  fechaCreacion?: Prisma.DateTimeFilter<"PurchaseSuggestion"> | Date | string
+  fechaActualizacion?: Prisma.DateTimeFilter<"PurchaseSuggestion"> | Date | string
 }
 
-export type PurchaseSuggestionCreateWithoutCreatedByInput = {
-  materialCode: string
-  materialDescription: string
-  supplier: string
-  supplyCenter: string
-  warehouse: string
-  leadTime: number
-  finalInventoryDaysQuantity: number
-  orderToday: number
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  status: Prisma.PurchaseSuggestionStatusCreateNestedOneWithoutSuggestionsInput
-  history?: Prisma.PurchaseHistoryCreateNestedManyWithoutPurchaseInput
-}
-
-export type PurchaseSuggestionUncheckedCreateWithoutCreatedByInput = {
+export type PurchaseSuggestionCreateManyEstadoCompraSugeridaInput = {
   id?: number
-  materialCode: string
-  materialDescription: string
-  supplier: string
-  supplyCenter: string
-  warehouse: string
-  leadTime: number
-  finalInventoryDaysQuantity: number
-  orderToday: number
-  purchaseStatusId: number
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  history?: Prisma.PurchaseHistoryUncheckedCreateNestedManyWithoutPurchaseInput
+  mc: string
+  mca: string
+  mcap?: string | null
+  codigoMaterial: number
+  descripcionMaterial: string
+  codProv: string
+  proveedor: string
+  centroAbastecedor: string
+  desDentro?: string | null
+  porcCompra?: number | null
+  almacen: number
+  categoria?: string | null
+  ltReal: number
+  factorLt: runtime.Decimal | runtime.DecimalJsLike | number | string
+  frec: runtime.Decimal | runtime.DecimalJsLike | number | string
+  ump: number
+  ums: number
+  venta30DiasDiaDelDia: runtime.Decimal | runtime.DecimalJsLike | number | string
+  ventaFcDiaAjustada: runtime.Decimal | runtime.DecimalJsLike | number | string
+  porcDesviacionFcVsVenta?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  porcIncPlaneacionDemanda?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  aplica?: string | null
+  pedidoPromedioDiaUmp: number
+  tiendasAgotadas?: number | null
+  tipologia?: number | null
+  invTienda?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  stockObjetivoTienda?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  faltanteLlenadoTienda?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvTienda?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  inventarioFisico?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  inventarioEnTransito?: number | null
+  diasInvALaFecha?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvFisicoTransito?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonarojaPura?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaroja?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaamarilla?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaverde?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  tamBufferPuroUmp?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  tamBufferUmp?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  demandaCalificada?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  activoLunes: boolean
+  activoMartes: boolean
+  activoMiercoles: boolean
+  activoJueves: boolean
+  activoViernes: boolean
+  activoSabado: boolean
+  activoDomingo: boolean
+  pedidoHoy: number
+  pedidoF1?: number | null
+  pedidoF2?: number | null
+  pedidoF3?: number | null
+  pedidoF4?: number | null
+  pedidoF5?: number | null
+  pedidoF6?: number | null
+  estimadoParaTopeBuffer?: number | null
+  cantidadDefinitivaOcHoy?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF1?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF2?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF3?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  factorVariabilidadVenta?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasMinimoInv?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasPromedioInv?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasMaximoInv?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCantidadDefinitiva?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF1?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF2?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF3?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diaDePedido?: string | null
+  diaDeLlegada?: string | null
+  fechaEstimadaEntrega?: Date | string | null
+  nomDiaEntrega?: string | null
+  fechaEntregaF1?: Date | string | null
+  fechaEntregaF2?: Date | string | null
+  fechaEntregaF3?: Date | string | null
+  alertaStock?: string | null
+  vidaUtilMinDiasReciboCedi?: number | null
+  alertaVidaUtil?: string | null
+  crossDock?: boolean | null
+  moq?: number | null
+  subcategoria?: string | null
+  temperaturaAlmacenamiento?: string | null
+  responsableDeCompra?: string | null
+  category?: string | null
+  multiploDeCompra?: number | null
+  fechaCreacion?: Date | string
+  fechaActualizacion?: Date | string
 }
 
-export type PurchaseSuggestionCreateOrConnectWithoutCreatedByInput = {
-  where: Prisma.PurchaseSuggestionWhereUniqueInput
-  create: Prisma.XOR<Prisma.PurchaseSuggestionCreateWithoutCreatedByInput, Prisma.PurchaseSuggestionUncheckedCreateWithoutCreatedByInput>
+export type PurchaseSuggestionUpdateWithoutEstadoCompraSugeridaInput = {
+  mc?: Prisma.StringFieldUpdateOperationsInput | string
+  mca?: Prisma.StringFieldUpdateOperationsInput | string
+  mcap?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  codigoMaterial?: Prisma.IntFieldUpdateOperationsInput | number
+  descripcionMaterial?: Prisma.StringFieldUpdateOperationsInput | string
+  codProv?: Prisma.StringFieldUpdateOperationsInput | string
+  proveedor?: Prisma.StringFieldUpdateOperationsInput | string
+  centroAbastecedor?: Prisma.StringFieldUpdateOperationsInput | string
+  desDentro?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  porcCompra?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  almacen?: Prisma.IntFieldUpdateOperationsInput | number
+  categoria?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  ltReal?: Prisma.IntFieldUpdateOperationsInput | number
+  factorLt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  frec?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  ump?: Prisma.IntFieldUpdateOperationsInput | number
+  ums?: Prisma.IntFieldUpdateOperationsInput | number
+  venta30DiasDiaDelDia?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  ventaFcDiaAjustada?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  porcDesviacionFcVsVenta?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  porcIncPlaneacionDemanda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  aplica?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  pedidoPromedioDiaUmp?: Prisma.IntFieldUpdateOperationsInput | number
+  tiendasAgotadas?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  tipologia?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  invTienda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  stockObjetivoTienda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  faltanteLlenadoTienda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvTienda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  inventarioFisico?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  inventarioEnTransito?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  diasInvALaFecha?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvFisicoTransito?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonarojaPura?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaroja?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaamarilla?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaverde?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  tamBufferPuroUmp?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  tamBufferUmp?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  demandaCalificada?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  activoLunes?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoMartes?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoMiercoles?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoJueves?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoViernes?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoSabado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoDomingo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  pedidoHoy?: Prisma.IntFieldUpdateOperationsInput | number
+  pedidoF1?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF2?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF3?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF4?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF5?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF6?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  estimadoParaTopeBuffer?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  cantidadDefinitivaOcHoy?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF1?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF2?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF3?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  factorVariabilidadVenta?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasMinimoInv?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasPromedioInv?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasMaximoInv?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCantidadDefinitiva?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF1?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF2?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF3?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diaDePedido?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diaDeLlegada?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaEstimadaEntrega?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  nomDiaEntrega?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaEntregaF1?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  fechaEntregaF2?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  fechaEntregaF3?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  alertaStock?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  vidaUtilMinDiasReciboCedi?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  alertaVidaUtil?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  crossDock?: Prisma.NullableBoolFieldUpdateOperationsInput | boolean | null
+  moq?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  subcategoria?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  temperaturaAlmacenamiento?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  responsableDeCompra?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  category?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  multiploDeCompra?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  fechaCreacion?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  fechaActualizacion?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  historial?: Prisma.PurchaseSuggestionHistoryUpdateManyWithoutCompraSugeridaNestedInput
 }
 
-export type PurchaseSuggestionCreateManyCreatedByInputEnvelope = {
-  data: Prisma.PurchaseSuggestionCreateManyCreatedByInput | Prisma.PurchaseSuggestionCreateManyCreatedByInput[]
-  skipDuplicates?: boolean
-}
-
-export type PurchaseSuggestionUpsertWithWhereUniqueWithoutCreatedByInput = {
-  where: Prisma.PurchaseSuggestionWhereUniqueInput
-  update: Prisma.XOR<Prisma.PurchaseSuggestionUpdateWithoutCreatedByInput, Prisma.PurchaseSuggestionUncheckedUpdateWithoutCreatedByInput>
-  create: Prisma.XOR<Prisma.PurchaseSuggestionCreateWithoutCreatedByInput, Prisma.PurchaseSuggestionUncheckedCreateWithoutCreatedByInput>
-}
-
-export type PurchaseSuggestionUpdateWithWhereUniqueWithoutCreatedByInput = {
-  where: Prisma.PurchaseSuggestionWhereUniqueInput
-  data: Prisma.XOR<Prisma.PurchaseSuggestionUpdateWithoutCreatedByInput, Prisma.PurchaseSuggestionUncheckedUpdateWithoutCreatedByInput>
-}
-
-export type PurchaseSuggestionUpdateManyWithWhereWithoutCreatedByInput = {
-  where: Prisma.PurchaseSuggestionScalarWhereInput
-  data: Prisma.XOR<Prisma.PurchaseSuggestionUpdateManyMutationInput, Prisma.PurchaseSuggestionUncheckedUpdateManyWithoutCreatedByInput>
-}
-
-export type PurchaseSuggestionCreateManyStatusInput = {
-  id?: number
-  materialCode: string
-  materialDescription: string
-  supplier: string
-  supplyCenter: string
-  warehouse: string
-  leadTime: number
-  finalInventoryDaysQuantity: number
-  orderToday: number
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  createdById: number
-}
-
-export type PurchaseSuggestionUpdateWithoutStatusInput = {
-  materialCode?: Prisma.StringFieldUpdateOperationsInput | string
-  materialDescription?: Prisma.StringFieldUpdateOperationsInput | string
-  supplier?: Prisma.StringFieldUpdateOperationsInput | string
-  supplyCenter?: Prisma.StringFieldUpdateOperationsInput | string
-  warehouse?: Prisma.StringFieldUpdateOperationsInput | string
-  leadTime?: Prisma.IntFieldUpdateOperationsInput | number
-  finalInventoryDaysQuantity?: Prisma.FloatFieldUpdateOperationsInput | number
-  orderToday?: Prisma.IntFieldUpdateOperationsInput | number
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  createdBy?: Prisma.UserUpdateOneRequiredWithoutCreatedSuggestionsNestedInput
-  history?: Prisma.PurchaseHistoryUpdateManyWithoutPurchaseNestedInput
-}
-
-export type PurchaseSuggestionUncheckedUpdateWithoutStatusInput = {
+export type PurchaseSuggestionUncheckedUpdateWithoutEstadoCompraSugeridaInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
-  materialCode?: Prisma.StringFieldUpdateOperationsInput | string
-  materialDescription?: Prisma.StringFieldUpdateOperationsInput | string
-  supplier?: Prisma.StringFieldUpdateOperationsInput | string
-  supplyCenter?: Prisma.StringFieldUpdateOperationsInput | string
-  warehouse?: Prisma.StringFieldUpdateOperationsInput | string
-  leadTime?: Prisma.IntFieldUpdateOperationsInput | number
-  finalInventoryDaysQuantity?: Prisma.FloatFieldUpdateOperationsInput | number
-  orderToday?: Prisma.IntFieldUpdateOperationsInput | number
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  createdById?: Prisma.IntFieldUpdateOperationsInput | number
-  history?: Prisma.PurchaseHistoryUncheckedUpdateManyWithoutPurchaseNestedInput
+  mc?: Prisma.StringFieldUpdateOperationsInput | string
+  mca?: Prisma.StringFieldUpdateOperationsInput | string
+  mcap?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  codigoMaterial?: Prisma.IntFieldUpdateOperationsInput | number
+  descripcionMaterial?: Prisma.StringFieldUpdateOperationsInput | string
+  codProv?: Prisma.StringFieldUpdateOperationsInput | string
+  proveedor?: Prisma.StringFieldUpdateOperationsInput | string
+  centroAbastecedor?: Prisma.StringFieldUpdateOperationsInput | string
+  desDentro?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  porcCompra?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  almacen?: Prisma.IntFieldUpdateOperationsInput | number
+  categoria?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  ltReal?: Prisma.IntFieldUpdateOperationsInput | number
+  factorLt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  frec?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  ump?: Prisma.IntFieldUpdateOperationsInput | number
+  ums?: Prisma.IntFieldUpdateOperationsInput | number
+  venta30DiasDiaDelDia?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  ventaFcDiaAjustada?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  porcDesviacionFcVsVenta?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  porcIncPlaneacionDemanda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  aplica?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  pedidoPromedioDiaUmp?: Prisma.IntFieldUpdateOperationsInput | number
+  tiendasAgotadas?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  tipologia?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  invTienda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  stockObjetivoTienda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  faltanteLlenadoTienda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvTienda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  inventarioFisico?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  inventarioEnTransito?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  diasInvALaFecha?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvFisicoTransito?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonarojaPura?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaroja?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaamarilla?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaverde?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  tamBufferPuroUmp?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  tamBufferUmp?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  demandaCalificada?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  activoLunes?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoMartes?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoMiercoles?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoJueves?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoViernes?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoSabado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoDomingo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  pedidoHoy?: Prisma.IntFieldUpdateOperationsInput | number
+  pedidoF1?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF2?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF3?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF4?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF5?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF6?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  estimadoParaTopeBuffer?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  cantidadDefinitivaOcHoy?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF1?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF2?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF3?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  factorVariabilidadVenta?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasMinimoInv?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasPromedioInv?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasMaximoInv?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCantidadDefinitiva?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF1?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF2?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF3?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diaDePedido?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diaDeLlegada?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaEstimadaEntrega?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  nomDiaEntrega?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaEntregaF1?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  fechaEntregaF2?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  fechaEntregaF3?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  alertaStock?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  vidaUtilMinDiasReciboCedi?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  alertaVidaUtil?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  crossDock?: Prisma.NullableBoolFieldUpdateOperationsInput | boolean | null
+  moq?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  subcategoria?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  temperaturaAlmacenamiento?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  responsableDeCompra?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  category?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  multiploDeCompra?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  fechaCreacion?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  fechaActualizacion?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  historial?: Prisma.PurchaseSuggestionHistoryUncheckedUpdateManyWithoutCompraSugeridaNestedInput
 }
 
-export type PurchaseSuggestionUncheckedUpdateManyWithoutStatusInput = {
+export type PurchaseSuggestionUncheckedUpdateManyWithoutEstadoCompraSugeridaInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
-  materialCode?: Prisma.StringFieldUpdateOperationsInput | string
-  materialDescription?: Prisma.StringFieldUpdateOperationsInput | string
-  supplier?: Prisma.StringFieldUpdateOperationsInput | string
-  supplyCenter?: Prisma.StringFieldUpdateOperationsInput | string
-  warehouse?: Prisma.StringFieldUpdateOperationsInput | string
-  leadTime?: Prisma.IntFieldUpdateOperationsInput | number
-  finalInventoryDaysQuantity?: Prisma.FloatFieldUpdateOperationsInput | number
-  orderToday?: Prisma.IntFieldUpdateOperationsInput | number
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  createdById?: Prisma.IntFieldUpdateOperationsInput | number
-}
-
-export type PurchaseSuggestionCreateManyCreatedByInput = {
-  id?: number
-  materialCode: string
-  materialDescription: string
-  supplier: string
-  supplyCenter: string
-  warehouse: string
-  leadTime: number
-  finalInventoryDaysQuantity: number
-  orderToday: number
-  purchaseStatusId: number
-  createdAt?: Date | string
-  updatedAt?: Date | string
-}
-
-export type PurchaseSuggestionUpdateWithoutCreatedByInput = {
-  materialCode?: Prisma.StringFieldUpdateOperationsInput | string
-  materialDescription?: Prisma.StringFieldUpdateOperationsInput | string
-  supplier?: Prisma.StringFieldUpdateOperationsInput | string
-  supplyCenter?: Prisma.StringFieldUpdateOperationsInput | string
-  warehouse?: Prisma.StringFieldUpdateOperationsInput | string
-  leadTime?: Prisma.IntFieldUpdateOperationsInput | number
-  finalInventoryDaysQuantity?: Prisma.FloatFieldUpdateOperationsInput | number
-  orderToday?: Prisma.IntFieldUpdateOperationsInput | number
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  status?: Prisma.PurchaseSuggestionStatusUpdateOneRequiredWithoutSuggestionsNestedInput
-  history?: Prisma.PurchaseHistoryUpdateManyWithoutPurchaseNestedInput
-}
-
-export type PurchaseSuggestionUncheckedUpdateWithoutCreatedByInput = {
-  id?: Prisma.IntFieldUpdateOperationsInput | number
-  materialCode?: Prisma.StringFieldUpdateOperationsInput | string
-  materialDescription?: Prisma.StringFieldUpdateOperationsInput | string
-  supplier?: Prisma.StringFieldUpdateOperationsInput | string
-  supplyCenter?: Prisma.StringFieldUpdateOperationsInput | string
-  warehouse?: Prisma.StringFieldUpdateOperationsInput | string
-  leadTime?: Prisma.IntFieldUpdateOperationsInput | number
-  finalInventoryDaysQuantity?: Prisma.FloatFieldUpdateOperationsInput | number
-  orderToday?: Prisma.IntFieldUpdateOperationsInput | number
-  purchaseStatusId?: Prisma.IntFieldUpdateOperationsInput | number
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  history?: Prisma.PurchaseHistoryUncheckedUpdateManyWithoutPurchaseNestedInput
-}
-
-export type PurchaseSuggestionUncheckedUpdateManyWithoutCreatedByInput = {
-  id?: Prisma.IntFieldUpdateOperationsInput | number
-  materialCode?: Prisma.StringFieldUpdateOperationsInput | string
-  materialDescription?: Prisma.StringFieldUpdateOperationsInput | string
-  supplier?: Prisma.StringFieldUpdateOperationsInput | string
-  supplyCenter?: Prisma.StringFieldUpdateOperationsInput | string
-  warehouse?: Prisma.StringFieldUpdateOperationsInput | string
-  leadTime?: Prisma.IntFieldUpdateOperationsInput | number
-  finalInventoryDaysQuantity?: Prisma.FloatFieldUpdateOperationsInput | number
-  orderToday?: Prisma.IntFieldUpdateOperationsInput | number
-  purchaseStatusId?: Prisma.IntFieldUpdateOperationsInput | number
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  mc?: Prisma.StringFieldUpdateOperationsInput | string
+  mca?: Prisma.StringFieldUpdateOperationsInput | string
+  mcap?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  codigoMaterial?: Prisma.IntFieldUpdateOperationsInput | number
+  descripcionMaterial?: Prisma.StringFieldUpdateOperationsInput | string
+  codProv?: Prisma.StringFieldUpdateOperationsInput | string
+  proveedor?: Prisma.StringFieldUpdateOperationsInput | string
+  centroAbastecedor?: Prisma.StringFieldUpdateOperationsInput | string
+  desDentro?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  porcCompra?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  almacen?: Prisma.IntFieldUpdateOperationsInput | number
+  categoria?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  ltReal?: Prisma.IntFieldUpdateOperationsInput | number
+  factorLt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  frec?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  ump?: Prisma.IntFieldUpdateOperationsInput | number
+  ums?: Prisma.IntFieldUpdateOperationsInput | number
+  venta30DiasDiaDelDia?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  ventaFcDiaAjustada?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  porcDesviacionFcVsVenta?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  porcIncPlaneacionDemanda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  aplica?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  pedidoPromedioDiaUmp?: Prisma.IntFieldUpdateOperationsInput | number
+  tiendasAgotadas?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  tipologia?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  invTienda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  stockObjetivoTienda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  faltanteLlenadoTienda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvTienda?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  inventarioFisico?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  inventarioEnTransito?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  diasInvALaFecha?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvFisicoTransito?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonarojaPura?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaroja?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaamarilla?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  zonaverde?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  tamBufferPuroUmp?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  tamBufferUmp?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  demandaCalificada?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  activoLunes?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoMartes?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoMiercoles?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoJueves?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoViernes?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoSabado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  activoDomingo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  pedidoHoy?: Prisma.IntFieldUpdateOperationsInput | number
+  pedidoF1?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF2?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF3?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF4?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF5?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  pedidoF6?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  estimadoParaTopeBuffer?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  cantidadDefinitivaOcHoy?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF1?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF2?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  cantidadDefinitivaOcF3?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  factorVariabilidadVenta?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasMinimoInv?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasPromedioInv?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasMaximoInv?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCantidadDefinitiva?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF1?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF2?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diasInvCdF3?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  diaDePedido?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diaDeLlegada?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaEstimadaEntrega?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  nomDiaEntrega?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaEntregaF1?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  fechaEntregaF2?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  fechaEntregaF3?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  alertaStock?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  vidaUtilMinDiasReciboCedi?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  alertaVidaUtil?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  crossDock?: Prisma.NullableBoolFieldUpdateOperationsInput | boolean | null
+  moq?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  subcategoria?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  temperaturaAlmacenamiento?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  responsableDeCompra?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  category?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  multiploDeCompra?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  fechaCreacion?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  fechaActualizacion?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 
@@ -1023,11 +3656,11 @@ export type PurchaseSuggestionUncheckedUpdateManyWithoutCreatedByInput = {
  */
 
 export type PurchaseSuggestionCountOutputType = {
-  history: number
+  historial: number
 }
 
 export type PurchaseSuggestionCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  history?: boolean | PurchaseSuggestionCountOutputTypeCountHistoryArgs
+  historial?: boolean | PurchaseSuggestionCountOutputTypeCountHistorialArgs
 }
 
 /**
@@ -1043,120 +3676,488 @@ export type PurchaseSuggestionCountOutputTypeDefaultArgs<ExtArgs extends runtime
 /**
  * PurchaseSuggestionCountOutputType without action
  */
-export type PurchaseSuggestionCountOutputTypeCountHistoryArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  where?: Prisma.PurchaseHistoryWhereInput
+export type PurchaseSuggestionCountOutputTypeCountHistorialArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.PurchaseSuggestionHistoryWhereInput
 }
 
 
 export type PurchaseSuggestionSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  materialCode?: boolean
-  materialDescription?: boolean
-  supplier?: boolean
-  supplyCenter?: boolean
-  warehouse?: boolean
-  leadTime?: boolean
-  finalInventoryDaysQuantity?: boolean
-  orderToday?: boolean
-  purchaseStatusId?: boolean
-  createdAt?: boolean
-  updatedAt?: boolean
-  createdById?: boolean
-  status?: boolean | Prisma.PurchaseSuggestionStatusDefaultArgs<ExtArgs>
-  createdBy?: boolean | Prisma.UserDefaultArgs<ExtArgs>
-  history?: boolean | Prisma.PurchaseSuggestion$historyArgs<ExtArgs>
+  mc?: boolean
+  mca?: boolean
+  mcap?: boolean
+  codigoMaterial?: boolean
+  descripcionMaterial?: boolean
+  codProv?: boolean
+  proveedor?: boolean
+  centroAbastecedor?: boolean
+  desDentro?: boolean
+  porcCompra?: boolean
+  almacen?: boolean
+  categoria?: boolean
+  ltReal?: boolean
+  factorLt?: boolean
+  frec?: boolean
+  ump?: boolean
+  ums?: boolean
+  venta30DiasDiaDelDia?: boolean
+  ventaFcDiaAjustada?: boolean
+  porcDesviacionFcVsVenta?: boolean
+  porcIncPlaneacionDemanda?: boolean
+  aplica?: boolean
+  pedidoPromedioDiaUmp?: boolean
+  tiendasAgotadas?: boolean
+  tipologia?: boolean
+  invTienda?: boolean
+  stockObjetivoTienda?: boolean
+  faltanteLlenadoTienda?: boolean
+  diasInvTienda?: boolean
+  inventarioFisico?: boolean
+  inventarioEnTransito?: boolean
+  diasInvALaFecha?: boolean
+  diasInvFisicoTransito?: boolean
+  zonarojaPura?: boolean
+  zonaroja?: boolean
+  zonaamarilla?: boolean
+  zonaverde?: boolean
+  tamBufferPuroUmp?: boolean
+  tamBufferUmp?: boolean
+  demandaCalificada?: boolean
+  activoLunes?: boolean
+  activoMartes?: boolean
+  activoMiercoles?: boolean
+  activoJueves?: boolean
+  activoViernes?: boolean
+  activoSabado?: boolean
+  activoDomingo?: boolean
+  pedidoHoy?: boolean
+  pedidoF1?: boolean
+  pedidoF2?: boolean
+  pedidoF3?: boolean
+  pedidoF4?: boolean
+  pedidoF5?: boolean
+  pedidoF6?: boolean
+  estimadoParaTopeBuffer?: boolean
+  cantidadDefinitivaOcHoy?: boolean
+  cantidadDefinitivaOcF1?: boolean
+  cantidadDefinitivaOcF2?: boolean
+  cantidadDefinitivaOcF3?: boolean
+  factorVariabilidadVenta?: boolean
+  diasMinimoInv?: boolean
+  diasPromedioInv?: boolean
+  diasMaximoInv?: boolean
+  diasInvCantidadDefinitiva?: boolean
+  diasInvCdF1?: boolean
+  diasInvCdF2?: boolean
+  diasInvCdF3?: boolean
+  diaDePedido?: boolean
+  diaDeLlegada?: boolean
+  fechaEstimadaEntrega?: boolean
+  nomDiaEntrega?: boolean
+  fechaEntregaF1?: boolean
+  fechaEntregaF2?: boolean
+  fechaEntregaF3?: boolean
+  alertaStock?: boolean
+  vidaUtilMinDiasReciboCedi?: boolean
+  alertaVidaUtil?: boolean
+  crossDock?: boolean
+  moq?: boolean
+  subcategoria?: boolean
+  temperaturaAlmacenamiento?: boolean
+  responsableDeCompra?: boolean
+  category?: boolean
+  multiploDeCompra?: boolean
+  estado?: boolean
+  fechaCreacion?: boolean
+  fechaActualizacion?: boolean
+  historial?: boolean | Prisma.PurchaseSuggestion$historialArgs<ExtArgs>
+  estadoCompraSugerida?: boolean | Prisma.PurchaseSuggestion$estadoCompraSugeridaArgs<ExtArgs>
   _count?: boolean | Prisma.PurchaseSuggestionCountOutputTypeDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["purchaseSuggestion"]>
 
 export type PurchaseSuggestionSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  materialCode?: boolean
-  materialDescription?: boolean
-  supplier?: boolean
-  supplyCenter?: boolean
-  warehouse?: boolean
-  leadTime?: boolean
-  finalInventoryDaysQuantity?: boolean
-  orderToday?: boolean
-  purchaseStatusId?: boolean
-  createdAt?: boolean
-  updatedAt?: boolean
-  createdById?: boolean
-  status?: boolean | Prisma.PurchaseSuggestionStatusDefaultArgs<ExtArgs>
-  createdBy?: boolean | Prisma.UserDefaultArgs<ExtArgs>
+  mc?: boolean
+  mca?: boolean
+  mcap?: boolean
+  codigoMaterial?: boolean
+  descripcionMaterial?: boolean
+  codProv?: boolean
+  proveedor?: boolean
+  centroAbastecedor?: boolean
+  desDentro?: boolean
+  porcCompra?: boolean
+  almacen?: boolean
+  categoria?: boolean
+  ltReal?: boolean
+  factorLt?: boolean
+  frec?: boolean
+  ump?: boolean
+  ums?: boolean
+  venta30DiasDiaDelDia?: boolean
+  ventaFcDiaAjustada?: boolean
+  porcDesviacionFcVsVenta?: boolean
+  porcIncPlaneacionDemanda?: boolean
+  aplica?: boolean
+  pedidoPromedioDiaUmp?: boolean
+  tiendasAgotadas?: boolean
+  tipologia?: boolean
+  invTienda?: boolean
+  stockObjetivoTienda?: boolean
+  faltanteLlenadoTienda?: boolean
+  diasInvTienda?: boolean
+  inventarioFisico?: boolean
+  inventarioEnTransito?: boolean
+  diasInvALaFecha?: boolean
+  diasInvFisicoTransito?: boolean
+  zonarojaPura?: boolean
+  zonaroja?: boolean
+  zonaamarilla?: boolean
+  zonaverde?: boolean
+  tamBufferPuroUmp?: boolean
+  tamBufferUmp?: boolean
+  demandaCalificada?: boolean
+  activoLunes?: boolean
+  activoMartes?: boolean
+  activoMiercoles?: boolean
+  activoJueves?: boolean
+  activoViernes?: boolean
+  activoSabado?: boolean
+  activoDomingo?: boolean
+  pedidoHoy?: boolean
+  pedidoF1?: boolean
+  pedidoF2?: boolean
+  pedidoF3?: boolean
+  pedidoF4?: boolean
+  pedidoF5?: boolean
+  pedidoF6?: boolean
+  estimadoParaTopeBuffer?: boolean
+  cantidadDefinitivaOcHoy?: boolean
+  cantidadDefinitivaOcF1?: boolean
+  cantidadDefinitivaOcF2?: boolean
+  cantidadDefinitivaOcF3?: boolean
+  factorVariabilidadVenta?: boolean
+  diasMinimoInv?: boolean
+  diasPromedioInv?: boolean
+  diasMaximoInv?: boolean
+  diasInvCantidadDefinitiva?: boolean
+  diasInvCdF1?: boolean
+  diasInvCdF2?: boolean
+  diasInvCdF3?: boolean
+  diaDePedido?: boolean
+  diaDeLlegada?: boolean
+  fechaEstimadaEntrega?: boolean
+  nomDiaEntrega?: boolean
+  fechaEntregaF1?: boolean
+  fechaEntregaF2?: boolean
+  fechaEntregaF3?: boolean
+  alertaStock?: boolean
+  vidaUtilMinDiasReciboCedi?: boolean
+  alertaVidaUtil?: boolean
+  crossDock?: boolean
+  moq?: boolean
+  subcategoria?: boolean
+  temperaturaAlmacenamiento?: boolean
+  responsableDeCompra?: boolean
+  category?: boolean
+  multiploDeCompra?: boolean
+  estado?: boolean
+  fechaCreacion?: boolean
+  fechaActualizacion?: boolean
+  estadoCompraSugerida?: boolean | Prisma.PurchaseSuggestion$estadoCompraSugeridaArgs<ExtArgs>
 }, ExtArgs["result"]["purchaseSuggestion"]>
 
 export type PurchaseSuggestionSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  materialCode?: boolean
-  materialDescription?: boolean
-  supplier?: boolean
-  supplyCenter?: boolean
-  warehouse?: boolean
-  leadTime?: boolean
-  finalInventoryDaysQuantity?: boolean
-  orderToday?: boolean
-  purchaseStatusId?: boolean
-  createdAt?: boolean
-  updatedAt?: boolean
-  createdById?: boolean
-  status?: boolean | Prisma.PurchaseSuggestionStatusDefaultArgs<ExtArgs>
-  createdBy?: boolean | Prisma.UserDefaultArgs<ExtArgs>
+  mc?: boolean
+  mca?: boolean
+  mcap?: boolean
+  codigoMaterial?: boolean
+  descripcionMaterial?: boolean
+  codProv?: boolean
+  proveedor?: boolean
+  centroAbastecedor?: boolean
+  desDentro?: boolean
+  porcCompra?: boolean
+  almacen?: boolean
+  categoria?: boolean
+  ltReal?: boolean
+  factorLt?: boolean
+  frec?: boolean
+  ump?: boolean
+  ums?: boolean
+  venta30DiasDiaDelDia?: boolean
+  ventaFcDiaAjustada?: boolean
+  porcDesviacionFcVsVenta?: boolean
+  porcIncPlaneacionDemanda?: boolean
+  aplica?: boolean
+  pedidoPromedioDiaUmp?: boolean
+  tiendasAgotadas?: boolean
+  tipologia?: boolean
+  invTienda?: boolean
+  stockObjetivoTienda?: boolean
+  faltanteLlenadoTienda?: boolean
+  diasInvTienda?: boolean
+  inventarioFisico?: boolean
+  inventarioEnTransito?: boolean
+  diasInvALaFecha?: boolean
+  diasInvFisicoTransito?: boolean
+  zonarojaPura?: boolean
+  zonaroja?: boolean
+  zonaamarilla?: boolean
+  zonaverde?: boolean
+  tamBufferPuroUmp?: boolean
+  tamBufferUmp?: boolean
+  demandaCalificada?: boolean
+  activoLunes?: boolean
+  activoMartes?: boolean
+  activoMiercoles?: boolean
+  activoJueves?: boolean
+  activoViernes?: boolean
+  activoSabado?: boolean
+  activoDomingo?: boolean
+  pedidoHoy?: boolean
+  pedidoF1?: boolean
+  pedidoF2?: boolean
+  pedidoF3?: boolean
+  pedidoF4?: boolean
+  pedidoF5?: boolean
+  pedidoF6?: boolean
+  estimadoParaTopeBuffer?: boolean
+  cantidadDefinitivaOcHoy?: boolean
+  cantidadDefinitivaOcF1?: boolean
+  cantidadDefinitivaOcF2?: boolean
+  cantidadDefinitivaOcF3?: boolean
+  factorVariabilidadVenta?: boolean
+  diasMinimoInv?: boolean
+  diasPromedioInv?: boolean
+  diasMaximoInv?: boolean
+  diasInvCantidadDefinitiva?: boolean
+  diasInvCdF1?: boolean
+  diasInvCdF2?: boolean
+  diasInvCdF3?: boolean
+  diaDePedido?: boolean
+  diaDeLlegada?: boolean
+  fechaEstimadaEntrega?: boolean
+  nomDiaEntrega?: boolean
+  fechaEntregaF1?: boolean
+  fechaEntregaF2?: boolean
+  fechaEntregaF3?: boolean
+  alertaStock?: boolean
+  vidaUtilMinDiasReciboCedi?: boolean
+  alertaVidaUtil?: boolean
+  crossDock?: boolean
+  moq?: boolean
+  subcategoria?: boolean
+  temperaturaAlmacenamiento?: boolean
+  responsableDeCompra?: boolean
+  category?: boolean
+  multiploDeCompra?: boolean
+  estado?: boolean
+  fechaCreacion?: boolean
+  fechaActualizacion?: boolean
+  estadoCompraSugerida?: boolean | Prisma.PurchaseSuggestion$estadoCompraSugeridaArgs<ExtArgs>
 }, ExtArgs["result"]["purchaseSuggestion"]>
 
 export type PurchaseSuggestionSelectScalar = {
   id?: boolean
-  materialCode?: boolean
-  materialDescription?: boolean
-  supplier?: boolean
-  supplyCenter?: boolean
-  warehouse?: boolean
-  leadTime?: boolean
-  finalInventoryDaysQuantity?: boolean
-  orderToday?: boolean
-  purchaseStatusId?: boolean
-  createdAt?: boolean
-  updatedAt?: boolean
-  createdById?: boolean
+  mc?: boolean
+  mca?: boolean
+  mcap?: boolean
+  codigoMaterial?: boolean
+  descripcionMaterial?: boolean
+  codProv?: boolean
+  proveedor?: boolean
+  centroAbastecedor?: boolean
+  desDentro?: boolean
+  porcCompra?: boolean
+  almacen?: boolean
+  categoria?: boolean
+  ltReal?: boolean
+  factorLt?: boolean
+  frec?: boolean
+  ump?: boolean
+  ums?: boolean
+  venta30DiasDiaDelDia?: boolean
+  ventaFcDiaAjustada?: boolean
+  porcDesviacionFcVsVenta?: boolean
+  porcIncPlaneacionDemanda?: boolean
+  aplica?: boolean
+  pedidoPromedioDiaUmp?: boolean
+  tiendasAgotadas?: boolean
+  tipologia?: boolean
+  invTienda?: boolean
+  stockObjetivoTienda?: boolean
+  faltanteLlenadoTienda?: boolean
+  diasInvTienda?: boolean
+  inventarioFisico?: boolean
+  inventarioEnTransito?: boolean
+  diasInvALaFecha?: boolean
+  diasInvFisicoTransito?: boolean
+  zonarojaPura?: boolean
+  zonaroja?: boolean
+  zonaamarilla?: boolean
+  zonaverde?: boolean
+  tamBufferPuroUmp?: boolean
+  tamBufferUmp?: boolean
+  demandaCalificada?: boolean
+  activoLunes?: boolean
+  activoMartes?: boolean
+  activoMiercoles?: boolean
+  activoJueves?: boolean
+  activoViernes?: boolean
+  activoSabado?: boolean
+  activoDomingo?: boolean
+  pedidoHoy?: boolean
+  pedidoF1?: boolean
+  pedidoF2?: boolean
+  pedidoF3?: boolean
+  pedidoF4?: boolean
+  pedidoF5?: boolean
+  pedidoF6?: boolean
+  estimadoParaTopeBuffer?: boolean
+  cantidadDefinitivaOcHoy?: boolean
+  cantidadDefinitivaOcF1?: boolean
+  cantidadDefinitivaOcF2?: boolean
+  cantidadDefinitivaOcF3?: boolean
+  factorVariabilidadVenta?: boolean
+  diasMinimoInv?: boolean
+  diasPromedioInv?: boolean
+  diasMaximoInv?: boolean
+  diasInvCantidadDefinitiva?: boolean
+  diasInvCdF1?: boolean
+  diasInvCdF2?: boolean
+  diasInvCdF3?: boolean
+  diaDePedido?: boolean
+  diaDeLlegada?: boolean
+  fechaEstimadaEntrega?: boolean
+  nomDiaEntrega?: boolean
+  fechaEntregaF1?: boolean
+  fechaEntregaF2?: boolean
+  fechaEntregaF3?: boolean
+  alertaStock?: boolean
+  vidaUtilMinDiasReciboCedi?: boolean
+  alertaVidaUtil?: boolean
+  crossDock?: boolean
+  moq?: boolean
+  subcategoria?: boolean
+  temperaturaAlmacenamiento?: boolean
+  responsableDeCompra?: boolean
+  category?: boolean
+  multiploDeCompra?: boolean
+  estado?: boolean
+  fechaCreacion?: boolean
+  fechaActualizacion?: boolean
 }
 
-export type PurchaseSuggestionOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "materialCode" | "materialDescription" | "supplier" | "supplyCenter" | "warehouse" | "leadTime" | "finalInventoryDaysQuantity" | "orderToday" | "purchaseStatusId" | "createdAt" | "updatedAt" | "createdById", ExtArgs["result"]["purchaseSuggestion"]>
+export type PurchaseSuggestionOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "mc" | "mca" | "mcap" | "codigoMaterial" | "descripcionMaterial" | "codProv" | "proveedor" | "centroAbastecedor" | "desDentro" | "porcCompra" | "almacen" | "categoria" | "ltReal" | "factorLt" | "frec" | "ump" | "ums" | "venta30DiasDiaDelDia" | "ventaFcDiaAjustada" | "porcDesviacionFcVsVenta" | "porcIncPlaneacionDemanda" | "aplica" | "pedidoPromedioDiaUmp" | "tiendasAgotadas" | "tipologia" | "invTienda" | "stockObjetivoTienda" | "faltanteLlenadoTienda" | "diasInvTienda" | "inventarioFisico" | "inventarioEnTransito" | "diasInvALaFecha" | "diasInvFisicoTransito" | "zonarojaPura" | "zonaroja" | "zonaamarilla" | "zonaverde" | "tamBufferPuroUmp" | "tamBufferUmp" | "demandaCalificada" | "activoLunes" | "activoMartes" | "activoMiercoles" | "activoJueves" | "activoViernes" | "activoSabado" | "activoDomingo" | "pedidoHoy" | "pedidoF1" | "pedidoF2" | "pedidoF3" | "pedidoF4" | "pedidoF5" | "pedidoF6" | "estimadoParaTopeBuffer" | "cantidadDefinitivaOcHoy" | "cantidadDefinitivaOcF1" | "cantidadDefinitivaOcF2" | "cantidadDefinitivaOcF3" | "factorVariabilidadVenta" | "diasMinimoInv" | "diasPromedioInv" | "diasMaximoInv" | "diasInvCantidadDefinitiva" | "diasInvCdF1" | "diasInvCdF2" | "diasInvCdF3" | "diaDePedido" | "diaDeLlegada" | "fechaEstimadaEntrega" | "nomDiaEntrega" | "fechaEntregaF1" | "fechaEntregaF2" | "fechaEntregaF3" | "alertaStock" | "vidaUtilMinDiasReciboCedi" | "alertaVidaUtil" | "crossDock" | "moq" | "subcategoria" | "temperaturaAlmacenamiento" | "responsableDeCompra" | "category" | "multiploDeCompra" | "estado" | "fechaCreacion" | "fechaActualizacion", ExtArgs["result"]["purchaseSuggestion"]>
 export type PurchaseSuggestionInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  status?: boolean | Prisma.PurchaseSuggestionStatusDefaultArgs<ExtArgs>
-  createdBy?: boolean | Prisma.UserDefaultArgs<ExtArgs>
-  history?: boolean | Prisma.PurchaseSuggestion$historyArgs<ExtArgs>
+  historial?: boolean | Prisma.PurchaseSuggestion$historialArgs<ExtArgs>
+  estadoCompraSugerida?: boolean | Prisma.PurchaseSuggestion$estadoCompraSugeridaArgs<ExtArgs>
   _count?: boolean | Prisma.PurchaseSuggestionCountOutputTypeDefaultArgs<ExtArgs>
 }
 export type PurchaseSuggestionIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  status?: boolean | Prisma.PurchaseSuggestionStatusDefaultArgs<ExtArgs>
-  createdBy?: boolean | Prisma.UserDefaultArgs<ExtArgs>
+  estadoCompraSugerida?: boolean | Prisma.PurchaseSuggestion$estadoCompraSugeridaArgs<ExtArgs>
 }
 export type PurchaseSuggestionIncludeUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  status?: boolean | Prisma.PurchaseSuggestionStatusDefaultArgs<ExtArgs>
-  createdBy?: boolean | Prisma.UserDefaultArgs<ExtArgs>
+  estadoCompraSugerida?: boolean | Prisma.PurchaseSuggestion$estadoCompraSugeridaArgs<ExtArgs>
 }
 
 export type $PurchaseSuggestionPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "PurchaseSuggestion"
   objects: {
-    status: Prisma.$PurchaseSuggestionStatusPayload<ExtArgs>
-    createdBy: Prisma.$UserPayload<ExtArgs>
-    history: Prisma.$PurchaseHistoryPayload<ExtArgs>[]
+    historial: Prisma.$PurchaseSuggestionHistoryPayload<ExtArgs>[]
+    estadoCompraSugerida: Prisma.$PurchaseSuggestionStatusPayload<ExtArgs> | null
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: number
-    materialCode: string
-    materialDescription: string
-    supplier: string
-    supplyCenter: string
-    warehouse: string
-    leadTime: number
-    finalInventoryDaysQuantity: number
-    orderToday: number
-    purchaseStatusId: number
-    createdAt: Date
-    updatedAt: Date
-    createdById: number
+    mc: string
+    mca: string
+    mcap: string | null
+    codigoMaterial: number
+    descripcionMaterial: string
+    codProv: string
+    proveedor: string
+    centroAbastecedor: string
+    desDentro: string | null
+    porcCompra: number | null
+    almacen: number
+    categoria: string | null
+    ltReal: number
+    factorLt: runtime.Decimal
+    frec: runtime.Decimal
+    ump: number
+    ums: number
+    venta30DiasDiaDelDia: runtime.Decimal
+    ventaFcDiaAjustada: runtime.Decimal
+    porcDesviacionFcVsVenta: runtime.Decimal | null
+    porcIncPlaneacionDemanda: runtime.Decimal | null
+    aplica: string | null
+    pedidoPromedioDiaUmp: number
+    tiendasAgotadas: number | null
+    tipologia: number | null
+    invTienda: runtime.Decimal | null
+    stockObjetivoTienda: runtime.Decimal | null
+    faltanteLlenadoTienda: runtime.Decimal | null
+    diasInvTienda: runtime.Decimal | null
+    inventarioFisico: runtime.Decimal | null
+    inventarioEnTransito: number | null
+    diasInvALaFecha: runtime.Decimal | null
+    diasInvFisicoTransito: runtime.Decimal | null
+    zonarojaPura: runtime.Decimal | null
+    zonaroja: runtime.Decimal | null
+    zonaamarilla: runtime.Decimal | null
+    zonaverde: runtime.Decimal | null
+    tamBufferPuroUmp: runtime.Decimal | null
+    tamBufferUmp: runtime.Decimal | null
+    demandaCalificada: runtime.Decimal | null
+    activoLunes: boolean
+    activoMartes: boolean
+    activoMiercoles: boolean
+    activoJueves: boolean
+    activoViernes: boolean
+    activoSabado: boolean
+    activoDomingo: boolean
+    pedidoHoy: number
+    pedidoF1: number | null
+    pedidoF2: number | null
+    pedidoF3: number | null
+    pedidoF4: number | null
+    pedidoF5: number | null
+    pedidoF6: number | null
+    estimadoParaTopeBuffer: number | null
+    cantidadDefinitivaOcHoy: runtime.Decimal | null
+    cantidadDefinitivaOcF1: runtime.Decimal | null
+    cantidadDefinitivaOcF2: runtime.Decimal | null
+    cantidadDefinitivaOcF3: runtime.Decimal | null
+    factorVariabilidadVenta: runtime.Decimal | null
+    diasMinimoInv: runtime.Decimal | null
+    diasPromedioInv: runtime.Decimal | null
+    diasMaximoInv: runtime.Decimal | null
+    diasInvCantidadDefinitiva: runtime.Decimal | null
+    diasInvCdF1: runtime.Decimal | null
+    diasInvCdF2: runtime.Decimal | null
+    diasInvCdF3: runtime.Decimal | null
+    diaDePedido: string | null
+    diaDeLlegada: string | null
+    fechaEstimadaEntrega: Date | null
+    nomDiaEntrega: string | null
+    fechaEntregaF1: Date | null
+    fechaEntregaF2: Date | null
+    fechaEntregaF3: Date | null
+    alertaStock: string | null
+    vidaUtilMinDiasReciboCedi: number | null
+    alertaVidaUtil: string | null
+    crossDock: boolean | null
+    moq: number | null
+    subcategoria: string | null
+    temperaturaAlmacenamiento: string | null
+    responsableDeCompra: string | null
+    category: string | null
+    multiploDeCompra: number | null
+    estado: string | null
+    fechaCreacion: Date
+    fechaActualizacion: Date
   }, ExtArgs["result"]["purchaseSuggestion"]>
   composites: {}
 }
@@ -1551,9 +4552,8 @@ readonly fields: PurchaseSuggestionFieldRefs;
  */
 export interface Prisma__PurchaseSuggestionClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
-  status<T extends Prisma.PurchaseSuggestionStatusDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.PurchaseSuggestionStatusDefaultArgs<ExtArgs>>): Prisma.Prisma__PurchaseSuggestionStatusClient<runtime.Types.Result.GetResult<Prisma.$PurchaseSuggestionStatusPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
-  createdBy<T extends Prisma.UserDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.UserDefaultArgs<ExtArgs>>): Prisma.Prisma__UserClient<runtime.Types.Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
-  history<T extends Prisma.PurchaseSuggestion$historyArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.PurchaseSuggestion$historyArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$PurchaseHistoryPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  historial<T extends Prisma.PurchaseSuggestion$historialArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.PurchaseSuggestion$historialArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$PurchaseSuggestionHistoryPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  estadoCompraSugerida<T extends Prisma.PurchaseSuggestion$estadoCompraSugeridaArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.PurchaseSuggestion$estadoCompraSugeridaArgs<ExtArgs>>): Prisma.Prisma__PurchaseSuggestionStatusClient<runtime.Types.Result.GetResult<Prisma.$PurchaseSuggestionStatusPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -1584,18 +4584,93 @@ export interface Prisma__PurchaseSuggestionClient<T, Null = never, ExtArgs exten
  */
 export interface PurchaseSuggestionFieldRefs {
   readonly id: Prisma.FieldRef<"PurchaseSuggestion", 'Int'>
-  readonly materialCode: Prisma.FieldRef<"PurchaseSuggestion", 'String'>
-  readonly materialDescription: Prisma.FieldRef<"PurchaseSuggestion", 'String'>
-  readonly supplier: Prisma.FieldRef<"PurchaseSuggestion", 'String'>
-  readonly supplyCenter: Prisma.FieldRef<"PurchaseSuggestion", 'String'>
-  readonly warehouse: Prisma.FieldRef<"PurchaseSuggestion", 'String'>
-  readonly leadTime: Prisma.FieldRef<"PurchaseSuggestion", 'Int'>
-  readonly finalInventoryDaysQuantity: Prisma.FieldRef<"PurchaseSuggestion", 'Float'>
-  readonly orderToday: Prisma.FieldRef<"PurchaseSuggestion", 'Int'>
-  readonly purchaseStatusId: Prisma.FieldRef<"PurchaseSuggestion", 'Int'>
-  readonly createdAt: Prisma.FieldRef<"PurchaseSuggestion", 'DateTime'>
-  readonly updatedAt: Prisma.FieldRef<"PurchaseSuggestion", 'DateTime'>
-  readonly createdById: Prisma.FieldRef<"PurchaseSuggestion", 'Int'>
+  readonly mc: Prisma.FieldRef<"PurchaseSuggestion", 'String'>
+  readonly mca: Prisma.FieldRef<"PurchaseSuggestion", 'String'>
+  readonly mcap: Prisma.FieldRef<"PurchaseSuggestion", 'String'>
+  readonly codigoMaterial: Prisma.FieldRef<"PurchaseSuggestion", 'Int'>
+  readonly descripcionMaterial: Prisma.FieldRef<"PurchaseSuggestion", 'String'>
+  readonly codProv: Prisma.FieldRef<"PurchaseSuggestion", 'String'>
+  readonly proveedor: Prisma.FieldRef<"PurchaseSuggestion", 'String'>
+  readonly centroAbastecedor: Prisma.FieldRef<"PurchaseSuggestion", 'String'>
+  readonly desDentro: Prisma.FieldRef<"PurchaseSuggestion", 'String'>
+  readonly porcCompra: Prisma.FieldRef<"PurchaseSuggestion", 'Int'>
+  readonly almacen: Prisma.FieldRef<"PurchaseSuggestion", 'Int'>
+  readonly categoria: Prisma.FieldRef<"PurchaseSuggestion", 'String'>
+  readonly ltReal: Prisma.FieldRef<"PurchaseSuggestion", 'Int'>
+  readonly factorLt: Prisma.FieldRef<"PurchaseSuggestion", 'Decimal'>
+  readonly frec: Prisma.FieldRef<"PurchaseSuggestion", 'Decimal'>
+  readonly ump: Prisma.FieldRef<"PurchaseSuggestion", 'Int'>
+  readonly ums: Prisma.FieldRef<"PurchaseSuggestion", 'Int'>
+  readonly venta30DiasDiaDelDia: Prisma.FieldRef<"PurchaseSuggestion", 'Decimal'>
+  readonly ventaFcDiaAjustada: Prisma.FieldRef<"PurchaseSuggestion", 'Decimal'>
+  readonly porcDesviacionFcVsVenta: Prisma.FieldRef<"PurchaseSuggestion", 'Decimal'>
+  readonly porcIncPlaneacionDemanda: Prisma.FieldRef<"PurchaseSuggestion", 'Decimal'>
+  readonly aplica: Prisma.FieldRef<"PurchaseSuggestion", 'String'>
+  readonly pedidoPromedioDiaUmp: Prisma.FieldRef<"PurchaseSuggestion", 'Int'>
+  readonly tiendasAgotadas: Prisma.FieldRef<"PurchaseSuggestion", 'Int'>
+  readonly tipologia: Prisma.FieldRef<"PurchaseSuggestion", 'Int'>
+  readonly invTienda: Prisma.FieldRef<"PurchaseSuggestion", 'Decimal'>
+  readonly stockObjetivoTienda: Prisma.FieldRef<"PurchaseSuggestion", 'Decimal'>
+  readonly faltanteLlenadoTienda: Prisma.FieldRef<"PurchaseSuggestion", 'Decimal'>
+  readonly diasInvTienda: Prisma.FieldRef<"PurchaseSuggestion", 'Decimal'>
+  readonly inventarioFisico: Prisma.FieldRef<"PurchaseSuggestion", 'Decimal'>
+  readonly inventarioEnTransito: Prisma.FieldRef<"PurchaseSuggestion", 'Int'>
+  readonly diasInvALaFecha: Prisma.FieldRef<"PurchaseSuggestion", 'Decimal'>
+  readonly diasInvFisicoTransito: Prisma.FieldRef<"PurchaseSuggestion", 'Decimal'>
+  readonly zonarojaPura: Prisma.FieldRef<"PurchaseSuggestion", 'Decimal'>
+  readonly zonaroja: Prisma.FieldRef<"PurchaseSuggestion", 'Decimal'>
+  readonly zonaamarilla: Prisma.FieldRef<"PurchaseSuggestion", 'Decimal'>
+  readonly zonaverde: Prisma.FieldRef<"PurchaseSuggestion", 'Decimal'>
+  readonly tamBufferPuroUmp: Prisma.FieldRef<"PurchaseSuggestion", 'Decimal'>
+  readonly tamBufferUmp: Prisma.FieldRef<"PurchaseSuggestion", 'Decimal'>
+  readonly demandaCalificada: Prisma.FieldRef<"PurchaseSuggestion", 'Decimal'>
+  readonly activoLunes: Prisma.FieldRef<"PurchaseSuggestion", 'Boolean'>
+  readonly activoMartes: Prisma.FieldRef<"PurchaseSuggestion", 'Boolean'>
+  readonly activoMiercoles: Prisma.FieldRef<"PurchaseSuggestion", 'Boolean'>
+  readonly activoJueves: Prisma.FieldRef<"PurchaseSuggestion", 'Boolean'>
+  readonly activoViernes: Prisma.FieldRef<"PurchaseSuggestion", 'Boolean'>
+  readonly activoSabado: Prisma.FieldRef<"PurchaseSuggestion", 'Boolean'>
+  readonly activoDomingo: Prisma.FieldRef<"PurchaseSuggestion", 'Boolean'>
+  readonly pedidoHoy: Prisma.FieldRef<"PurchaseSuggestion", 'Int'>
+  readonly pedidoF1: Prisma.FieldRef<"PurchaseSuggestion", 'Int'>
+  readonly pedidoF2: Prisma.FieldRef<"PurchaseSuggestion", 'Int'>
+  readonly pedidoF3: Prisma.FieldRef<"PurchaseSuggestion", 'Int'>
+  readonly pedidoF4: Prisma.FieldRef<"PurchaseSuggestion", 'Int'>
+  readonly pedidoF5: Prisma.FieldRef<"PurchaseSuggestion", 'Int'>
+  readonly pedidoF6: Prisma.FieldRef<"PurchaseSuggestion", 'Int'>
+  readonly estimadoParaTopeBuffer: Prisma.FieldRef<"PurchaseSuggestion", 'Int'>
+  readonly cantidadDefinitivaOcHoy: Prisma.FieldRef<"PurchaseSuggestion", 'Decimal'>
+  readonly cantidadDefinitivaOcF1: Prisma.FieldRef<"PurchaseSuggestion", 'Decimal'>
+  readonly cantidadDefinitivaOcF2: Prisma.FieldRef<"PurchaseSuggestion", 'Decimal'>
+  readonly cantidadDefinitivaOcF3: Prisma.FieldRef<"PurchaseSuggestion", 'Decimal'>
+  readonly factorVariabilidadVenta: Prisma.FieldRef<"PurchaseSuggestion", 'Decimal'>
+  readonly diasMinimoInv: Prisma.FieldRef<"PurchaseSuggestion", 'Decimal'>
+  readonly diasPromedioInv: Prisma.FieldRef<"PurchaseSuggestion", 'Decimal'>
+  readonly diasMaximoInv: Prisma.FieldRef<"PurchaseSuggestion", 'Decimal'>
+  readonly diasInvCantidadDefinitiva: Prisma.FieldRef<"PurchaseSuggestion", 'Decimal'>
+  readonly diasInvCdF1: Prisma.FieldRef<"PurchaseSuggestion", 'Decimal'>
+  readonly diasInvCdF2: Prisma.FieldRef<"PurchaseSuggestion", 'Decimal'>
+  readonly diasInvCdF3: Prisma.FieldRef<"PurchaseSuggestion", 'Decimal'>
+  readonly diaDePedido: Prisma.FieldRef<"PurchaseSuggestion", 'String'>
+  readonly diaDeLlegada: Prisma.FieldRef<"PurchaseSuggestion", 'String'>
+  readonly fechaEstimadaEntrega: Prisma.FieldRef<"PurchaseSuggestion", 'DateTime'>
+  readonly nomDiaEntrega: Prisma.FieldRef<"PurchaseSuggestion", 'String'>
+  readonly fechaEntregaF1: Prisma.FieldRef<"PurchaseSuggestion", 'DateTime'>
+  readonly fechaEntregaF2: Prisma.FieldRef<"PurchaseSuggestion", 'DateTime'>
+  readonly fechaEntregaF3: Prisma.FieldRef<"PurchaseSuggestion", 'DateTime'>
+  readonly alertaStock: Prisma.FieldRef<"PurchaseSuggestion", 'String'>
+  readonly vidaUtilMinDiasReciboCedi: Prisma.FieldRef<"PurchaseSuggestion", 'Int'>
+  readonly alertaVidaUtil: Prisma.FieldRef<"PurchaseSuggestion", 'String'>
+  readonly crossDock: Prisma.FieldRef<"PurchaseSuggestion", 'Boolean'>
+  readonly moq: Prisma.FieldRef<"PurchaseSuggestion", 'Int'>
+  readonly subcategoria: Prisma.FieldRef<"PurchaseSuggestion", 'String'>
+  readonly temperaturaAlmacenamiento: Prisma.FieldRef<"PurchaseSuggestion", 'String'>
+  readonly responsableDeCompra: Prisma.FieldRef<"PurchaseSuggestion", 'String'>
+  readonly category: Prisma.FieldRef<"PurchaseSuggestion", 'String'>
+  readonly multiploDeCompra: Prisma.FieldRef<"PurchaseSuggestion", 'Int'>
+  readonly estado: Prisma.FieldRef<"PurchaseSuggestion", 'String'>
+  readonly fechaCreacion: Prisma.FieldRef<"PurchaseSuggestion", 'DateTime'>
+  readonly fechaActualizacion: Prisma.FieldRef<"PurchaseSuggestion", 'DateTime'>
 }
     
 
@@ -1997,27 +5072,46 @@ export type PurchaseSuggestionDeleteManyArgs<ExtArgs extends runtime.Types.Exten
 }
 
 /**
- * PurchaseSuggestion.history
+ * PurchaseSuggestion.historial
  */
-export type PurchaseSuggestion$historyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type PurchaseSuggestion$historialArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the PurchaseHistory
+   * Select specific fields to fetch from the PurchaseSuggestionHistory
    */
-  select?: Prisma.PurchaseHistorySelect<ExtArgs> | null
+  select?: Prisma.PurchaseSuggestionHistorySelect<ExtArgs> | null
   /**
-   * Omit specific fields from the PurchaseHistory
+   * Omit specific fields from the PurchaseSuggestionHistory
    */
-  omit?: Prisma.PurchaseHistoryOmit<ExtArgs> | null
+  omit?: Prisma.PurchaseSuggestionHistoryOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.PurchaseHistoryInclude<ExtArgs> | null
-  where?: Prisma.PurchaseHistoryWhereInput
-  orderBy?: Prisma.PurchaseHistoryOrderByWithRelationInput | Prisma.PurchaseHistoryOrderByWithRelationInput[]
-  cursor?: Prisma.PurchaseHistoryWhereUniqueInput
+  include?: Prisma.PurchaseSuggestionHistoryInclude<ExtArgs> | null
+  where?: Prisma.PurchaseSuggestionHistoryWhereInput
+  orderBy?: Prisma.PurchaseSuggestionHistoryOrderByWithRelationInput | Prisma.PurchaseSuggestionHistoryOrderByWithRelationInput[]
+  cursor?: Prisma.PurchaseSuggestionHistoryWhereUniqueInput
   take?: number
   skip?: number
-  distinct?: Prisma.PurchaseHistoryScalarFieldEnum | Prisma.PurchaseHistoryScalarFieldEnum[]
+  distinct?: Prisma.PurchaseSuggestionHistoryScalarFieldEnum | Prisma.PurchaseSuggestionHistoryScalarFieldEnum[]
+}
+
+/**
+ * PurchaseSuggestion.estadoCompraSugerida
+ */
+export type PurchaseSuggestion$estadoCompraSugeridaArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the PurchaseSuggestionStatus
+   */
+  select?: Prisma.PurchaseSuggestionStatusSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the PurchaseSuggestionStatus
+   */
+  omit?: Prisma.PurchaseSuggestionStatusOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.PurchaseSuggestionStatusInclude<ExtArgs> | null
+  where?: Prisma.PurchaseSuggestionStatusWhereInput
 }
 
 /**

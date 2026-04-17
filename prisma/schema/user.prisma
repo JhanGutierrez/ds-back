@@ -1,17 +1,14 @@
 model User {
-  id        Int      @id @default(autoincrement())
-  email     String   @unique
-  username  String   @unique
-  firstName String?  @map("first_name")
-  lastName  String?  @map("last_name")
-  createdAt DateTime @default(now()) @map("created_at")
-  updatedAt DateTime @updatedAt @map("updated_at")
-  password  String
-
-  createdSuggestions PurchaseSuggestion[] @relation("CreatedBy")
-  purchaseHistories  PurchaseHistory[]
-
-  roles UserRole[]
+  id                 Int                         @id @default(autoincrement())
+  correo             String                      @unique
+  nombreUsuario      String                      @unique @map("nombre_usuario")
+  nombre             String                     @map("nombre")
+  apellido           String                     @map("apellido")
+  fechaCreacion      DateTime                    @default(now()) @map("fecha_creacion")
+  fechaActualizacion DateTime                    @updatedAt @map("fecha_actualizacion")
+  contrasena         String
+  purchaseHistories  PurchaseSuggestionHistory[]
+  roles              UserRole[]
 
   @@map("user")
 }

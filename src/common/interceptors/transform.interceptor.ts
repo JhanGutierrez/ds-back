@@ -23,7 +23,7 @@ export class TransformInterceptor<T> implements NestInterceptor<
 
         return {
           statusCode: response.statusCode,
-          message: data?.message || 'Operation sucessful',
+          message: data?.message || 'Operación exitosa',
           data: isPaginated ? data.results : data?.data || data,
           meta: isPaginated
             ? { total: data.total, page: data.page, lastPage: data.lastPage }

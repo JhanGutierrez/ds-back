@@ -1,14 +1,12 @@
-model PurchaseHistory {
-  id         Int                @id @default(autoincrement())
-  purchaseId Int                @map("purchase_id")
-  purchase   PurchaseSuggestion @relation(fields: [purchaseId], references: [id])
+model PurchaseSuggestionHistory {
+  id               Int                 @id @default(autoincrement())
+  compraSugeridaId Int?                @map("compra_sugerida_id")
+  compraSugerida   PurchaseSuggestion? @relation(fields: [compraSugeridaId], references: [id], onDelete: SetNull)
+  usuarioId        Int                 @map("usuario_id")
+  usuario          User                @relation(fields: [usuarioId], references: [id])
+  accion           String // "CREATE", "UPDATE", "STATUS_CHANGE", "DELETE"
+  cambios          Json?
+  fechaCreacion    DateTime            @default(now()) @map("fecha_creacion")
 
-  userId Int  @map("user_id")
-  user   User @relation(fields: [userId], references: [id])
-
-  action    String // "CREATE", "UPDATE", "STATUS_CHANGE", "DELETE"
-  changes   Json?
-  createdAt DateTime @default(now()) @map("created_at")
-
-  @@map("purchase_history")
+  @@map("purchase_suggestion_history")
 }

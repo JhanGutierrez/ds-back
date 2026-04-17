@@ -12,8 +12,8 @@ export class AuthGuard implements CanActivate {
 
     if (!token) {
       throw new AppException(
-        'Authentication token not found',
-        'AUTH_TOKEN_MISSING',
+        'Token de autenticación no encontrado',
+        'TOKEN_NO_ENCONTRADO',
         401,
       );
     }
@@ -26,8 +26,8 @@ export class AuthGuard implements CanActivate {
       request['user'] = payload;
     } catch (error) {
       throw new AppException(
-        'Invalid or expired token',
-        'AUTH_TOKEN_INVALID',
+        'Token de autenticación inválido o expirado',
+        'TOKEN_INVALIDO',
         401,
         error instanceof Error ? error.message : 'Unknown error',
       );

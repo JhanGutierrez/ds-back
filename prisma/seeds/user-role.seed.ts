@@ -1,20 +1,35 @@
-import { PrismaClient, UserRole } from '../../generated/prisma/client';
+import { PrismaClient } from '../../generated/prisma/client';
 
 export async function userRoleSeed(prisma: PrismaClient): Promise<void> {
-  await prisma.$executeRawUnsafe(
-    `TRUNCATE TABLE "user_role" RESTART IDENTITY CASCADE;`,
-  );
-
-  const roles: UserRole[] = [
-    {
-      userId: 1, // Assuming the admin user created in usersSeed has an ID of 1
-      roleId: 1, // Assuming the ADMIN role created in rolesSeed has an ID of 1
-    },
+  const assignments: { correo: string; rolNombre: string }[] = [
+    { correo: 'admin@empresa.com', rolNombre: 'ADMIN' },
+    { correo: 'jaime.torres@empresa.com', rolNombre: 'GERENTE_PLANEACION' },
+    { correo: 'lina.garcia@empresa.com', rolNombre: 'SAR' },
+    { correo: 'rafael.saavedra@empresa.com', rolNombre: 'SAR' },
+    { correo: 'edwin.rubio@empresa.com', rolNombre: 'SAR' },
+    { correo: 'viviana.hincapie@empresa.com', rolNombre: 'SAN' },
+    { correo: 'cristian.vasquez@empresa.com', rolNombre: 'SAN' },
+    { correo: 'dario.castro@empresa.com', rolNombre: 'SUBGERENTE_PLANEACION' },
+    { correo: 'juan.serna@empresa.com', rolNombre: 'SUBGERENTE_PLANEACION' },
+    { correo: 'alvaro.javier@empresa.com', rolNombre: 'SAN_IMPORTADOS' },
+    { correo: 'juandavid.dottor@empresa.com', rolNombre: 'GERENTE_ABASTECIMIENTO_REGIONAL' },
+    { correo: 'daniel.rojas@empresa.com', rolNombre: 'GERENTE_ABASTECIMIENTO_NACIONAL' },
+    { correo: 'carolina@empresa.com', rolNombre: 'GERENTE_ABASTECIMIENTO_NACIONAL' },
   ];
 
-  for (const role of roles) {
-    await prisma.userRole.create({
-      data: role,
+  for (const { correo, rolNombre } of assignments) {
+    const user = await prisma.user.findUnique({ where: { correo } });
+    const role = await prisma.role.findUnique({ where: { nombre: rolNombre } });
+
+    if (!user || !role) {
+      console.warn(`Skipping ${correo} → ${rolNombre}: user or role not found`);
+      continue;
+    }
+
+    await prisma.userRole.upsert({
+      where: { usuarioId_rolId: { usuarioId: user.id, rolId: role.id } },
+      update: {},
+      create: { usuarioId: user.id, rolId: role.id },
     });
   }
 }

@@ -36,20 +36,20 @@ export type PurchaseSuggestionStatusSumAggregateOutputType = {
 
 export type PurchaseSuggestionStatusMinAggregateOutputType = {
   id: number | null
-  code: string | null
-  name: string | null
+  codigo: string | null
+  nombre: string | null
 }
 
 export type PurchaseSuggestionStatusMaxAggregateOutputType = {
   id: number | null
-  code: string | null
-  name: string | null
+  codigo: string | null
+  nombre: string | null
 }
 
 export type PurchaseSuggestionStatusCountAggregateOutputType = {
   id: number
-  code: number
-  name: number
+  codigo: number
+  nombre: number
   _all: number
 }
 
@@ -64,20 +64,20 @@ export type PurchaseSuggestionStatusSumAggregateInputType = {
 
 export type PurchaseSuggestionStatusMinAggregateInputType = {
   id?: true
-  code?: true
-  name?: true
+  codigo?: true
+  nombre?: true
 }
 
 export type PurchaseSuggestionStatusMaxAggregateInputType = {
   id?: true
-  code?: true
-  name?: true
+  codigo?: true
+  nombre?: true
 }
 
 export type PurchaseSuggestionStatusCountAggregateInputType = {
   id?: true
-  code?: true
-  name?: true
+  codigo?: true
+  nombre?: true
   _all?: true
 }
 
@@ -169,8 +169,8 @@ export type PurchaseSuggestionStatusGroupByArgs<ExtArgs extends runtime.Types.Ex
 
 export type PurchaseSuggestionStatusGroupByOutputType = {
   id: number
-  code: string
-  name: string
+  codigo: string
+  nombre: string
   _count: PurchaseSuggestionStatusCountAggregateOutputType | null
   _avg: PurchaseSuggestionStatusAvgAggregateOutputType | null
   _sum: PurchaseSuggestionStatusSumAggregateOutputType | null
@@ -198,32 +198,32 @@ export type PurchaseSuggestionStatusWhereInput = {
   OR?: Prisma.PurchaseSuggestionStatusWhereInput[]
   NOT?: Prisma.PurchaseSuggestionStatusWhereInput | Prisma.PurchaseSuggestionStatusWhereInput[]
   id?: Prisma.IntFilter<"PurchaseSuggestionStatus"> | number
-  code?: Prisma.StringFilter<"PurchaseSuggestionStatus"> | string
-  name?: Prisma.StringFilter<"PurchaseSuggestionStatus"> | string
-  suggestions?: Prisma.PurchaseSuggestionListRelationFilter
+  codigo?: Prisma.StringFilter<"PurchaseSuggestionStatus"> | string
+  nombre?: Prisma.StringFilter<"PurchaseSuggestionStatus"> | string
+  compraSugerida?: Prisma.PurchaseSuggestionListRelationFilter
 }
 
 export type PurchaseSuggestionStatusOrderByWithRelationInput = {
   id?: Prisma.SortOrder
-  code?: Prisma.SortOrder
-  name?: Prisma.SortOrder
-  suggestions?: Prisma.PurchaseSuggestionOrderByRelationAggregateInput
+  codigo?: Prisma.SortOrder
+  nombre?: Prisma.SortOrder
+  compraSugerida?: Prisma.PurchaseSuggestionOrderByRelationAggregateInput
 }
 
 export type PurchaseSuggestionStatusWhereUniqueInput = Prisma.AtLeast<{
   id?: number
-  code?: string
+  codigo?: string
   AND?: Prisma.PurchaseSuggestionStatusWhereInput | Prisma.PurchaseSuggestionStatusWhereInput[]
   OR?: Prisma.PurchaseSuggestionStatusWhereInput[]
   NOT?: Prisma.PurchaseSuggestionStatusWhereInput | Prisma.PurchaseSuggestionStatusWhereInput[]
-  name?: Prisma.StringFilter<"PurchaseSuggestionStatus"> | string
-  suggestions?: Prisma.PurchaseSuggestionListRelationFilter
-}, "id" | "code">
+  nombre?: Prisma.StringFilter<"PurchaseSuggestionStatus"> | string
+  compraSugerida?: Prisma.PurchaseSuggestionListRelationFilter
+}, "id" | "codigo">
 
 export type PurchaseSuggestionStatusOrderByWithAggregationInput = {
   id?: Prisma.SortOrder
-  code?: Prisma.SortOrder
-  name?: Prisma.SortOrder
+  codigo?: Prisma.SortOrder
+  nombre?: Prisma.SortOrder
   _count?: Prisma.PurchaseSuggestionStatusCountOrderByAggregateInput
   _avg?: Prisma.PurchaseSuggestionStatusAvgOrderByAggregateInput
   _max?: Prisma.PurchaseSuggestionStatusMaxOrderByAggregateInput
@@ -236,57 +236,57 @@ export type PurchaseSuggestionStatusScalarWhereWithAggregatesInput = {
   OR?: Prisma.PurchaseSuggestionStatusScalarWhereWithAggregatesInput[]
   NOT?: Prisma.PurchaseSuggestionStatusScalarWhereWithAggregatesInput | Prisma.PurchaseSuggestionStatusScalarWhereWithAggregatesInput[]
   id?: Prisma.IntWithAggregatesFilter<"PurchaseSuggestionStatus"> | number
-  code?: Prisma.StringWithAggregatesFilter<"PurchaseSuggestionStatus"> | string
-  name?: Prisma.StringWithAggregatesFilter<"PurchaseSuggestionStatus"> | string
+  codigo?: Prisma.StringWithAggregatesFilter<"PurchaseSuggestionStatus"> | string
+  nombre?: Prisma.StringWithAggregatesFilter<"PurchaseSuggestionStatus"> | string
 }
 
 export type PurchaseSuggestionStatusCreateInput = {
-  code: string
-  name: string
-  suggestions?: Prisma.PurchaseSuggestionCreateNestedManyWithoutStatusInput
+  codigo: string
+  nombre: string
+  compraSugerida?: Prisma.PurchaseSuggestionCreateNestedManyWithoutEstadoCompraSugeridaInput
 }
 
 export type PurchaseSuggestionStatusUncheckedCreateInput = {
   id?: number
-  code: string
-  name: string
-  suggestions?: Prisma.PurchaseSuggestionUncheckedCreateNestedManyWithoutStatusInput
+  codigo: string
+  nombre: string
+  compraSugerida?: Prisma.PurchaseSuggestionUncheckedCreateNestedManyWithoutEstadoCompraSugeridaInput
 }
 
 export type PurchaseSuggestionStatusUpdateInput = {
-  code?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  suggestions?: Prisma.PurchaseSuggestionUpdateManyWithoutStatusNestedInput
+  codigo?: Prisma.StringFieldUpdateOperationsInput | string
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
+  compraSugerida?: Prisma.PurchaseSuggestionUpdateManyWithoutEstadoCompraSugeridaNestedInput
 }
 
 export type PurchaseSuggestionStatusUncheckedUpdateInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
-  code?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  suggestions?: Prisma.PurchaseSuggestionUncheckedUpdateManyWithoutStatusNestedInput
+  codigo?: Prisma.StringFieldUpdateOperationsInput | string
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
+  compraSugerida?: Prisma.PurchaseSuggestionUncheckedUpdateManyWithoutEstadoCompraSugeridaNestedInput
 }
 
 export type PurchaseSuggestionStatusCreateManyInput = {
   id?: number
-  code: string
-  name: string
+  codigo: string
+  nombre: string
 }
 
 export type PurchaseSuggestionStatusUpdateManyMutationInput = {
-  code?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
+  codigo?: Prisma.StringFieldUpdateOperationsInput | string
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
 }
 
 export type PurchaseSuggestionStatusUncheckedUpdateManyInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
-  code?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
+  codigo?: Prisma.StringFieldUpdateOperationsInput | string
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
 }
 
 export type PurchaseSuggestionStatusCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  code?: Prisma.SortOrder
-  name?: Prisma.SortOrder
+  codigo?: Prisma.SortOrder
+  nombre?: Prisma.SortOrder
 }
 
 export type PurchaseSuggestionStatusAvgOrderByAggregateInput = {
@@ -295,75 +295,77 @@ export type PurchaseSuggestionStatusAvgOrderByAggregateInput = {
 
 export type PurchaseSuggestionStatusMaxOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  code?: Prisma.SortOrder
-  name?: Prisma.SortOrder
+  codigo?: Prisma.SortOrder
+  nombre?: Prisma.SortOrder
 }
 
 export type PurchaseSuggestionStatusMinOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  code?: Prisma.SortOrder
-  name?: Prisma.SortOrder
+  codigo?: Prisma.SortOrder
+  nombre?: Prisma.SortOrder
 }
 
 export type PurchaseSuggestionStatusSumOrderByAggregateInput = {
   id?: Prisma.SortOrder
 }
 
-export type PurchaseSuggestionStatusScalarRelationFilter = {
-  is?: Prisma.PurchaseSuggestionStatusWhereInput
-  isNot?: Prisma.PurchaseSuggestionStatusWhereInput
+export type PurchaseSuggestionStatusNullableScalarRelationFilter = {
+  is?: Prisma.PurchaseSuggestionStatusWhereInput | null
+  isNot?: Prisma.PurchaseSuggestionStatusWhereInput | null
 }
 
-export type PurchaseSuggestionStatusCreateNestedOneWithoutSuggestionsInput = {
-  create?: Prisma.XOR<Prisma.PurchaseSuggestionStatusCreateWithoutSuggestionsInput, Prisma.PurchaseSuggestionStatusUncheckedCreateWithoutSuggestionsInput>
-  connectOrCreate?: Prisma.PurchaseSuggestionStatusCreateOrConnectWithoutSuggestionsInput
+export type PurchaseSuggestionStatusCreateNestedOneWithoutCompraSugeridaInput = {
+  create?: Prisma.XOR<Prisma.PurchaseSuggestionStatusCreateWithoutCompraSugeridaInput, Prisma.PurchaseSuggestionStatusUncheckedCreateWithoutCompraSugeridaInput>
+  connectOrCreate?: Prisma.PurchaseSuggestionStatusCreateOrConnectWithoutCompraSugeridaInput
   connect?: Prisma.PurchaseSuggestionStatusWhereUniqueInput
 }
 
-export type PurchaseSuggestionStatusUpdateOneRequiredWithoutSuggestionsNestedInput = {
-  create?: Prisma.XOR<Prisma.PurchaseSuggestionStatusCreateWithoutSuggestionsInput, Prisma.PurchaseSuggestionStatusUncheckedCreateWithoutSuggestionsInput>
-  connectOrCreate?: Prisma.PurchaseSuggestionStatusCreateOrConnectWithoutSuggestionsInput
-  upsert?: Prisma.PurchaseSuggestionStatusUpsertWithoutSuggestionsInput
+export type PurchaseSuggestionStatusUpdateOneWithoutCompraSugeridaNestedInput = {
+  create?: Prisma.XOR<Prisma.PurchaseSuggestionStatusCreateWithoutCompraSugeridaInput, Prisma.PurchaseSuggestionStatusUncheckedCreateWithoutCompraSugeridaInput>
+  connectOrCreate?: Prisma.PurchaseSuggestionStatusCreateOrConnectWithoutCompraSugeridaInput
+  upsert?: Prisma.PurchaseSuggestionStatusUpsertWithoutCompraSugeridaInput
+  disconnect?: Prisma.PurchaseSuggestionStatusWhereInput | boolean
+  delete?: Prisma.PurchaseSuggestionStatusWhereInput | boolean
   connect?: Prisma.PurchaseSuggestionStatusWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.PurchaseSuggestionStatusUpdateToOneWithWhereWithoutSuggestionsInput, Prisma.PurchaseSuggestionStatusUpdateWithoutSuggestionsInput>, Prisma.PurchaseSuggestionStatusUncheckedUpdateWithoutSuggestionsInput>
+  update?: Prisma.XOR<Prisma.XOR<Prisma.PurchaseSuggestionStatusUpdateToOneWithWhereWithoutCompraSugeridaInput, Prisma.PurchaseSuggestionStatusUpdateWithoutCompraSugeridaInput>, Prisma.PurchaseSuggestionStatusUncheckedUpdateWithoutCompraSugeridaInput>
 }
 
-export type PurchaseSuggestionStatusCreateWithoutSuggestionsInput = {
-  code: string
-  name: string
+export type PurchaseSuggestionStatusCreateWithoutCompraSugeridaInput = {
+  codigo: string
+  nombre: string
 }
 
-export type PurchaseSuggestionStatusUncheckedCreateWithoutSuggestionsInput = {
+export type PurchaseSuggestionStatusUncheckedCreateWithoutCompraSugeridaInput = {
   id?: number
-  code: string
-  name: string
+  codigo: string
+  nombre: string
 }
 
-export type PurchaseSuggestionStatusCreateOrConnectWithoutSuggestionsInput = {
+export type PurchaseSuggestionStatusCreateOrConnectWithoutCompraSugeridaInput = {
   where: Prisma.PurchaseSuggestionStatusWhereUniqueInput
-  create: Prisma.XOR<Prisma.PurchaseSuggestionStatusCreateWithoutSuggestionsInput, Prisma.PurchaseSuggestionStatusUncheckedCreateWithoutSuggestionsInput>
+  create: Prisma.XOR<Prisma.PurchaseSuggestionStatusCreateWithoutCompraSugeridaInput, Prisma.PurchaseSuggestionStatusUncheckedCreateWithoutCompraSugeridaInput>
 }
 
-export type PurchaseSuggestionStatusUpsertWithoutSuggestionsInput = {
-  update: Prisma.XOR<Prisma.PurchaseSuggestionStatusUpdateWithoutSuggestionsInput, Prisma.PurchaseSuggestionStatusUncheckedUpdateWithoutSuggestionsInput>
-  create: Prisma.XOR<Prisma.PurchaseSuggestionStatusCreateWithoutSuggestionsInput, Prisma.PurchaseSuggestionStatusUncheckedCreateWithoutSuggestionsInput>
+export type PurchaseSuggestionStatusUpsertWithoutCompraSugeridaInput = {
+  update: Prisma.XOR<Prisma.PurchaseSuggestionStatusUpdateWithoutCompraSugeridaInput, Prisma.PurchaseSuggestionStatusUncheckedUpdateWithoutCompraSugeridaInput>
+  create: Prisma.XOR<Prisma.PurchaseSuggestionStatusCreateWithoutCompraSugeridaInput, Prisma.PurchaseSuggestionStatusUncheckedCreateWithoutCompraSugeridaInput>
   where?: Prisma.PurchaseSuggestionStatusWhereInput
 }
 
-export type PurchaseSuggestionStatusUpdateToOneWithWhereWithoutSuggestionsInput = {
+export type PurchaseSuggestionStatusUpdateToOneWithWhereWithoutCompraSugeridaInput = {
   where?: Prisma.PurchaseSuggestionStatusWhereInput
-  data: Prisma.XOR<Prisma.PurchaseSuggestionStatusUpdateWithoutSuggestionsInput, Prisma.PurchaseSuggestionStatusUncheckedUpdateWithoutSuggestionsInput>
+  data: Prisma.XOR<Prisma.PurchaseSuggestionStatusUpdateWithoutCompraSugeridaInput, Prisma.PurchaseSuggestionStatusUncheckedUpdateWithoutCompraSugeridaInput>
 }
 
-export type PurchaseSuggestionStatusUpdateWithoutSuggestionsInput = {
-  code?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
+export type PurchaseSuggestionStatusUpdateWithoutCompraSugeridaInput = {
+  codigo?: Prisma.StringFieldUpdateOperationsInput | string
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
 }
 
-export type PurchaseSuggestionStatusUncheckedUpdateWithoutSuggestionsInput = {
+export type PurchaseSuggestionStatusUncheckedUpdateWithoutCompraSugeridaInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
-  code?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
+  codigo?: Prisma.StringFieldUpdateOperationsInput | string
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
 }
 
 
@@ -372,11 +374,11 @@ export type PurchaseSuggestionStatusUncheckedUpdateWithoutSuggestionsInput = {
  */
 
 export type PurchaseSuggestionStatusCountOutputType = {
-  suggestions: number
+  compraSugerida: number
 }
 
 export type PurchaseSuggestionStatusCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  suggestions?: boolean | PurchaseSuggestionStatusCountOutputTypeCountSuggestionsArgs
+  compraSugerida?: boolean | PurchaseSuggestionStatusCountOutputTypeCountCompraSugeridaArgs
 }
 
 /**
@@ -392,40 +394,40 @@ export type PurchaseSuggestionStatusCountOutputTypeDefaultArgs<ExtArgs extends r
 /**
  * PurchaseSuggestionStatusCountOutputType without action
  */
-export type PurchaseSuggestionStatusCountOutputTypeCountSuggestionsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type PurchaseSuggestionStatusCountOutputTypeCountCompraSugeridaArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   where?: Prisma.PurchaseSuggestionWhereInput
 }
 
 
 export type PurchaseSuggestionStatusSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  code?: boolean
-  name?: boolean
-  suggestions?: boolean | Prisma.PurchaseSuggestionStatus$suggestionsArgs<ExtArgs>
+  codigo?: boolean
+  nombre?: boolean
+  compraSugerida?: boolean | Prisma.PurchaseSuggestionStatus$compraSugeridaArgs<ExtArgs>
   _count?: boolean | Prisma.PurchaseSuggestionStatusCountOutputTypeDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["purchaseSuggestionStatus"]>
 
 export type PurchaseSuggestionStatusSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  code?: boolean
-  name?: boolean
+  codigo?: boolean
+  nombre?: boolean
 }, ExtArgs["result"]["purchaseSuggestionStatus"]>
 
 export type PurchaseSuggestionStatusSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  code?: boolean
-  name?: boolean
+  codigo?: boolean
+  nombre?: boolean
 }, ExtArgs["result"]["purchaseSuggestionStatus"]>
 
 export type PurchaseSuggestionStatusSelectScalar = {
   id?: boolean
-  code?: boolean
-  name?: boolean
+  codigo?: boolean
+  nombre?: boolean
 }
 
-export type PurchaseSuggestionStatusOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "code" | "name", ExtArgs["result"]["purchaseSuggestionStatus"]>
+export type PurchaseSuggestionStatusOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "codigo" | "nombre", ExtArgs["result"]["purchaseSuggestionStatus"]>
 export type PurchaseSuggestionStatusInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  suggestions?: boolean | Prisma.PurchaseSuggestionStatus$suggestionsArgs<ExtArgs>
+  compraSugerida?: boolean | Prisma.PurchaseSuggestionStatus$compraSugeridaArgs<ExtArgs>
   _count?: boolean | Prisma.PurchaseSuggestionStatusCountOutputTypeDefaultArgs<ExtArgs>
 }
 export type PurchaseSuggestionStatusIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {}
@@ -434,12 +436,12 @@ export type PurchaseSuggestionStatusIncludeUpdateManyAndReturn<ExtArgs extends r
 export type $PurchaseSuggestionStatusPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "PurchaseSuggestionStatus"
   objects: {
-    suggestions: Prisma.$PurchaseSuggestionPayload<ExtArgs>[]
+    compraSugerida: Prisma.$PurchaseSuggestionPayload<ExtArgs>[]
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: number
-    code: string
-    name: string
+    codigo: string
+    nombre: string
   }, ExtArgs["result"]["purchaseSuggestionStatus"]>
   composites: {}
 }
@@ -834,7 +836,7 @@ readonly fields: PurchaseSuggestionStatusFieldRefs;
  */
 export interface Prisma__PurchaseSuggestionStatusClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
-  suggestions<T extends Prisma.PurchaseSuggestionStatus$suggestionsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.PurchaseSuggestionStatus$suggestionsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$PurchaseSuggestionPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  compraSugerida<T extends Prisma.PurchaseSuggestionStatus$compraSugeridaArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.PurchaseSuggestionStatus$compraSugeridaArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$PurchaseSuggestionPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -865,8 +867,8 @@ export interface Prisma__PurchaseSuggestionStatusClient<T, Null = never, ExtArgs
  */
 export interface PurchaseSuggestionStatusFieldRefs {
   readonly id: Prisma.FieldRef<"PurchaseSuggestionStatus", 'Int'>
-  readonly code: Prisma.FieldRef<"PurchaseSuggestionStatus", 'String'>
-  readonly name: Prisma.FieldRef<"PurchaseSuggestionStatus", 'String'>
+  readonly codigo: Prisma.FieldRef<"PurchaseSuggestionStatus", 'String'>
+  readonly nombre: Prisma.FieldRef<"PurchaseSuggestionStatus", 'String'>
 }
     
 
@@ -1260,9 +1262,9 @@ export type PurchaseSuggestionStatusDeleteManyArgs<ExtArgs extends runtime.Types
 }
 
 /**
- * PurchaseSuggestionStatus.suggestions
+ * PurchaseSuggestionStatus.compraSugerida
  */
-export type PurchaseSuggestionStatus$suggestionsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type PurchaseSuggestionStatus$compraSugeridaArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the PurchaseSuggestion
    */

@@ -18,10 +18,10 @@ export { Prisma }
 export * as $Enums from './enums.js'
 export * from './enums.js';
 /**
- * Model PurchaseHistory
+ * Model PurchaseSuggestionHistory
  * 
  */
-export type PurchaseHistory = Prisma.PurchaseHistoryModel
+export type PurchaseSuggestionHistory = Prisma.PurchaseSuggestionHistoryModel
 /**
  * Model PurchaseSuggestionStatus
  * 

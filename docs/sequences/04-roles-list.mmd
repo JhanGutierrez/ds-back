@@ -1,0 +1,22 @@
+sequenceDiagram
+    autonumber
+
+    participant C   as Cliente
+    participant G   as AuthGuard + RolesGuard
+    participant RC  as RolesController
+    participant RS  as RolesService
+    participant DB  as PrismaService
+
+    Note over G: Rol requerido: ADMIN
+    Note over C,DB: Ver diagrama 02 para el flujo detallado de autenticación y autorización
+
+    C->>G: GET /roles
+    G-->>RC: request autorizado (user.roles incluye ADMIN)
+
+    RC->>RS: getRoles()
+
+    RS->>DB: role.findMany()
+    DB-->>RS: Role[]
+
+    RS-->>RC: Role[]
+    RC-->>C: 200 { statusCode, message, data: Role[] }

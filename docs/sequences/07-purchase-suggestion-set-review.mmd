@@ -1,0 +1,32 @@
+sequenceDiagram
+    autonumber
+
+    participant C   as Cliente
+    participant G   as AuthGuard + RolesGuard
+    participant PSC as PurchaseSuggestionController
+    participant PSS as PurchaseSuggestionService
+    participant DB  as PrismaService
+
+    Note over G: Roles: ADMIN, GERENTE_PLANEACION, SAR, SAN,<br/>SUBGERENTE_PLANEACION, SAN_IMPORTADOS,<br/>GERENTE_ABASTECIMIENTO_REGIONAL, GERENTE_ABASTECIMIENTO_NACIONAL
+    Note over C,DB: Ver diagrama 02 para el flujo detallado de autenticación y autorización
+
+    C->>G: POST /purchase-suggestion/set-in-review<br/>{ id: number, pedidoHoy: number }
+    G-->>PSC: request autorizado
+
+    PSC->>PSS: setInReview(dto)
+
+    PSS->>DB: purchaseSuggestion.update({<br/>  where: { id },<br/>  data: { estado: "revisado", pedidoHoy },<br/>  select: { id, descripcionMaterial, codigoMaterial, estado }<br/>})
+
+    alt Registro no encontrado (Prisma P2025)
+        DB-->>PSS: PrismaClientKnownRequestError P2025
+        PSS-->>PSC: throw AppException(SUGERENCIA_COMPRA_NO_ENCONTRADA, 404)
+        PSC-->>C: 404 { code: "SUGERENCIA_COMPRA_NO_ENCONTRADA" }
+    else Error interno
+        DB-->>PSS: Error genérico
+        PSS-->>PSC: throw AppException(ERROR_INTERNO, 500)
+        PSC-->>C: 500 { code: "ERROR_INTERNO" }
+    else Actualización exitosa
+        DB-->>PSS: { id, descripcionMaterial, codigoMaterial, estado }
+        PSS-->>PSC: { ordenCompra: { id, descripcionMaterial, codigoMaterial, estado } }
+        PSC-->>C: 200 { statusCode, message, data: { ordenCompra } }
+    end

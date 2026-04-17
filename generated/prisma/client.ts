@@ -29,8 +29,8 @@ export * from "./enums.js"
  * const prisma = new PrismaClient({
  *   adapter: new PrismaPg({ connectionString: process.env.DATABASE_URL })
  * })
- * // Fetch zero or more PurchaseHistories
- * const purchaseHistories = await prisma.purchaseHistory.findMany()
+ * // Fetch zero or more PurchaseSuggestionHistories
+ * const purchaseSuggestionHistories = await prisma.purchaseSuggestionHistory.findMany()
  * ```
  * 
  * Read more in our [docs](https://pris.ly/d/client).
@@ -40,10 +40,10 @@ export type PrismaClient<LogOpts extends Prisma.LogLevel = never, OmitOpts exten
 export { Prisma }
 
 /**
- * Model PurchaseHistory
+ * Model PurchaseSuggestionHistory
  * 
  */
-export type PurchaseHistory = Prisma.PurchaseHistoryModel
+export type PurchaseSuggestionHistory = Prisma.PurchaseSuggestionHistoryModel
 /**
  * Model PurchaseSuggestionStatus
  * 

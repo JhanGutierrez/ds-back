@@ -1,0 +1,42 @@
+sequenceDiagram
+    autonumber
+
+    participant C   as Cliente
+    participant G   as AuthGuard + RolesGuard
+    participant PSC as PurchaseSuggestionController
+    participant PSS as PurchaseSuggestionService
+    participant DB  as PrismaService
+
+    Note over G: Roles: ADMIN, SUBGERENTE_PLANEACION, GERENTE_ABASTECIMIENTO_NACIONAL
+    Note over C,DB: Ver diagrama 02 para el flujo detallado de autenticación y autorización
+
+    C->>G: POST /purchase-suggestion/bulk/status { ids: number[], codigo_estado: string }
+    G-->>PSC: request autorizado
+
+    PSC->>PSS: bulkUpdateStatus(dto, user)
+
+    PSS->>PSS: Deduplicar IDs, uniqueIds = [...new Set(ids)]
+
+    PSS->>DB: $transaction(async (tx) => { ... })
+
+    activate DB
+        DB->>DB: purchaseSuggestionStatus.findFirst({ where: { codigo: codigo_estado } })
+
+        alt Estado no encontrado
+            DB-->>PSS: null
+            PSS-->>PSC: throw AppException(ESTADO_COMPRA_NO_ENCONTRADO, 404)
+            PSC-->>C: 404 { code: "ESTADO_COMPRA_NO_ENCONTRADO" }
+        else Estado válido
+            DB->>DB: purchaseSuggestion.updateMany({ where: { id: { in: uniqueIds } }, data: { estado: codigo_estado } })
+            DB->>DB: purchaseSuggestionHistory.createMany({ data: uniqueIds.map(id => ({ compraSugeridaId: id, usuarioId: user.sub, accion: "UPDATE", cambios: { estado: codigo_estado } })) })
+            DB-->>PSS: { idsActualizados: uniqueIds, totalActualizados: uniqueIds.length }
+        end
+    deactivate DB
+
+    PSS-->>PSC: { idsActualizados, totalActualizados }
+    PSC-->>C: 200 { statusCode, message, data: { idsActualizados, totalActualizados } }
+
+    alt Error interno inesperado
+        PSS-->>PSC: throw AppException(ERROR_INTERNO, 500)
+        PSC-->>C: 500 { code: "ERROR_INTERNO" }
+    end

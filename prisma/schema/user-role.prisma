@@ -1,10 +1,9 @@
-model UserRole{
-  userId Int
-  roleId Int
+model UserRole {
+  usuarioId Int  @map("usuario_id")
+  rolId     Int  @map("role_id")
+  usuario   User @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
+  rol       Role @relation(fields: [rolId], references: [id], onDelete: Restrict)
 
-  user User @relation(fields: [userId], references: [id])
-  role Role @relation(fields: [roleId], references: [id])
-
-  @@id([userId, roleId])
+  @@id([usuarioId, rolId])
   @@map("user_role")
 }

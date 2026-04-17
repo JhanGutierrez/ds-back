@@ -1,5 +1,6 @@
 import { ApiProperty } from "@nestjs/swagger";
-import { IsArray, IsInt, IsNotEmpty } from "class-validator";
+import { IsArray, IsEnum, IsInt, IsNotEmpty } from "class-validator";
+import { PurchaseSuggestionStatus } from "src/common/enums/purchase-suggeston-status.enum";
 
 export class PurchaseStatusBulkDto  {
   @ApiProperty({ type: [Number], required: true })
@@ -9,7 +10,7 @@ export class PurchaseStatusBulkDto  {
   ids!: number[];
 
   @ApiProperty({ required: true })
-  @IsInt()
+  @IsEnum(PurchaseSuggestionStatus)
   @IsNotEmpty()
-  status_id!: number;
+  codigo_estado!: PurchaseSuggestionStatus;
 }

@@ -22,8 +22,8 @@ export class RolesGuard implements CanActivate {
 
     if (!hasRole) {
       throw new AppException(
-        'User does not have the required permissions',
-        'INSUFFICIENT_PERMISSIONS',
+        'No tienes permisos para acceder a este recurso',
+        'PERMISOS_INSUFICIENTES',
         403,
       );
     }

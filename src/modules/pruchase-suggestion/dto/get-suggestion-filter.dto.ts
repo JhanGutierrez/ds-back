@@ -1,6 +1,14 @@
 import { ApiPropertyOptional } from '@nestjs/swagger';
 import { Type } from 'class-transformer';
-import { IsIn, IsInt, IsOptional, IsString, Min } from 'class-validator';
+import {
+  IsEnum,
+  IsIn,
+  IsInt,
+  IsOptional,
+  IsString,
+  Min,
+} from 'class-validator';
+import { PurchaseSuggestionStatus } from 'src/common/enums/purchase-suggeston-status.enum';
 
 export class GetSuggestionFilterDto {
   @ApiPropertyOptional({ default: 1, minimum: 1 })
@@ -8,39 +16,50 @@ export class GetSuggestionFilterDto {
   @IsInt()
   @Min(1)
   @Type(() => Number)
-  page?: number = 1;
+  pagina?: number = 1;
 
   @ApiPropertyOptional({ default: 10, minimum: 1 })
   @IsOptional()
   @IsInt()
   @Min(1)
   @Type(() => Number)
-  limit?: number = 10;
+  limite?: number = 10;
 
-  @ApiPropertyOptional({
-    description:
-      'Search in material description, supplier, or supply center (partial match in any)',
-  })
-  @IsOptional()
+  @ApiPropertyOptional({ description: 'Buscar por centro abastecedor.', required: true })
   @IsString()
-  search?: string;
+  centroAbastecedor!: string;
 
-  @ApiPropertyOptional()
+  @ApiPropertyOptional({ description: 'Buscar por código del material.' })
   @IsOptional()
   @IsInt()
   @Type(() => Number)
-  purchaseStatusId?: number;
+  codigoMaterial?: number;
+
+  @ApiPropertyOptional({
+    enum: PurchaseSuggestionStatus,
+    description: 'Estado de la sugerencia de compra.',
+  })
+  @IsOptional()
+  @IsEnum(PurchaseSuggestionStatus)
+  estado?: PurchaseSuggestionStatus;
 
   @ApiPropertyOptional({ enum: ['asc', 'desc'], default: 'desc' })
   @IsOptional()
   @IsIn(['asc', 'desc'])
-  order?: 'asc' | 'desc' = 'desc';
+  orden?: 'asc' | 'desc' = 'desc';
 
   @ApiPropertyOptional({
-    enum: ['materialDescription', 'orderToday', 'createdAt', 'leadTime'],
-    default: 'createdAt',
+    enum: [
+      'codigoMaterial',
+      'fechaCreacion',
+      'fechaEstimadaEntrega',
+      'proveedor',
+      'alertaStock',
+      'estado',
+    ],
+    default: 'fechaCreacion',
   })
   @IsOptional()
   @IsString()
-  sortBy?: string = 'createdAt';
+  ordenarPor?: string = 'fechaCreacion';
 }

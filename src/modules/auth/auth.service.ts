@@ -12,32 +12,34 @@ export class AuthService {
     private readonly _jwtService: JwtService,
   ) {}
 
-  async login(
-    data: LoginDto,
-  ): Promise<{ access_token: string }> {
+  async login(data: LoginDto): Promise<{ access_token: string }> {
     const user = await this._prismaService.user.findFirst({
-      where: { email: data.email },
+      where: { correo: data.email },
       select: {
-        roles: { include: { role: true } },
-        password: true,
-        email: true,
+        roles: { include: { rol: true } },
+        contrasena: true,
+        correo: true,
         id: true,
       },
     });
 
-    if (!user)
-      throw new AppException('Invalid credentials', 'INVALID_CREDENTIALS', 401);
+    if (!user) {
+      console.error('[AuthService][login] Error: Credenciales inválidas');
+      throw new AppException('Credenciales inválidas', 'CREDENCIALES_INVALIDAS', 401);
+    }
 
     const decryptedPassword = await bcrypt.compare(
       data.password,
-      user.password,
+      user.contrasena,
     );
 
-    if (!decryptedPassword)
-      throw new AppException('Invalid credentials', 'INVALID_CREDENTIALS', 401);
+    if (!decryptedPassword) {
+      console.error('[AuthService][login] Error: Credenciales inválidas');
+      throw new AppException('Credenciales inválidas', 'CREDENCIALES_INVALIDAS', 401);
+    }
 
-    const roles = user.roles.map((r) => r.role.name);
-    const payload = { email: user.email, sub: user.id, roles };
+    const roles = user.roles.map((r) => r.rol.nombre);
+    const payload = { correo: user.correo, sub: user.id, roles };
     const access_token = this._jwtService.sign(payload);
     return { access_token };
   }
@@ -46,11 +48,12 @@ export class AuthService {
     try {
       return this._jwtService.verify(token, { secret: process.env.JWT_SECRET });
     } catch (error) {
+      console.error('[AuthService][decodeToken] Error:', error);
       throw new AppException(
-        'Invalid or expired token',
-        'AUTH_TOKEN_INVALID',
+        'Token inválido o expirado',
+        'TOKEN_INVALIDO',
         401,
-        error instanceof Error ? error.message : 'Unknown error',
+        error instanceof Error ? error.message : 'Error desconocido',
       );
     }
   }

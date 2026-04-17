@@ -1,0 +1,37 @@
+sequenceDiagram
+    autonumber
+
+    participant C as Cliente
+    participant AC as AuthController
+    participant AS as AuthService
+    participant DB as PrismaService
+    participant BC as bcrypt
+    participant JS as JwtService
+
+    C->>AC: POST /auth/login {email, password}
+    AC->>AS: login(loginDto)
+
+    AS->>DB: user.findUnique({ where: { correo: email } })
+    DB-->>AS: User | null
+
+    alt Usuario no encontrado
+        AS-->>AC: throw AppException("CREDENCIALES_INVALIDAS", 401)
+        AC-->>C: 401 { code: "CREDENCIALES_INVALIDAS" }
+    else Usuario encontrado
+        AS->>BC: bcrypt.compare(password, user.contrasena)
+        BC-->>AS: boolean
+
+        alt Contraseña incorrecta
+            AS-->>AC: throw AppException("CREDENCIALES_INVALIDAS", 401)
+            AC-->>C: 401 { code: "CREDENCIALES_INVALIDAS" }
+        else Contraseña correcta
+            AS->>DB: userRole.findMany({ where: { usuarioId: user.id }, include: { rol } })
+            DB-->>AS: UserRole[] con roles
+
+            AS->>JS: sign({ correo, sub: user.id, roles: string[] })
+            JS-->>AS: access_token (JWT)
+
+            AS-->>AC: { access_token }
+            AC-->>C: 200 { data: { access_token } }
+        end
+    end

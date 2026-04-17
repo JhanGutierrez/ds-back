@@ -1,0 +1,60 @@
+erDiagram
+
+    User {
+        Int     id                PK
+        String  correo            UK
+        String  nombreUsuario     UK
+        String  nombre
+        String  apellido
+        String  contrasena
+        DateTime fechaCreacion
+        DateTime fechaActualizacion
+    }
+
+    Role {
+        Int    id     PK
+        String nombre UK
+    }
+
+    UserRole {
+        Int usuarioId PK,FK
+        Int rolId     PK,FK
+    }
+
+    PurchaseSuggestionStatus {
+        Int    id     PK
+        String codigo UK
+        String nombre
+    }
+
+    PurchaseSuggestion {
+        Int      id                  PK
+        String   mc                  UK
+        Int      codigoMaterial
+        String   descripcionMaterial
+        String   centroAbastecedor
+        String   almacen
+        String   proveedor
+        Float    ltReal
+        Float    diasInvCantidadDefinitiva
+        Float    pedidoHoy
+        String   estado              FK
+        Boolean  alertaStock
+        DateTime fechaCreacion
+        DateTime fechaActualizacion
+    }
+
+    PurchaseSuggestionHistory {
+        Int      id               PK
+        Int      compraSugeridaId FK
+        Int      usuarioId        FK
+        String   accion
+        Json     cambios
+        DateTime fechaCreacion
+    }
+
+    User            ||--o{  UserRole                  : "tiene roles"
+    Role            ||--o{  UserRole                  : "asignado a usuarios"
+    PurchaseSuggestionStatus ||--o{ PurchaseSuggestion : "clasifica"
+    PurchaseSuggestion       ||--o{ PurchaseSuggestionHistory : "registra historial"
+    User            ||--o{  PurchaseSuggestionHistory : "realiza acciones"

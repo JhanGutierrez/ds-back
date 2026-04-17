@@ -8,7 +8,7 @@
  *
  * 🟢 You can import this file directly.
  */
-export type * from './models/PurchaseHistory.js'
+export type * from './models/PurchaseSuggestionHistory.js'
 export type * from './models/PurchaseSuggestionStatus.js'
 export type * from './models/PurchaseSuggestion.js'
 export type * from './models/Role.js'

@@ -1,0 +1,44 @@
+sequenceDiagram
+    autonumber
+
+    participant C as Cliente
+    participant AG as AuthGuard
+    participant JS as JwtService
+    participant RG as RolesGuard
+    participant H as Handler (Controller)
+
+    Note over C,H: Flujo común a todos los endpoints protegidos
+
+    C->>AG: Cualquier request con Authorization: Bearer <token>
+
+    AG->>AG: Extraer token del header
+
+    alt Token ausente o mal formado
+        AG-->>C: 401 { code: "TOKEN_NO_ENCONTRADO" }
+    else Token presente
+        AG->>JS: jwtService.verifyAsync(token, { secret: JWT_SECRET })
+
+        alt Token inválido o expirado
+            JS-->>AG: Error
+            AG-->>C: 401 { code: "TOKEN_INVALIDO" }
+        else Token válido
+            JS-->>AG: payload { correo, sub, roles[] }
+            AG->>AG: request["user"] = payload
+
+            AG->>RG: canActivate(context)
+            RG->>RG: Leer @Roles(...) del handler/clase via Reflector
+
+            alt Sin metadata @Roles → ruta pública
+                RG-->>H: Permitir acceso
+            else Con metadata @Roles
+                RG->>RG: user.roles.some(r => requiredRoles.includes(r))
+
+                alt Usuario no tiene el rol requerido
+                    RG-->>C: 403 { code: "PERMISOS_INSUFICIENTES" }
+                else Usuario tiene el rol
+                    RG-->>H: Permitir acceso
+                    H-->>C: 200 { statusCode, message, data }
+                end
+            end
+        end
+    end

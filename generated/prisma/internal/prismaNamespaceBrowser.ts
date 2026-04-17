@@ -51,7 +51,7 @@ export const AnyNull = runtime.AnyNull
 
 
 export const ModelName = {
-  PurchaseHistory: 'PurchaseHistory',
+  PurchaseSuggestionHistory: 'PurchaseSuggestionHistory',
   PurchaseSuggestionStatus: 'PurchaseSuggestionStatus',
   PurchaseSuggestion: 'PurchaseSuggestion',
   Role: 'Role',
@@ -75,22 +75,22 @@ export const TransactionIsolationLevel = runtime.makeStrictEnum({
 export type TransactionIsolationLevel = (typeof TransactionIsolationLevel)[keyof typeof TransactionIsolationLevel]
 
 
-export const PurchaseHistoryScalarFieldEnum = {
+export const PurchaseSuggestionHistoryScalarFieldEnum = {
   id: 'id',
-  purchaseId: 'purchaseId',
-  userId: 'userId',
-  action: 'action',
-  changes: 'changes',
-  createdAt: 'createdAt'
+  compraSugeridaId: 'compraSugeridaId',
+  usuarioId: 'usuarioId',
+  accion: 'accion',
+  cambios: 'cambios',
+  fechaCreacion: 'fechaCreacion'
 } as const
 
-export type PurchaseHistoryScalarFieldEnum = (typeof PurchaseHistoryScalarFieldEnum)[keyof typeof PurchaseHistoryScalarFieldEnum]
+export type PurchaseSuggestionHistoryScalarFieldEnum = (typeof PurchaseSuggestionHistoryScalarFieldEnum)[keyof typeof PurchaseSuggestionHistoryScalarFieldEnum]
 
 
 export const PurchaseSuggestionStatusScalarFieldEnum = {
   id: 'id',
-  code: 'code',
-  name: 'name'
+  codigo: 'codigo',
+  nombre: 'nombre'
 } as const
 
 export type PurchaseSuggestionStatusScalarFieldEnum = (typeof PurchaseSuggestionStatusScalarFieldEnum)[keyof typeof PurchaseSuggestionStatusScalarFieldEnum]
@@ -98,18 +98,93 @@ export type PurchaseSuggestionStatusScalarFieldEnum = (typeof PurchaseSuggestion
 
 export const PurchaseSuggestionScalarFieldEnum = {
   id: 'id',
-  materialCode: 'materialCode',
-  materialDescription: 'materialDescription',
-  supplier: 'supplier',
-  supplyCenter: 'supplyCenter',
-  warehouse: 'warehouse',
-  leadTime: 'leadTime',
-  finalInventoryDaysQuantity: 'finalInventoryDaysQuantity',
-  orderToday: 'orderToday',
-  purchaseStatusId: 'purchaseStatusId',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt',
-  createdById: 'createdById'
+  mc: 'mc',
+  mca: 'mca',
+  mcap: 'mcap',
+  codigoMaterial: 'codigoMaterial',
+  descripcionMaterial: 'descripcionMaterial',
+  codProv: 'codProv',
+  proveedor: 'proveedor',
+  centroAbastecedor: 'centroAbastecedor',
+  desDentro: 'desDentro',
+  porcCompra: 'porcCompra',
+  almacen: 'almacen',
+  categoria: 'categoria',
+  ltReal: 'ltReal',
+  factorLt: 'factorLt',
+  frec: 'frec',
+  ump: 'ump',
+  ums: 'ums',
+  venta30DiasDiaDelDia: 'venta30DiasDiaDelDia',
+  ventaFcDiaAjustada: 'ventaFcDiaAjustada',
+  porcDesviacionFcVsVenta: 'porcDesviacionFcVsVenta',
+  porcIncPlaneacionDemanda: 'porcIncPlaneacionDemanda',
+  aplica: 'aplica',
+  pedidoPromedioDiaUmp: 'pedidoPromedioDiaUmp',
+  tiendasAgotadas: 'tiendasAgotadas',
+  tipologia: 'tipologia',
+  invTienda: 'invTienda',
+  stockObjetivoTienda: 'stockObjetivoTienda',
+  faltanteLlenadoTienda: 'faltanteLlenadoTienda',
+  diasInvTienda: 'diasInvTienda',
+  inventarioFisico: 'inventarioFisico',
+  inventarioEnTransito: 'inventarioEnTransito',
+  diasInvALaFecha: 'diasInvALaFecha',
+  diasInvFisicoTransito: 'diasInvFisicoTransito',
+  zonarojaPura: 'zonarojaPura',
+  zonaroja: 'zonaroja',
+  zonaamarilla: 'zonaamarilla',
+  zonaverde: 'zonaverde',
+  tamBufferPuroUmp: 'tamBufferPuroUmp',
+  tamBufferUmp: 'tamBufferUmp',
+  demandaCalificada: 'demandaCalificada',
+  activoLunes: 'activoLunes',
+  activoMartes: 'activoMartes',
+  activoMiercoles: 'activoMiercoles',
+  activoJueves: 'activoJueves',
+  activoViernes: 'activoViernes',
+  activoSabado: 'activoSabado',
+  activoDomingo: 'activoDomingo',
+  pedidoHoy: 'pedidoHoy',
+  pedidoF1: 'pedidoF1',
+  pedidoF2: 'pedidoF2',
+  pedidoF3: 'pedidoF3',
+  pedidoF4: 'pedidoF4',
+  pedidoF5: 'pedidoF5',
+  pedidoF6: 'pedidoF6',
+  estimadoParaTopeBuffer: 'estimadoParaTopeBuffer',
+  cantidadDefinitivaOcHoy: 'cantidadDefinitivaOcHoy',
+  cantidadDefinitivaOcF1: 'cantidadDefinitivaOcF1',
+  cantidadDefinitivaOcF2: 'cantidadDefinitivaOcF2',
+  cantidadDefinitivaOcF3: 'cantidadDefinitivaOcF3',
+  factorVariabilidadVenta: 'factorVariabilidadVenta',
+  diasMinimoInv: 'diasMinimoInv',
+  diasPromedioInv: 'diasPromedioInv',
+  diasMaximoInv: 'diasMaximoInv',
+  diasInvCantidadDefinitiva: 'diasInvCantidadDefinitiva',
+  diasInvCdF1: 'diasInvCdF1',
+  diasInvCdF2: 'diasInvCdF2',
+  diasInvCdF3: 'diasInvCdF3',
+  diaDePedido: 'diaDePedido',
+  diaDeLlegada: 'diaDeLlegada',
+  fechaEstimadaEntrega: 'fechaEstimadaEntrega',
+  nomDiaEntrega: 'nomDiaEntrega',
+  fechaEntregaF1: 'fechaEntregaF1',
+  fechaEntregaF2: 'fechaEntregaF2',
+  fechaEntregaF3: 'fechaEntregaF3',
+  alertaStock: 'alertaStock',
+  vidaUtilMinDiasReciboCedi: 'vidaUtilMinDiasReciboCedi',
+  alertaVidaUtil: 'alertaVidaUtil',
+  crossDock: 'crossDock',
+  moq: 'moq',
+  subcategoria: 'subcategoria',
+  temperaturaAlmacenamiento: 'temperaturaAlmacenamiento',
+  responsableDeCompra: 'responsableDeCompra',
+  category: 'category',
+  multiploDeCompra: 'multiploDeCompra',
+  estado: 'estado',
+  fechaCreacion: 'fechaCreacion',
+  fechaActualizacion: 'fechaActualizacion'
 } as const
 
 export type PurchaseSuggestionScalarFieldEnum = (typeof PurchaseSuggestionScalarFieldEnum)[keyof typeof PurchaseSuggestionScalarFieldEnum]
@@ -117,15 +192,15 @@ export type PurchaseSuggestionScalarFieldEnum = (typeof PurchaseSuggestionScalar
 
 export const RoleScalarFieldEnum = {
   id: 'id',
-  name: 'name'
+  nombre: 'nombre'
 } as const
 
 export type RoleScalarFieldEnum = (typeof RoleScalarFieldEnum)[keyof typeof RoleScalarFieldEnum]
 
 
 export const UserRoleScalarFieldEnum = {
-  userId: 'userId',
-  roleId: 'roleId'
+  usuarioId: 'usuarioId',
+  rolId: 'rolId'
 } as const
 
 export type UserRoleScalarFieldEnum = (typeof UserRoleScalarFieldEnum)[keyof typeof UserRoleScalarFieldEnum]
@@ -133,13 +208,13 @@ export type UserRoleScalarFieldEnum = (typeof UserRoleScalarFieldEnum)[keyof typ
 
 export const UserScalarFieldEnum = {
   id: 'id',
-  email: 'email',
-  username: 'username',
-  firstName: 'firstName',
-  lastName: 'lastName',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt',
-  password: 'password'
+  correo: 'correo',
+  nombreUsuario: 'nombreUsuario',
+  nombre: 'nombre',
+  apellido: 'apellido',
+  fechaCreacion: 'fechaCreacion',
+  fechaActualizacion: 'fechaActualizacion',
+  contrasena: 'contrasena'
 } as const
 
 export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum]

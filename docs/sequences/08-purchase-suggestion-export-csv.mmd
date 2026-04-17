@@ -1,0 +1,47 @@
+sequenceDiagram
+    autonumber
+
+    participant C   as Cliente
+    participant G   as AuthGuard + RolesGuard
+    participant PSC as PurchaseSuggestionController
+    participant PSS as PurchaseSuggestionService
+    participant DB  as PrismaService
+    participant PT  as PassThrough (Stream)
+
+    Note over G: Roles: ADMIN, GERENTE_PLANEACION, SUBGERENTE_PLANEACION,<br/>GERENTE_ABASTECIMIENTO_REGIONAL, GERENTE_ABASTECIMIENTO_NACIONAL
+    Note over C,DB: Ver diagrama 02 para el flujo detallado de autenticación y autorización
+
+    C->>G: GET /purchase-suggestion/export-generated-oc
+    G-->>PSC: request autorizado
+
+    PSC->>PSS: exportGeneratedOC(response)
+
+    PSS->>DB: purchaseSuggestion.count({ where: { estado: "oc_generada" } })
+    DB-->>PSS: total: number
+
+    alt Sin registros con estado oc_generada
+        PSS-->>PSC: throw AppException(NO_ORDENES_OC_GENERADA, 404)
+        PSC-->>C: 404 { code: "NO_ORDENES_OC_GENERADA" }
+    else Hay registros
+        PSS->>PT: new PassThrough()
+        PSS->>PSC: Setear headers de respuesta:<br/>Content-Type: text/csv<br/>Content-Disposition: attachment; filename=ordenes_de_compra_YYYY-MM-DD.csv
+
+        PSS->>PT: pipe(response)
+        PSS->>PT: write(encabezados CSV)
+
+        loop Paginación por cursor (lotes de 1000)
+            PSS->>DB: purchaseSuggestion.findMany({<br/>  where: { estado: "oc_generada" },<br/>  select: COMMON_FIELDS,<br/>  take: 1000,<br/>  skip: cursor ? 1 : 0,<br/>  cursor: cursor ? { id: cursor } : undefined<br/>})
+            DB-->>PSS: PurchaseSuggestion[] (lote)
+
+            PSS->>PSS: Formatear cada registro como fila CSV
+            PSS->>PT: write(filas CSV del lote)
+
+            alt Lote < 1000 → último lote
+                PSS->>PT: end()
+            else Hay más registros
+                PSS->>PSS: cursor = lastItem.id
+            end
+        end
+
+        PT-->>C: Stream CSV completo<br/>(ordenes_de_compra_YYYY-MM-DD.csv)
+    end

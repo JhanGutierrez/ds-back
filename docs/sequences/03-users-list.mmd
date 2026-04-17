@@ -1,0 +1,26 @@
+sequenceDiagram
+    autonumber
+
+    participant C   as Cliente
+    participant G   as AuthGuard + RolesGuard
+    participant UC  as UsersController
+    participant US  as UsersService
+    participant DB  as PrismaService
+
+    Note over G: Rol requerido: ADMIN
+    Note over C,DB: Ver diagrama 02 para el flujo detallado de autenticación y autorización
+
+    C->>G: GET /users ?pagina=1&limite=10&correo=...&nombreUsuario=...&roles=...
+    G-->>UC: request autorizado (user.roles incluye ADMIN)
+
+    UC->>US: getUsers(filterDto, pagina, limite)
+
+    US->>US: Construir condiciones where: correo/nombreUsuario contains (insensitive), roles IN [...]
+
+    US->>DB: $transaction([ user.findMany({ where, skip, take, include: { roles: { include: { rol } } } }), user.count({ where }) ])
+    DB-->>US: [User[], total: number]
+
+    US->>US: Calcular ultimaPagina = Math.ceil(total / limite)
+
+    US-->>UC: { meta: { total, pagina, ultimaPagina }, data: User[] }
+    UC-->>C: 200 { statusCode, message, data, meta }
